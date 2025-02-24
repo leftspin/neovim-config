@@ -14,10 +14,31 @@ return {
   { "github/copilot.vim" },
 
   -- 4) APZelos/blamer.nvim
-  { "APZelos/blamer.nvim" },
+  -- REMOVED
 
   -- 5) vim-scripts/lightline
   { "vim-scripts/lightline" },
+
+  -- Gitsigns plugin
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("gitsigns").setup({
+        -- You can enable inline blame with:
+        current_line_blame = true, -- set to true if you want it on by default
+        current_line_blame_opts = {
+          delay = 300,
+          virt_text_pos = "eol",
+        },
+        on_attach = function(bufnr)
+          local gs = package.loaded.gitsigns
+          -- Keymap to toggle line blame
+          vim.keymap.set("n", "<leader>gb", gs.toggle_current_line_blame, { buffer = bufnr })
+        end,
+      })
+    end,
+  },
 
   -- 6) vim-startify
   { "mhinz/vim-startify" },

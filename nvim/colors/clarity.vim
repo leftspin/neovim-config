@@ -25,7 +25,9 @@ hi VertSplit    guibg=#102030     guifg=#102030   gui=none
 hi Folded       guifg=#cccccc     guibg=#405060
 hi FoldColumn   guibg=grey30      guifg=tan
 hi IncSearch    guifg=slategrey   guibg=khaki
-hi LineNr       guifg=#3b5989     guibg=#18304d
+hi LineNr       guifg=#4382CB     guibg=#18304d
+hi CursorLineNr guifg=#60A1D8     guibg=#18304d
+hi GitSignsCurrentLineBlame guifg=#60A1D8
 hi ModeMsg      guifg=goldenrod
 hi MoreMsg      guifg=SeaGreen
 hi NonText      guifg=#304050     guibg=#18304d
@@ -55,10 +57,10 @@ if version >= 703
     hi ColorColumn  guifg=#e8ecf0 guibg=#283848
 endif
 
-hi Comment    guifg=#7e8bc2   gui=none
+hi Comment    guifg=#8f9ae5   gui=none
 hi Constant   guifg=#ffe381   gui=none
 hi Identifier guifg=#70d080   gui=none
-hi Statement  guifg=#4b8bc3   gui=none
+hi Statement  guifg=#5fa1db   gui=none
 hi PreProc    guifg=indianred gui=none
 hi Type       guifg=#8cd0d3   gui=none
 hi Special    guifg=#ecad2b   gui=none
@@ -98,11 +100,11 @@ hi jsAssignmentColon    guifg=#82d567 guibg=none
 hi jsComma              guifg=#82d567 guibg=none
 hi jsDot                guifg=#82d567 guibg=none
 
-hi typescriptImport         guifg=#4b8bc3 gui=italic guibg=none
-hi typescriptExport         guifg=#4b8bc3 gui=italic guibg=none
-hi typescriptTry            guifg=#4b8bc3 gui=italic guibg=none
-hi typescriptExceptions     guifg=#4b8bc3 gui=italic guibg=none
-hi typescriptCastKeyword    guifg=#4b8bc3 gui=italic
+hi typescriptImport         guifg=#5fa1db gui=italic guibg=none
+hi typescriptExport         guifg=#5fa1db gui=italic guibg=none
+hi typescriptTry            guifg=#5fa1db gui=italic guibg=none
+hi typescriptExceptions     guifg=#5fa1db gui=italic guibg=none
+hi typescriptCastKeyword    guifg=#5fa1db gui=italic
 
 hi typescriptInterfaceKeyword   guifg=#82d567 guibg=none gui=none
 hi typescriptInterfaceName      guifg=#82d567 guibg=none gui=bold
