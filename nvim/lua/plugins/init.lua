@@ -52,8 +52,14 @@ return {
   -- 9) tpope/vim-vinegar
   { "tpope/vim-vinegar" },
 
-  -- 10) tpope/vim-fugitive
-  { "tpope/vim-fugitive" },
+  -- 10) neogit (Modern, Magit-inspired Git interface for Neovim)
+  { "NeogitOrg/neogit" },
+  -- 11) gp.nvim (AI-powered commit message generator)
+  { "robitx/gp.nvim",
+    cmd = { "WriteGitCommitMessage" },
+    ft = "gitcommit",
+    opts = {},
+  },
 
   -- 11) tpope/vim-commentary
   { "tpope/vim-commentary" },
