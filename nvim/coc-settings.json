@@ -1,0 +1,45 @@
+{
+  "[css]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[markdown]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[typescript]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[javascript]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[swift]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[javascriptreact]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[typescriptreact]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[html]": {
+    "coc.preferences.formatOnType": true
+  },
+  "[svelte]": {
+    "coc.preferences.formatOnType": true
+  },
+  "coc.preferences.formatOnType": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "✖︎ ",
+  "diagnostic.warningSign": "▲ ",
+  "diagnostic.infoSign": "➤ ",
+  "diagnostic.hintSign": "★ ",
+  "diagnostic.filetypeMap": { "default": "bufferType" },
+  "suggest.snippetIndicator": "…",
+  "suggest.noselect": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "typescript.autoClosingTags": true,
+  "svelte.enable-ts-plugin": true,
+  "workspace.rootPatterns": [".git", "package.json", "tsconfig.json"],
+  "coc.preferences.extensionUpdateCheck":"daily"
+}

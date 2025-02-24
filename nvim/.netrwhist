@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading/Orders'
+let g:netrw_dirhist_3='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading/hooks'
+let g:netrw_dirhist_2='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading'
+let g:netrw_dirhist_1='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading/components'
+let g:netrw_dirhist_0='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading'
+let g:netrw_dirhist_9='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading/Orders'
+let g:netrw_dirhist_8='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading'
+let g:netrw_dirhist_7='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading/OrderManagement'
+let g:netrw_dirhist_6='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading'
+let g:netrw_dirhist_5='/Users/mikemanzano/src/retail/order-screen-multiselection/react-native/src/packages/app/src/screens/AdvancedTrading/Markets'

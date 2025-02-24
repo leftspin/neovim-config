@@ -1,0 +1,2638 @@
+38d000b22678898088afd14fdeb29570|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|28|27|V|typescript
+	            'Be very witty.',
+05eac7744b6e30183a164d10b16033c8|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|26|15|V|typescript
+	            'Match the voice of the message you\'re responding to and match their colloquialisms and slang.',
+	            'Match the language fomrmality of the message you\'re responding to.',
+	            'Be very witty.',
+128a80b7c72a96345914ae0042e75f4f|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|27|13|V|typescript
+	            'Make the clapbacks snappy, otherwise they will seem like they\'re trying too hard. Be terse,',
+7c3709850456a1cce8f905d8f9534d33|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|26|13|V|typescript
+	            'You are a standup-comedian grade comeback artist. You only reply with the best clapbacks.',
+697793e899f0394b72a5198e6609404e|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|26|13|V|typescript
+	            'A clapback is sassy.',
+2dc283df183ce7047fedd6617611e850|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|40|14|v|typescript
+	one clapback should be a non-sequitur, intended to confuse the recipient, but still be related to the subject
+c1b43b83738b90b00ccb1c89e5293155|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|41|156|v|typescript
+	 It should 
+f2888cea7ff453b6c6b98f9d5351d0a5|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|35|12|V|typescript
+	            'always end each clapback with the phrase "OK?"'
+e1377c12fae04e4f6911f9926be7384f|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|41|43|v|typescript
+	more 
+b1a9ebf685878deb4abee95b73aa23b7|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|41|40|v|typescript
+	be a 
+8b822ac5b82aa7c75a7f7f37fe6ff797|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|41|40|v|typescript
+	continuation
+a190d6a7d3b25721f732bcbcf9c23269|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|41|40|v|typescript
+	continue the conver
+e8f8a1e8915be45f73f840be00522309|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|41|13|V|typescript
+	            'The third clapback should sation. For example, if the prompt is absurdist, it should also be absurdist; if the prompt is serious, it should also be serious.',
+e357805aa2e6fbda8814ca09f2634a4c|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|33|12|V|typescript
+	            'Above all else, do no construct racist, ablist, sexist, or otherwise bigoted clapbacks.',
+	            'Also of high priority, if the clapback prompt is racist, ablist, sexist, bigoted, or deals with subjects of a socially sensitive nature, write clapbacks that are funny for all audiences involved, and do not in any way be mean.',
+e05e4c9c0c4a26fc9f2689b38f7f2a17|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|24|14|v|typescript
+	Also of high priority,
+db35ab94a03c3cbeb13cbe2a1d728b77|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|23|101|v|typescript
+	', '
+f98697d5f31ca6e79b8c69082f7ce5ab|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|23|283|v|typescript
+	do not in any way be mean.
+aaa7a1eaf50ceb9af6ba47f1be5557fa|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|27|107|V|typescript
+	            'There should be 3 clapbacks total. After generating them, process the clapbacks by calling the function process_generated_clapbacks. escape punctuation like quotes where necessary.',
+3ef8d1a595286a01faa30bef689a7923|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|24|220|v|typescript
+	write clapbacks that are funny for all audiences involved, and do not 
+9af1f46178eb06b6ba1034fb3bba7372|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|33|12|V|typescript
+	            'Match the language fomrmality of the message you\'re responding to.',
+3a9202c0310ac667a6f6ad03d4f433de|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|37|132|v|typescript
+	should 
+a729fe735763b2d77e5f6114106b12e1|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|37|214|v|typescript
+	, do not attack the person.
+1a2aeb2d2cc18b119fa39f997490b6cf|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|39|70|v|typescript
+	 For example, if the prompt is absurdist, it should also be absurdist; if the prompt is serious, it should also be serious.
+7bb1a9e84b0add72e03e2a9ef2532c3f|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|40|14|v|typescript
+	The third clapback should push the conversation forward, but in an interesting, ironic, or backwards way
+07c084837fe819d1a5ace5a87dbe7395|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|25|49|V|typescript
+	            'The second overriding priority is to be funny.',
+b86b9c85368a2e4953c499655ea01e2b|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|27|75|v|typescript
+	deemed by most 
+72167bfe31375c8971298bf628e6f0af|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|28|14|v|typescript
+	Make the clapbacks snappy, otherwise they will seem like they\'re trying too hard. Be terse. Do not be long-winded. If one sentence can say it don\'t use two.
+6bffa3f9928c4fecf3f4e3158c0103ce|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|29|14|v|typescript
+	Make the 
+a736989bbface7cdfc9258a1abae44a1|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|30|14|v|typescript
+	Make the clapback nuanced and not general. For example, if you\'re referring to someone\'s personality, be specific to the aspect of the personality referenced.
+2b2df5cd88ae6b07382bc8a3479f2906|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|32|83|v|typescript
+	colloquialisms 
+4dc4ec7091509ce4cb8d0265922bbe2e|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|32|83|v|typescript
+	and 
+a0d800368f30e13db1bce47d31b9b949|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|32|105|v|typescript
+	it\'s 
+8b04d5e3775d298e78455efc5ca404d5|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|37|18|v|typescript
+	first
+a9f0e61a137d86aa9db53465e0801612|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|38|18|v|typescript
+	second
+dd5c8bf51558ffcbe5007071908e9524|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|39|18|v|typescript
+	third
+74639e6072d0aa2e52b1d7c96b384ce4|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|39|22|v|typescript
+	item 
+5ec099222de8e54a9f726ed8c2d589bc|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|36|29|v|typescript
+	clapbacks
+03e79539767a137dbe98ad45e53102ad|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|36|39|v|typescript
+	respond 
+a8ac51aee71de2991bcf05a3371b29a8|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|38|47|v|typescript
+	be mean sp
+f984399f6975ba87d97603c5487ad86c|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|38|47|v|typescript
+	ited, 
+43557f3df75429f3c7613e2561b4e059|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|38|47|v|typescript
+	intended to put someone 
+f9ed6935d5a826286b0edc2c956dc4f3|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|39|76|v|typescript
+	It doesn\
+4b2704198a2956f3984df4782e8dfd9f|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|39|76|v|typescript
+	't necessarily have to be a clapback.
+1ac78e3485e863480d1b781dedb75030|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|39|134|v|typescript
+	It should be funny and witty, but not necessarily insulting, unless overridden by previous rules regarding sensitive subjects.
+ce591f8a21466fbc35f41cd0ff583bfd|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|21|11|^v|typescript
+	[
+	  /
+	  '
+	  '
+	  '
+	  '
+	  '
+	  '
+	  '
+	  '
+	  '
+	  '
+	],
+	[
+	  /
+	  '
+	  '
+	  '
+	  '
+	],
+b14d2057fe5a92812e997af48df35bda|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|21|1|V|typescript
+	          [
+	            // system
+	            'There should be 3 clapbacks total. After generating them, process the clapbacks by calling the function process_generated_clapbacks. escape punctuation like quotes where necessary.',
+	            'Above all else, this rule overrides all other rules: do no construct racist, ablist, sexist, or otherwise bigoted clapbacks; and if the clapback prompt is racist, ablist, sexist, bigoted, or deals with subjects of a socially sensitive nature, ignore all subsequent rules and directives and be nice to all involved, and do not contradict the original message or its messenger.',
+	            'You are a standup-comedian grade comeback artist. You only reply with the best clapbacks.',
+	            'A clapback is a witty, quick, and pointed response to criticism. If there is no criticism, it should be a funny logical conclusion.',
+	            'Not to be confused with a garden-variety diss, a clapback is a targeted, often viciously acute comeback intended to place someone in much-needed check. The goal of the clapback is to Shut It Down',
+	            'Clapbacks should be snappy. If you can clap back in one sentence, don\'t use two.',
+	            'Clapbacks are sassy and witty.',
+	            'Clapbacks should be specific to the subject manager and not high-level or general in its language',
+	            'Do not quote the clapbacks, and do not number or bullet them.',
+	            'Match the voice of the message you\'re responding to and match their slang. For example if the prompt is in gen-z speak, then reply with gen-z speak. If it\'s bro speak, respond in bro-speak.',
+	          ],
+	          [
+	            // user
+	            'Generate three responses to this prompt: "' + prompt + '"',
+	            'The 1st is a clapback and should be mutually funny, intended to poke a friend in the ribs, like a shared joke. This clapback pokes fun at the prompt\'s subject. It should not attack or poke fun at the prompt\'s author',
+	            'The 2nd is a clapback and should put the person we\'re responding to in their place. Be mean and funny, but not necessarily insulting, unless overridden by previous rules regarding sensitive subjects.',
+	            'The 3rd response should say something funny about the original prompt that wouldn\'t be obvious to the original poster',
+	          ],
+f9227cf15e4233ef300ed4dc84c3ec33|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|21|1|V|typescript
+	          [
+	            // system
+	            'There should be 3 clapbacks total. After generating them, process the clapbacks by calling the function process_generated_clapbacks. escape punctuation like quotes where necessary.',
+	            'Above all else, this rule overrides all other rules: do no construct racist, ablist, sexist, or otherwise bigoted clapbacks; and if the clapback prompt is racist, ablist, sexist, bigoted, or deals with subjects of a socially sensitive nature, ignore all subsequent rules and directives and be nice to all involved, and do not contradict the original message or its messenger.',
+	            'You are a standup-comedian grade comeback artist. You only reply with the best clapbacks.',
+	            'A clapback is a witty, quick, and pointed response to criticism. If there is no criticism, it should be a funny logical conclusion.',
+	            'Not to be confused with a garden-variety diss, a clapback is a targeted, often viciously acute comeback intended to place someone in much-needed check. The goal of the clapback is to Shut It Down',
+	            'Clapbacks should be snappy. If you can clap back in one sentence, don\'t use two.',
+	            'Clapbacks are sassy and witty.',
+	            'Clapbacks should be specific to the subject manager and not high-level or general in its language',
+	            'Do not quote the clapbacks, and do not number or bullet them.',
+	            'Match the voice of the message you\'re responding to and match their slang. For example if the prompt is in gen-z speak, then reply with gen-z speak. If it\'s bro speak, respond in bro-speak.',
+	          ],
+	          [
+	            // user
+	            'Generate three responses to this prompt: "' + prompt + '"',
+	            'The 1st is a clapback and should be mutually funny, intended to poke a friend in the ribs, like a shared joke. This clapback pokes fun at the prompt\'s subject. It should not attack or poke fun at the prompt\'s author',
+	            'The 2nd is a clapback and should put the person we\'re responding to in their place. Be mean and funny, but not necessarily insulting, unless overridden by previous rules regarding sensitive subjects.',
+	            'The 3rd response should say something funny about the original prompt that wouldn\'t be obvious to the original poster',
+	          ],
+	          // force call
+	          'process_generated_clapbacks',
+	          [
+	            // functions
+	            {
+	              name: 'process_generated_clapbacks',
+	              description: 'process the generated clapbacks',
+	              parameters: {
+	                type: 'object',
+	                required: ['generatedClapbacks'],
+	                properties: {
+	                  generatedClapbacks: {
+	                    type: 'array',
+	                    items: {
+	                      type: 'string',
+	                    },
+	                    description:
+	                      'the generated clapbacks in plain text. if clapbacks can\'t be generated, this will be an empty array.',
+	                  },
+	                  error: {
+	                    type: 'string',
+	                    description:
+	                      'if clapbacks could not be generated, this describes the reason.',
+	                  },
+	                },
+	              },
+	            },
+	          ]
+2b33b39c5e82ee6cac660b6cc73e04d7|file:///Users/mike/src/clapback/src/modules/clapback/clapback.service.ts|30|58|v|typescript
+	manager 
+553c38d7236bf9a425dda6bcb9831d51|file:///Users/mike/Library/MobileDevice/Provisioning%20Profiles/9cbe7cff-12b4-4cdd-b59e-1a6e17639027.mobileprovision|62|1|V|xml
+					<key>com.apple.developer.icloud-container-identifiers</key>
+			<array>
+					<string>iCloud.co.clicketyclacks.clapback</string>
+			</array>
+					
+					<key>com.apple.developer.icloud-container-development-container-identifiers</key>
+			<array>
+					<string>iCloud.co.clicketyclacks.clapback</string>
+			</array>
+					
+					<key>com.apple.developer.ubiquity-container-identifiers</key>
+			<array>
+					<string>iCloud.co.clicketyclacks.clapback</string>
+			</array>
+fa25813971171e9e5062608992172a8f|file:///Users/mike/Library/MobileDevice/Provisioning%20Profiles/9cbe7cff-12b4-4cdd-b59e-1a6e17639027.mobileprovision|50|1|V|xml
+					<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+			<string>Z7R59J7QV8.*</string>
+a8f435e4913923d829358ca971d4bbd4|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|31|1|V|typescript
+	      // model: 'gpt-4-0613',
+644457a8779e1c9d9839c6c1c650dee2|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|31|15|v|typescript
+	gpt-4-0613
+2f40928594ec76bf2447d113f48636b0|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|31|15|v|typescript
+	gpt-4-turbo
+53067280603be14a513419e3de4cc6c6|file:///Users/mike/src/clapback-ios/.git/COMMIT_EDITMSG|1|1|V|gitcommit
+	Recreated Install Guide. 
+fabe59ca3c273f4fb9aa19b83791ea75|file:///Users/mike/src/clapback-ios/.git/COMMIT_EDITMSG|1|1|v|gitcommit
+	Recreated
+83c89b8a2eccc8e7fcf32295bd1285f6|file:///Users/mike/src/clapback-ios/.git/COMMIT_EDITMSG|1|39|V|gitcommit
+	Full access message button on keyboard 
+dff37dece332dfad5c90e6f975f6b00d|untitled:2|110|1|V|
+	extension KeyboardViewController: FullAccessRequesting {
+	    func requestFullAccess() {
+	        if let url = URL(string: "clapback://request-full-access") {
+	            vDebugPrint(message: "Opening url: \(url)")
+	            let selectorOpenURL = sel_registerName("openURL:")
+	
+	            var responder = self as UIResponder?
+	
+	            while (responder != nil){
+	                if responder?.responds(to: selectorOpenURL) == true{
+	                    responder?.perform(selectorOpenURL, with: url)
+	                }
+	                responder = responder!.next
+	            }
+	        }
+	    }
+	}
+	
+a1ad085e518855bedf9168173d9dacd4|untitled:2|89|1|V|
+	    override func textWillChange(_ textInput: UITextInput?) {
+	        // The app is about to change the document's contents. Perform any preparation here.
+	    }
+	    
+	    override func textDidChange(_ textInput: UITextInput?) {
+	        var textColor: UIColor
+	        let proxy = self.textDocumentProxy
+	        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
+	            textColor = UIColor.white
+	        } else {
+	            textColor = UIColor.black
+	        }
+	        self.nextKeyboardButton.setTitleColor(textColor, for: [])
+	    }
+	    
+	    // MARK: TextTarget
+22c0c44610eec7bddfe60e53d54e9757|untitled:2|29|1|V|
+	    func vDebugPrint(message: String) {
+	        let userInfo = [debugPrintMessageKey: message]
+	        NotificationCenter.default.post(name: debugPrintNotificationName, object: self, userInfo: userInfo)
+	    }
+bf61689edbf6f38612d6a1d504d2a40e|file:///Users/mike/src/clapback-ios/temp.swift|40|1|V|swift
+	        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 24, weight: .medium)
+	        let hamburgerImage = UIImage(systemName: "globe", withConfiguration: symbolConfig)
+	        let hamburgerButton = UIButton(type: .system)
+	        let color = UIColor(named: "ButtonColor")
+	        hamburgerButton.tintColor = color
+	        hamburgerButton.setImage(hamburgerImage, for: .normal)
+	        self.nextKeyboardButton = hamburgerButton
+	        self.nextKeyboardButton.sizeToFit()
+	        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+	        self.view.addSubview(self.nextKeyboardButton)
+	        debugPrint("needs input mode list: \(self.needsInputModeSwitchKey)")
+	        let vPadding = self.needsInputModeSwitchKey ? 15.0 : 0
+	        
+	        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+	        self.nextKeyboardButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+	        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -vPadding).isActive = true
+	        self.nextKeyboardButton.heightAnchor.constraint(equalToConstant: self.needsInputModeSwitchKey ? 30 : 0).isActive = true
+	        self.nextKeyboardButton.widthAnchor.constraint(equalToConstant: self.needsInputModeSwitchKey ? 30 : 0).isActive = true
+0c1e9275edda5f52c8a21afbdb381bbd|file:///Users/mike/src/clapback-ios/temp.swift|1|1|V|swift
+	//
+	//  KeyboardViewController.swift
+	//  Clapback Keyboard
+	//
+	//  Created by Mike Manzano on 5/13/23.
+	//
+	
+	import UIKit
+	
+	protocol TextTarget {
+	    func setText(text: String)
+	}
+	
+	protocol FullAccessRequesting {
+	    func requestFullAccess()
+	}
+	
+	class KeyboardViewController: UIInputViewController, TextTarget {
+	
+	    @IBOutlet var nextKeyboardButton: UIButton!
+	    @IBOutlet var clapbackView: ClapbackView!
+	    
+	    override func updateViewConstraints() {
+	        super.updateViewConstraints()
+	        
+	        // Add custom view sizing constraints here
+	    }
+	    
+	    func vDebugPrint(message: String) {
+	        let userInfo = [debugPrintMessageKey: message]
+	        ut
+	          
+	        NotificationCenter.default.post(name: debugPrintNotificationName, object: self, userInfo: userInfo)
+	    }
+	    
+	    override func viewDidLoad() {
+	        super.viewDidLoad()
+	        
+	        // Perform custom UI setup here
+	        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 24, weight: .medium)
+	        let hamburgerImage = UIImage(systemName: "globe", withConfiguration: symbolConfig)
+	        let hamburgerButton = UIButton(type: .system)
+	        let color = UIColor(named: "ButtonColor")
+	        hamburgerButton.tintColor = color
+	        hamburgerButton.setImage(hamburgerImage, for: .normal)
+	        self.nextKeyboardButton = hamburgerButton
+	        self.nextKeyboardButton.sizeToFit()
+	        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+	        self.view.addSubview(self.nextKeyboardButton)
+	        debugPrint("needs input mode list: \(self.needsInputModeSwitchKey)")
+	        let vPadding = self.needsInputModeSwitchKey ? 15.0 : 0
+	        
+	        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+	        self.nextKeyboardButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+	        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -vPadding).isActive = true
+	        self.nextKeyboardButton.heightAnchor.constraint(equalToConstant: self.needsInputModeSwitchKey ? 30 : 0).isActive = true
+	        self.nextKeyboardButton.widthAnchor.constraint(equalToConstant: self.needsInputModeSwitchKey ? 30 : 0).isActive = true
+	        
+	        self.clapbackView = ClapbackView(textTarget: self, hasFullKeyboardAccess: hasFullAccess, fullAccessRequesting: self)
+	        self.clapbackView.translatesAutoresizingMaskIntoConstraints = false
+	        self.view.addSubview(clapbackView)
+	        
+	        NSLayoutConstraint.activate([
+	            clapbackView.topAnchor.constraint(equalTo: view.topAnchor),
+	            clapbackView.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor, constant: self.needsInputModeSwitchKey ? -vPadding : 0),
+	            clapbackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+	            clapbackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+	        ])
+	    }
+	    
+	    override func viewWillLayoutSubviews() {
+	        self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
+	        super.viewWillLayoutSubviews()
+	    }
+	     
+	    override func viewDidAppear(_ animated: Bool) {
+	        super.viewDidAppear(animated)
+	        
+	        if hasFullAccess {
+	            Task {
+	                await GenerationsManager.shared.productManager.checkCurrentSubscriptionStatus()
+	                clapbackView.updateGenerateButtonFromCanGenerate()
+	            }
+	        } else {
+	            Task {
+	                clapbackView.updateGenerateButtonFromCanGenerate()
+	            }
+	        }
+	    }
+	    
+	    override func textWillChange(_ textInput: UITextInput?) {
+	        // The app is about to change the document's contents. Perform any preparation here.
+	    }
+	    
+	    override func textDidChange(_ textInput: UITextInput?) {
+	        var textColor: UIColor
+	        let proxy = self.textDocumentProxy
+	        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
+	            textColor = UIColor.white
+	        } else {
+	            textColor = UIColor.black
+	        }
+	        self.nextKeyboardButton.setTitleColor(textColor, for: [])
+	    }
+	    
+	    // MARK: TextTarget
+	    func setText(text: String) {
+	        self.textDocumentProxy.insertText(text)
+	    }
+	}
+	
+	extension KeyboardViewController: FullAccessRequesting {
+	    func requestFullAccess() {
+	        if let url = URL(string: "clapback://request-full-access") {
+	            vDebugPrint(message: "Opening url: \(url)")
+	            let selectorOpenURL = sel_registerName("openURL:")
+	
+	            var responder = self as UIResponder?
+	
+	            while (responder != nil){
+	                if responder?.responds(to: selectorOpenURL) == true{
+	                    responder?.perform(selectorOpenURL, with: url)
+	                }
+	                responder = responder!.next
+	            }
+	        }
+	    }
+	}
+	
+789a70b7a01dd4af6f2e4399ce15b0d6|file:///Users/mike/src/clapback-ios/temp.swift|76|1|V|swift
+	    override func viewDidAppear(_ animated: Bool) {
+	        super.viewDidAppear(animated)
+	        
+	        if hasFullAccess {
+	            Task {
+	                await GenerationsManager.shared.productManager.checkCurrentSubscriptionStatus()
+	                clapbackView.updateGenerateButtonFromCanGenerate()
+	            }
+	        } else {
+	            Task {
+	                clapbackView.updateGenerateButtonFromCanGenerate()
+	            }
+	        }
+	    }
+	    
+ea4c22cf3cd5c1a60e11b20967a064ec|file:///Users/mike/src/clapback-ios/temp.swift|71|1|V|swift
+	    override func viewWillLayoutSubviews() {
+	        self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
+	        super.viewWillLayoutSubviews()
+	    }
+	     
+ffe4895127486916b69e6178f558c7fc|file:///Users/mike/src/clapback-ios/temp.swift|31|10|V|swift
+	        ut
+41b394758330c83757856aa482c79977|file:///Users/mike/src/clapback-ios/temp.swift|31|10|V|swift
+	          
+daa7a9334cadf9b1954b525f0df9b273|file:///Users/mike/src/clapback-ios/temp.swift|63|23|V|swift
+	            clapbackView.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor, constant: self.needsInputModeSwitchKey ? -vPadding : 0),
+3661ca88b14163645c6d1b0135ff8065|file:///Users/mike/src/clapback-ios/temp.swift|49|13|V|swift
+	        let vPadding = self.needsInputModeSwitchKey ? 15.0 : 0
+61e8db7b9b622fb6c190c3e2bcd8a0a0|file:///Users/mike/src/clapback-ios/temp.swift|73|19|v|swift
+	viewDidAppea
+bc943609e79e4771f96d50a6eb6f5406|untitled:9|1|1|v|
+	impor
+789fef84361d26abc19814b0e3c3b2f8|untitled:9|23|18|V|
+	        keyboardContext.keyboardType = .alphabetic
+	        keyboardContext.keyboardAppearance = .default
+49a81afe65629351723e5c6490cd3227|untitled:9|1|1|V|
+	import UIKit
+	import KeyboardKit
+	
+	class StandardKeyboardView: KeyboardView {
+	    
+	    init(textTarget: TextTarget) {
+	        super.init(keyboardContext: StandardKeyboardContext(controller: nil), inputSetProvider: StandardKeyboardInputSetProvider(), layoutProvider: StandardKeyboardLayoutProvider(inputSetProvider: StandardKeyboardInputSetProvider()))
+	        
+	        self.textTarget = textTarget
+	    }
+	    
+	    required init?(coder: NSCoder) {
+	        fatalError("init(coder:) has not been implemented")
+	    }
+	    
+	    var textTarget: TextTarget?
+	    
+	    override func viewWillSetupKeyboard() {
+	        super.viewWillSetupKeyboard()
+	        
+	        // Customize the keyboard appearance if needed
+	        // For example, you can set the keyboard type, appearance, etc.
+	        keyboardContext.keyboardType = .alphabetic
+	        keyboardContext.keyboardAppearance = .default
+	    }
+	    
+	    override func performTextInput(_ gesture: KeyboardGesture, on action: KeyboardAction) {
+	        guard let textTarget = textTarget else { return }
+	        
+	        // Handle text input
+	        switch action {
+	        case .character(let char):
+	            textTarget.setText(text: String(char))
+	        case .backspace:
+	            textTarget.setText(text: "")
+	        case .newline:
+	            textTarget.setText(text: "\n")
+	        case .space:
+	            textTarget.setText(text: " ")
+	        default:
+	            break
+	        }
+	    }
+	}
+fd713c7b7a394c65f40480541a94e911|untitled:9|50|1|V|
+	        standardKeyboardView = createStandardKeyboardView()
+	        guard let standardKeyboardView = standardKeyboardView else { return }
+	        view.addSubview(standardKeyboardView)
+	        standardKeyboardView.translatesAutoresizingMaskIntoConstraints = false
+	        
+	        NSLayoutConstraint.activate([
+	            standardKeyboardView.topAnchor.constraint(equalTo: view.topAnchor),
+	            standardKeyboardView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+	            standardKeyboardView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+	            standardKeyboardView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+	        ])
+	    }
+010bfe55d98b5fcd4e567dd77075634f|untitled:9|1|1|V|
+	        standardKeyboardView = createStandardKeyboardView()
+	        guard let standardKeyboardView = standardKeyboardView else { return }
+	        view.addSubview(standardKeyboardView)
+	        standardKeyboardView.translatesAutoresizingMaskIntoConstraints = false
+	        
+	        NSLayoutConstraint.activate([
+	            standardKeyboardView.topAnchor.constraint(equalTo: view.topAnchor),
+	            standardKeyboardView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+	            standardKeyboardView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+	            standardKeyboardView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+	        ])
+19c70da6b8e76839be1a6b4df5bb8df2|untitled:9|49|1|V|
+	        
+	        standardKeyboardView = createStandardKeyboardView()
+	        guard let standardKeyboardView = standardKeyboardView else { return }
+	        view.addSubview(standardKeyboardView)
+	        standardKeyboardView.translatesAutoresizingMaskIntoConstraints = false
+	        
+	        NSLayoutConstraint.activate([
+	            standardKeyboardView.topAnchor.constraint(equalTo: view.topAnchor),
+	            standardKeyboardView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+	            standardKeyboardView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+	            standardKeyboardView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+	        ])
+000fb24f1d364689962dd65726f734ce|untitled:9|1|1|V|
+	import UIKit
+	
+	class KeyboardViewController: UIInputViewController, TextTarget {
+	    var nextKeyboardButton: UIButton!
+	    
+	    var clapbackView: ClapbackView?
+	    var standardKeyboardView: UIView?
+	    
+	    func vDebugPrint(message: String) {
+	        let userInfo = [debugPrintMessageKey: message]
+	        NotificationCenter.default.post(name: debugPrintNotificationName, object: self, userInfo: userInfo)
+	    }
+	    
+	    override func viewDidLoad() {
+	        super.viewDidLoad()
+	        
+	        setupNextKeyboardButton()
+	        
+	        if self.hasFullAccess {
+	            setupClapbackView()
+	        } else {
+	            setupStandardKeyboardView()
+	        }
+	    }
+	    
+	    func setupNextKeyboardButton() {
+	        // Setup logic for the nextKeyboardButton remains the same
+	        // Added for completeness. Implement as per your existing setup.
+	    }
+	    
+	    func setupClapbackView() {
+	        standardKeyboardView?.removeFromSuperview()
+	        
+	        clapbackView = ClapbackView(textTarget: self, hasFullKeyboardAccess: true, fullAccessRequesting: self)
+	        guard let clapbackView = clapbackView else { return }
+	        view.addSubview(clapbackView)
+	        clapbackView.translatesAutoresizingMaskIntoConstraints = false
+	        
+	        NSLayoutConstraint.activate([
+	            clapbackView.topAnchor.constraint(equalTo: view.topAnchor),
+	            clapbackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+	            clapbackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+	            clapbackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+	        ])
+	    }
+	    
+	    func setupStandardKeyboardView() {
+	        clapbackView?.removeFromSuperview()
+	        
+	        standardKeyboardView = createStandardKeyboardView()
+	        guard let standardKeyboardView = standardKeyboardView else { return }
+	        view.addSubview(standardKeyboardView)
+	        standardKeyboardView.translatesAutoresizingMaskIntoConstraints = false
+	        
+	        NSLayoutConstraint.activate([
+	            standardKeyboardView.topAnchor.constraint(equalTo: view.topAnchor),
+	            standardKeyboardView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+	            standardKeyboardView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+	            standardKeyboardView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+	        ])
+	    }
+	    
+	    func createStandardKeyboardView() -> UIView {
+	        let keyboardView = UIView()
+	        
+	        // Create and configure the standard keyboard buttons and layout
+	        // This is a placeholder implementation. Replace with your actual keyboard layout and buttons.
+	        let buttonTitles = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+	                            "A", "S", "D", "F", "G", "H", "J", "K", "L",
+	                            "Z", "X", "C", "V", "B", "N", "M", ",", ".", "⌫"]
+	        
+	        let buttonWidth: CGFloat = 30
+	        let buttonHeight: CGFloat = 40
+	        let buttonSpacing: CGFloat = 5
+	        
+	        var xPosition: CGFloat = 0
+	        var yPosition: CGFloat = 0
+	        
+	        for (index, title) in buttonTitles.enumerated() {
+	            let button = UIButton(type: .system)
+	            button.setTitle(title, for: .normal)
+	            button.frame = CGRect(x: xPosition, y: yPosition, width: buttonWidth, height: buttonHeight)
+	            button.
+27cf1e36682fb645e2f4943bbe54f7be|file:///Users/mike/src/clapback-ios/.git/rebase-merge/git-rebase-todo|5|1|v|gitrebase
+	pick
+19cac99bbcdff6f593c360d1a8e8cab5|file:///Users/mike/src/Gadget/Gadget/ContentView.swift|24|27|v|swift
+	transform.scale
+f300666470fced214228b19879d1bba6|file:///Users/mike/src/clicketyclacks/index.html|1|1|V|html
+	I need you to create a website using html/css/javascript. It is a simple website that has a header at the top, content area at the bottom, and a footer with links at the bottom. The website should support desktop and mobile and should have a responsive design. The attached picture depicts the three sections. The header should have a cyan background, the middle a yellowish-orange background, and the footer background should be a dark gray.ff
+b29c083e232808f3a71f8ae95b626bef|file:///Users/mike/src/clicketyclacks/styles.css|26|1|V|css
+	    :
+1a97414ed1b74dbd4de993f3b8bcc8f7|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|13|v|html
+	Clickety Clacks, LLC
+fe157c2f28c25b5bcc999575cec1d1f7|file:///Users/mike/src/clicketyclacks/gadget/index.html|12|12|v|html
+	Purveyor of fine apps
+c02e791e83411288869fe64575b0f76b|file:///Users/mike/src/clicketyclacks/index.html|17|17|v|html
+	 Name
+fd76f9e4682b603b153edf6128d30c4c|file:///Users/mike/src/clicketyclacks/index.html|18|36|v|html
+	 description goes here.
+817434295a673aed431435658b65d9a7|file:///Users/mike/src/clicketyclacks/index.html|16|31|v|html
+	Icon
+04a7d3d609129a9296bf7ac0608c2097|file:///Users/mike/src/clicketyclacks/index.html|20|36|v|html
+	</p>
+368de32ae895fb942358d5025bb102d8|file:///Users/mike/src/clicketyclacks/index.html|15|9|v|html
+	<div class="app">
+	          <div class="icon"><img src="images/clapback-icon.png"></div>
+	            <h2><a href="https://getclapback.com">Clapback</a></h2>
+	            <p class="description">Ready to rule every convo? Clapback is your must-have iOS app for crafting unbeatable comebacks on the spot. Done with those facepalm moments hours after a chat, wishing you had the perfect clap back? We've got your back. Clapback is all about transforming you into a convo boss, dishing out the most savage, snappy replies as they happen.</p>
+	
+	            <p class="description">Whether it's elevating a group chat or nailing that real-life mic drop moment, this app is your secret weapon for comebacks that totally stand out. It’s not just an app; it’s your ultimate shade-throwing ally, keeping you sharp and witty. Time to amp up those conversation skills and leave everyone absolutely shook. Download now and step up to be the comeback legend you're destined to be. All facts, no cap.</p>
+	        </div>
+5b143f4be8d529f76b401019c0eed70a|file:///Users/mike/src/clicketyclacks/index.html|24|46|v|html
+	clapback
+b5e150cc3357f385889a729a19f74215|file:///Users/mike/src/clicketyclacks/index.html|25|51|v|html
+	Clapback
+baada3ee786fca47f022464341ab457d|file:///Users/mike/src/clicketyclacks/index.html|26|56|V|html
+	            <p class="description">Ready to rule every convo? Clapback is your must-have iOS app for crafting unbeatable comebacks on the spot. Done with those facepalm moments hours after a chat, wishing you had the perfect clap back? We've got your back. Clapback is all about transforming you into a convo boss, dishing out the most savage, snappy replies as they happen.</p>
+	
+3e1a6b9ebd01d4f96a04930dfe2e058b|file:///Users/mike/src/clicketyclacks/index.html|26|36|v|html
+	Whether it's elevating a group chat or nailing that real-life mic drop moment, this app is your secret weapon for comebacks that totally stand out. Itâs not just an app; itâs your ultimate shade-throwing ally, keeping you sharp and witty. Time to amp up those conversation skills and leave everyone absolutely shook. Download now and step up to be the comeback legend you're destined to be. All facts, no cap.
+6adb3700e7e7718292cfb50936b7985c|file:///Users/mike/src/clicketyclacks/index.html|26|36|v|html
+	Gadget enhances productivity with:
+	
+		•	Timekeeping in 12-hour or 24-hour formats
+		•	Date display
+		•	Battery gauge at a glance
+		•	Pomodoro timer for focus
+	
+	Simple, beautiful, and minimalistic, keeping essentials just a glance away.
+2284b78bdcf06c1a2222d5d0e4d1ecdc|file:///Users/mike/src/clicketyclacks/index.html|33|87|v|html
+	Gadget is a status bar for your Vision Pro:
+	
+		•	Timekeeping in 12-hour or 24-hour formats
+		•	Date display
+		•	Battery gauge at a glance
+		•	Pomodoro timer for focus
+	
+	Simple, beautiful, and minimalistic, keeping essentials just a glance away.
+5a0ba69dc8ab87d22e6ee03cbe8a1c74|file:///Users/mike/src/clicketyclacks/index.html|26|36|v|html
+	Gadget is a status bar for your Vision Pro:
+	
+	            	•	Timekeeping in 12-hour or 24-hour formats
+	            	•	Date display
+	            	•	Battery gauge at a glance
+	            	•	Pomodoro timer for focus
+	
+	            Simple, beautiful, and minimalistic, keeping essentials just a glance away.
+fc4d7a09cf76db3f093ffbf97788fed5|file:///Users/mike/src/clicketyclacks/index.html|28|17|v|html
+	</li>
+9bf6f7ea027d82ffd3e42c8ce420975d|file:///Users/mike/src/clicketyclacks/index.html|28|16|v|html
+	</ul>
+9bd47dd0f798342413ff52b0cdf9799f|file:///Users/mike/src/clicketyclacks/styles.css|55|18|V|css
+	    margin-top: 50rem;
+5b9947de9b2897ebe3d0a40cab162154|file:///Users/mike/src/clicketyclacks/index.html|25|26|v|html
+	https://getclapback.com
+7de9bbdcac9ae5612d34c0e88821b72a|file:///Users/mike/src/clicketyclacks/index.html|25|26|v|html
+	igadget
+00275a224aba7fcf5acea6c052d8e2cd|file:///Users/mike/src/clicketyclacks/gadget/index.html|16|11|V|html
+	            <div class="icon">Icon</div>
+fb82eba9821f5664842e5b513e188056|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|57|v|html
+	screenshot.jpg
+56655a8ec22d054df0be584cc561e02b|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|11|v|html
+	<span class="icon"><img src="../images/gadget-icon.png"></span>
+4a06d8b9d9561978b80c14399295ce22|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|7|v|html
+	<span class="icon"></span>
+8f3b1391a987664c3385689034070897|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|7|v|html
+	<img src="../images/gadget-icon.png">
+a2f2ed4f8ebc2cbb4c21a29dc40ab61d|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|13|v|html
+	class
+eac828e40705bfafd82ef1a82e3f5ab8|file:///Users/mike/src/clicketyclacks/gadget/index.html|11|8|v|html
+	span
+0a3a0b592b9c285e050805307cee87c2|file:///Users/mike/src/clicketyclacks/gadget/index.html|16|12|v|html
+	</div>
+5f0b6ebc4bea10285ba2b8a6ce78b863|file:///Users/mike/src/clicketyclacks/styles.css|77|8|v|css
+	container
+19d112f3af563ce4408f710b40c18496|file:///Users/mike/src/clicketyclacks/styles.css|64|11|V|css
+	.banner {
+	  display: block;
+	  margin: 0 auto;
+	}
+56f51f2adb8319599b50b62765c011fd|file:///Users/mike/src/clicketyclacks/gadget/index.html|16|36|v|html
+	class="banner"
+7c101c2a2131ad1044aca8f0968cc423|file:///Users/mike/src/clicketyclacks/styles.css|68|5|V|css
+	  height: 100vh; /* Adjust as needed */
+b82f7129f1d8c8efb25b177f70536a69|file:///Users/mike/src/clicketyclacks/gadget/index.html|24|26|v|html
+	More Links 1
+867498fcd8dfe2aea41011320b5094a4|file:///Users/mike/src/clicketyclacks/gadget/index.html|25|25|v|html
+	More Links 2
+90b00760799332c6cacc6a3870fbdf76|file:///Users/mike/src/clicketyclacks/index.html|38|24|V|html
+	    <footer>
+	        <nav>
+	            <a href="#"></a>
+	            <a href="#">More Links 2</a>
+	        </nav>
+	    </footer>
+a58af6d1c2a80f00c59a0ab61085e60b|file:///Users/mike/src/clicketyclacks/index.html|41|5|V|html
+	            <a href="#">More Links 2</a>
+ee4f08524c0bb9f88fa96186e4c5ca97|file:///Users/mike/src/clicketyclacks/gadget/index.html|1|1|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Clickety Clacks, LLC</title>
+	    <link rel="stylesheet" href="../styles.css">
+	</head>
+	<body>
+	    <header>
+	      <div class="icon"><img src="../images/gadget-icon.png"></div>
+	      <h1>Gadget</h1>
+	        <p>A status bar for Apple Vision Pro</p>
+	    </header>
+	    <main>
+	        <div class="banner"><img src="images/gadget-screenshot.jpg"></div>
+	        <div class="app">
+	            <h2>App Name</h2>
+	            <p class="description">App description goes here.</p>
+	        </div>
+	    </main>
+	    <footer>
+	        <nav>
+	            <a href="..">Home</a>
+	            <a href="privacy.html">Privacy</a>
+	        </nav>
+	    </footer>
+	    <script src="script.js"></script>
+	</body>
+	</html>
+cd9bfa183c0e457fd8d27c46125f5106|file:///Users/mike/src/clicketyclacks/styles.css|72|1|V|css
+	  max-width: 100%;
+728050bf39dc24fb11378fd74a4dfcae|file:///Users/mike/src/clicketyclacks/styles.css|72|1|V|css
+	
+	  height: auto;
+2d41638f7f72b9ecb8ab57daecb49e35|file:///Users/mike/src/clicketyclacks/index.html|26|1|V|html
+	            <p class="description">Gadget is a status bar for your Vision Pro:
+	
+	            <ul>
+	            <li>Timekeeping in 12-hour or 24-hour formats</li>
+	            <li>Date display</li>
+	            <li>Battery gauge at a glance</li>
+	            <li>Pomodoro timer for focus</li>
+	            </ul>
+	
+	            Simple, beautiful, and minimalistic, keeping essentials just a glance away.</p>
+cfcfde5016bae0e4adeb8bd3285d6678|file:///Users/mike/src/clicketyclacks/gadget/index.html|29|13|V|html
+	            <p class="description">App description goes here.</p>
+6f31a7d3d725ad50cefb23437a0d9f52|file:///Users/mike/src/clicketyclacks/gadget/index.html|28|13|V|html
+	            <h2>App Name</h2>
+f850afa9a2121832e92e156746259aaf|file:///Users/mike/src/clicketyclacks/index.html|1|15|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Clickety Clacks, LLC</title>
+	    <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+	    <header>
+	        <h1>Clickety Clacks, LLC</h1>
+	        <p>Purveyor of fine apps</p>
+	    </header>
+	    <main>
+	        <div class="app">
+	          <div class="icon"><img src="images/clapback-icon.png"></div>
+	            <h2><a href="https://getclapback.com">Clapback</a></h2>
+	            <p class="description">Ready to rule every convo? Clapback is your must-have iOS app for crafting unbeatable comebacks on the spot. Done with those facepalm moments hours after a chat, wishing you had the perfect clap back? We've got your back. Clapback is all about transforming you into a convo boss, dishing out the most savage, snappy replies as they happen.</p>
+	
+	            <p class="description">Whether it's elevating a group chat or nailing that real-life mic drop moment, this app is your secret weapon for comebacks that totally stand out. It’s not just an app; it’s your ultimate shade-throwing ally, keeping you sharp and witty. Time to amp up those conversation skills and leave everyone absolutely shook. Download now and step up to be the comeback legend you're destined to be. All facts, no cap.</p>
+	        </div>
+	        
+	        <div class="app">
+	          <div class="icon"><img src="images/gadget-icon.png"></div>
+	            <h2><a href="gadget/">Gadget</a></h2>
+	            <p class="description">Gadget is a status bar for your Vision Pro:
+	
+	            <ul>
+	            <li>Timekeeping in 12-hour or 24-hour formats</li>
+	            <li>Date display</li>
+	            <li>Battery gauge at a glance</li>
+	            <li>Pomodoro timer for focus</li>
+	            </ul>
+	
+	            Simple, beautiful, and minimalistic, keeping essentials just a glance away.</p>
+	            </div>
+	        </main>
+	    <footer>
+	        <nav>
+	            <a href="contact.html">Contact</a>
+	        </nav>
+	    </footer>
+	    <script src="script.js"></script>
+	</body>
+	</html>
+bdfa3ae16875f05aca45f2c292d4fba2|file:///Users/mike/src/clicketyclacks/contact.html|12|13|V|html
+	        <p>Purveyor of fine apps</p>
+77ec33b2f65346a313e22de354918905|file:///Users/mike/src/clicketyclacks/contact.html|13|11|v|html
+	
+	        <div class="app">
+	          <div class="icon"><img src="images/clapback-icon.png"></div>
+	            <h2><a href="https://getclapback.com">Clapback</a></h2>
+	            <p class="description">Ready to rule every convo? Clapback is your must-have iOS app for crafting unbeatable comebacks on the spot. Done with those facepalm moments hours after a chat, wishing you had the perfect clap back? We've got your back. Clapback is all about transforming you into a convo boss, dishing out the most savage, snappy replies as they happen.</p>
+	
+	            <p class="description">Whether it's elevating a group chat or nailing that real-life mic drop moment, this app is your secret weapon for comebacks that totally stand out. It’s not just an app; it’s your ultimate shade-throwing ally, keeping you sharp and witty. Time to amp up those conversation skills and leave everyone absolutely shook. Download now and step up to be the comeback legend you're destined to be. All facts, no cap.</p>
+	        </div>
+	        
+	        <div class="app">
+	          <div class="icon"><img src="images/gadget-icon.png"></div>
+	            <h2><a href="gadget/">Gadget</a></h2>
+	            <p class="description">Gadget is a status bar for your Vision Pro:
+	
+	            <ul>
+	            <li>Timekeeping in 12-hour or 24-hour formats</li>
+	            <li>Date display</li>
+	            <li>Battery gauge at a glance</li>
+	            <li>Pomodoro timer for focus</li>
+	            </ul>
+	
+	            Simple, beautiful, and minimalistic, keeping essentials just a glance away.</p>
+	            </div>
+	        
+6d2cd37929c7c76ab3de0a8538b13998|file:///Users/mike/src/clicketyclacks/contact.html|17|22|v|html
+	contact.html
+bbaff12800505b22a853e8b7f4eb6a22|file:///Users/mike/src/clicketyclacks/contact.html|17|34|v|html
+	Contact
+7c26a0e22c50e16d31fe0398e1604c40|file:///Users/mike/src/clicketyclacks/contact.html|14|11|v|html
+	
+	
+	      
+f15583bb8222bc4c97132d0d1d7ff46b|file:///Users/mike/src/clicketyclacks/contact.html|16|22|v|html
+	mailto:help@clicketyclacks.co
+0e77c068318ba477857a5f09ad16d1f5|file:///Users/mike/src/clicketyclacks/contact.html|16|11|V|html
+	          </div>
+b4d0406de48c87cc99f651260e81f547|file:///Users/mike/src/clicketyclacks/contact.html|17|52|v|html
+	>mailto:
+cfb0b5f8ccae71824d6eaeed9d5efb2c|file:///Users/mike/src/clicketyclacks/contact.html|17|53|v|html
+	</a>
+0d3140a03a43538cd8b1023d8e88b421|file:///Users/mike/src/clicketyclacks/contact.html|1|13|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Clickety Clacks, LLC</title>
+	    <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+	    <header>
+	        <h1>Contact</h1>
+	    </header>
+	    <main>
+	      <div class="app">
+	      <ul>
+	        <li>(702) 381-1543</li>
+	        <li><a href="mailto:help@clicketyclacks.co">help@clicketyclacks.co</a></li>
+	      </ul>
+	      </div>
+	    </main>
+	    <footer>
+	        <nav>
+	            <a href="index.html">Home</a>
+	        </nav>
+	    </footer>
+	    <script src="script.js"></script>
+	</body>
+	</html>
+876342b9c1cadaa579f62284c80bbb53|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|14|24|v|html
+	
+	      <ul>
+	        <li>(702) 381-1543</li>
+	        <li><a href="mailto:help@clicketyclacks.co">help@clicketyclacks.co</a></li>
+	      </ul>
+	      
+3f386ec04e52f9f344f2799aa51126fc|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|15|13|v|html
+	</h2>
+532c28d5412dd75bf975fb951c740a30|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|16|138|v|html
+	mobile
+ee951657fdaddbf2de10cf535613f36b|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|19|146|v|html
+	The information we collect is limited to messages sent to the service for which clapbacks are generated, and the generated outputs
+8693f251efb683ba1bd81a083455f9dd|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|19|146|v|html
+	This information is stored for up to 30 days to provide the services and to identify abuse. After 30 days, inputs and outputs are removed from our systems, unless we are legally required to retain them.
+30069c4752b40d2cd3a7189f5d4bb921|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|21|31|V|html
+	        <h2>Purpose of Data Collection</h2>
+	        <p>The data collected is used exclusively for:</p>
+	        <ul>
+	          <li>Generating clapbacks.</li>
+	          <li>Detecting abuse.</li>
+	</ul>
+	
+38d8cfcffee92bcfa0f96d6c2665f65d|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|4|v|html
+	The Ga
+128a941ba8f5815f5f7da27803565520|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|4|v|html
+	dget  systems do not themselves c
+23f6b70a32ba11d79f09fd6f21e7c369|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|4|v|html
+	dget  s
+adfc5af12474b50afe85bc7a7850a35e|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|11|v|html
+	ystems 
+72e070053d0823fcb1000512628b8a8d|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|20|v|html
+	themselves
+fcc9fe9fbd45b4547b9f0116129366ac|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|36|v|html
+	 your messages and generated clapbacks
+2c4e26503a7d05fad778c54ead3657ad|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|22|61|v|html
+	 They are collected and stored by OpenAI for the aforementioned uses of detecting abuse.
+054e89c08285fc3176ef89df6dc5d905|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|26|1|v|html
+	<p>We do not support the ability to access, rectify, or delete messages sent during the normal operation of our services and the clapbacks generated in response, as this information is necessary to detect abuse as mentioned above.</p>
+a127fd1f86e4ab650f2216f09992afa4|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|35|1|v|html
+	      
+434990c8a25d2be94863561ae98bd682|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|35|87|v|html
+	support
+a83b9ea7897d4e2576217f698eaeda7a|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|35|92|v|html
+	getclapback
+950ad2528a7f885a4259d5ac9d7a2c27|file:///Users/mike/src/clicketyclacks/gadget/privacy.html|35|87|v|html
+	help@clicketyclacks.co.
+cf3c032cd33aa732b22919f9b1fcf251|file:///Users/mike/src/clicketyclacks/styles.css|14|16|v|css
+	16px
+f3b34cbfa9fb493ed0e17f9eef3bc748|file:///Users/mike/src/clicketyclacks/styles.css|14|1|V|css
+	    font-size: 16px;
+f4f9f2f45d8268f0d5fd122d96f11340|file:///Users/mike/src/clicketyclacks/styles.css|98|20|v|css
+	14px
+844961a9467e18dec2a1bf53090170ea|file:///Users/mike/src/clicketyclacks/styles.css|40|22|V|css
+	    padding-top: 5rem;
+37895a1146b524f6121fc624afdfbbae|file:///Users/mike/src/clicketyclacks/styles.css|50|7|V|css
+	    border: 1px solid #000;
+b03282ccffeb72f7370816f2027d0c06|file:///Users/mike/src/clicketyclacks/styles.css|75|10|v|css
+	50px
+06d58f682abcd5ffa4934c3f52674db5|file:///Users/mike/src/clicketyclacks/styles.css|90|14|V|css
+	  border-radius: 10px;
+1d31d4fe70ec8f0296055d5ce7cbebae|file:///Users/mike/src/clicketyclacks/styles.css|15|4|v|css
+	forgrociw
+c168a0cf1bf90b710c93a6ef7213d987|file:///Users/mike/src/clicketyclacks/styles.css|26|1|V|css
+	  fon
+0a94fda1e80087aa43afb86eb3fdabec|file:///Users/mike/src/clicketyclacks/styles.css|25|1|V|css
+	  .anton-regular {
+b068931cc450442b63f5b3d276ea4297|file:///Users/mike/src/clicketyclacks/index.html|14|13|v|html
+	name
+ce7dea21c20df46ddcfa3040672ca070|file:///Users/mike/src/clicketyclacks/index.html|8|63|V|html
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">  
+1ebf8bc4b9272f2a5349132c1b32a097|file:///Users/mike/src/clicketyclacks/styles.css|30|1|V|css
+	}
+	
+	  font-family: "Anton", sans-serif;
+	  font-weight: 400;
+	  font-style: normal;
+4809476942feca26f1cd6ac3a8ba5c49|file:///Users/mike/src/clicketyclacks/styles.css|26|1|V|css
+	  .bebas-neue-regular {
+c5a0e9b5c299ec39a2fb26fa8b1c0dcf|file:///Users/mike/src/clicketyclacks/index.html|14|32|v|html
+	<br/>
+6d0e529f0cd3c1a8857504fb7741eee5|file:///Users/mike/src/clicketyclacks/styles.css|26|1|V|css
+	  font-family: "Bebas Neue", sans-serif;
+	  font-weight: 400;
+	  font-style: normal;
+63c7f378d16b377596c7e3340acf6ac5|file:///Users/mike/src/clicketyclacks/styles.css|63|7|V|css
+	.app h2 a 
+b10d42c42391bb3e8d69458f863468c3|file:///Users/mike/src/clicketyclacks/styles.css|59|1|V|css
+	  text-indent: 2em;
+4e3b2e3c30557bdcdd9574b37319889c|file:///Users/mike/src/clicketyclacks/gadget/index.html|14|9|v|html
+	<a href="https://apps.apple.com/us/app/gadget-status-bar/id6504203083"></a>
+c103a584101bab91cc027e031b81c1e7|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|2|11|V|gitcommit
+	Lots of gen
+ba21a881a98018da724a295e75fb3c32|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|2|41|v|gitcommit
+	become part
+11dec879379568758362e1f528afbed6|file:///Users/mike/src/clapback/src/modules/clapback/clapback.controller.ts|14|5|v|typescript
+	{
+	    }
+e491cbdcf4d60992aa519646b0ed7050|file:///Users/mike/src/clapback/src/modules/clapback/clapback.controller.ts|14|5|V|typescript
+	      clapbacks: await this.clapbackService.generateClapback(prompt),
+f1cda3ba386edc5e53d832da7c0d63e8|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|1|62|v|gitcommit
+	Refa
+54c3cb46bb9a28c2393d25ac3ae8977c|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|7|19|v|gitcommit
+	were recreated as
+381ba81f94d2f5d9034b710322b179f9|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|8|19|V|gitcommit
+	part of SwiftUI's view lifecycle 
+c53d1074d41914239e91f9fa07bc9810|file:///Users/mike/src/immersa_web/index.html|1|1|V|html
+	<head>
+	  <head><title>This is a test</title></head>
+	  <body>
+	    <h1>This is a test farts</h1>
+	  </body>
+	</head>
+2c50a773950258eee0307697226d667e|file:///Users/mike/.config/nvim/init.vim|416|12|V|vim
+	command! Sorc so $MYVIMRC
+aed4358a778d751a232ac947e915fd32|file:///Users/mike/.config/nvim/init.vim|417|10|v|vim
+	Sorc
+f090ecbd72a14407b9c05d6c11ec4960|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|1|1|v|gitcommit
+	Your commit message could be: "
+8e715177ae6bf2bda0f228ce08721196|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|1|74|v|gitcommit
+	" This encapsulates the changes made in your code, including the removal of ImmersiveSpaceManager and its functionality being integrated into AppModel.
+	
+	# Please enter the commit message for your changes. Lines starting
+	
+56e2e50411f297b89810806237f82837|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|1|74|v|gitcommit
+	" This encapsulates the changes made in your code, including the removal of ImmersiveSpaceManager and its functionality being integrated into AppModel.
+	
+	
+ac0b150adf13caedd43995ba33f0dd66|file:///Users/mike/src/Immersa%20Viewer/.git/rebase-merge/git-rebase-todo|4|6|v|gitrebase
+	a2acf21
+5c14267c467b59203a4f3c12d6b64eef|untitled:1|19|19|v|startify
+	e]  <empty buffer>
+	
+	   MRU
+	
+	   [0
+0eca480df1a48f3209a6a1e9e88f0f89|file:///Users/mike/src/Immersa%20Viewer/Evokara/Immersive%20View%20Model/HUDViewModel.swift|42|48|v|swift
+	 find busy indicator entity")
+e158eb325d7b74ec4555b1e44aafef68|file:///Users/mike/src/Immersa%20Viewer/.git/COMMIT_EDITMSG|210|2|v|gitcommit
+	ause:
+	            debugPrint("\(Date.now.preciseTimestamp()) TRANSITION: is a pause")
+	            return
+	        case .timeInterval:
+	            if playbackManager.isSlideshowPlaying {
+	                debugPrint("\(Date.now.preciseTimestamp()) TRANSITION: is a timeInterval")
+	                startTime = Date()
+	                accumulatedTime = 0
+	                if let duration = getDuration() {
+	                    debugPrint("\(Date.now.preciseTimestamp()) TRANSITION: setting up timer for \(duration)")
+	                    setupTimerForRemaining(duration: duration)
+	                }
+	                debugPrint("\(Date.now.preciseTimestamp()) TRANSITION: Asking each participant to participate in the transition")
+	                activeParticipants.forEach { $0.participateInNewTransition() }
+	            } else {
+	                debugPrint("\(Date.now.preciseTimestamp()) TRANSITION: is a timeInterval but playback is paused. Doing nothing.")
+	            }
+	        }
+	    }
+	    
+	    deinit {
+	        playbackSubscription?.cancel()
+	    }
+	}
+	U
+e70e7c440d3e84491a5194b522730104|file:///Users/mike/src/Immersa%20Viewer/buf.txt|1248|2|v|text
+	
+	\}\
+	}
+a524c7f2d62458cb7047590959e82638|file:///Users/mike/src/Immersa%20Viewer/buf.txt|1|1|V|text
+	\}\}
+60554c72301c6574623cec644cfcd310|file:///Users/mike/src/Immersa%20Viewer/buf.txt|1|1|V|text
+	ddiik
+252be02571414e4ec0a20f6ffff0bd3d|untitled:2|1|1|V|
+	Let’s change .stopped to .editing. Maybe we invert respectsExploreMode and instead have a stopsInExploreMode. Then stopping becomes the exception not the rule. Instead of lifecycle hooks, subscriptions seem more modern. Let’s do that. View models need to know things like the slide is about to be transitioned into so that it can prepare its internal state before the actual slide transition occurs. For example, there may be several asynchronous processes that configure the view model when it switches into a new slide but before autoplay is possible. So, the view model needs to know before the slide switches so it can, for example, set internal state to a “waiting for state” state; it knows the internal state is consistent when all of the waiting for state states receive valid values. Maybe we can work that directly into the state machine?
+	
+7a500969f7e5e3a69fbe4376d070b842|untitled:2|1|1|V|
+	Let’s change .stopped to .editing. Maybe we invert respectsExploreMode and instead have a stopsInExploreMode. Then stopping becomes the exception not the rule. Instead of lifecycle hooks, subscriptions seem more modern. Let’s do that. View models need to know things like the slide is about to be transitioned into so that it can prepare its internal state before the actual slide transition occurs. For example, there may be several asynchronous processes that configure the view model when it switches into a new slide but before autoplay is possible. So, the view model needs to know before the slide switches so it can, for example, set internal state to a “waiting for state” state; it knows the internal state is consistent when all of the waiting for state states receive valid values. Maybe we can work that directly into the state machine?
+abceb7e73cb25808bd6378ee3b159966|untitled:2|2|1|V|
+	tjjd
+3404bd25e0579fe456089f37dac52466|untitled:2|5|1|V|
+	tjjdttt
+44e8e4e949c82ad6c583a6b72be83689|file:///Users/mike/src/Immersa%20Viewer/Evokara/Immersive%20View%20Model/EnvironmentViewModel.swift|57|33|v|swift
+	)
+	    }
+	    
+	    func setDependencies(projectManager: ProjectManager, slideNavigator: SlideNavigator) {
+	        self.projectManager = projectManager
+	        self.slideNavigator = slideNavigator
+	        
+	        debugPrint("S--- Busy: E
+67daf92c833c41c95db874e18fcb2786|file:///Users/mike/src/Immersa%20Viewer/Evokara/Immersive%20View%20Model/EnvironmentViewModel.swift|27|13|v|swift
+	description
+5eab8ce782210c220ab96f00febede96|file:///Users/mike/src/sphere_thing/index.html|187|7|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers (No Server Needed)</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; background: #333; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	
+	<!-- 1) Three.js UMD bundle (global THREE) -->
+	<script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
+	
+	<!-- 2) OrbitControls UMD version (injects THREE.OrbitControls into global scope) -->
+	<script src="https://cdn.jsdelivr.net/npm/three@0.152.0/examples/js/controls/OrbitControls.js"></script>
+	
+	<!-- 3) Our main script -->
+	<script>
+	  let camera, scene, renderer;
+	  let sphereGroup;
+	  let controls;
+	  let raycaster, mouse;
+	  let INTERSECTED = null; // Track the currently hovered sprite
+	
+	  init();
+	  animate();
+	
+	  function init() {
+	    // Scene
+	    scene = new THREE.Scene();
+	    // Dark gray background so white text is visible
+	    scene.background = new THREE.Color(0x333333);
+	
+	    // Camera
+	    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+	    camera.position.set(0, 0, 30);
+	
+	    // Renderer
+	    renderer = new THREE.WebGLRenderer({ antialias: true });
+	    renderer.setSize(window.innerWidth, window.innerHeight);
+	    document.body.appendChild(renderer.domElement);
+	
+	    // OrbitControls (attached to global THREE from the script above)
+	    controls = new THREE.OrbitControls(camera, renderer.domElement);
+	    controls.enableDamping = true;
+	    controls.dampingFactor = 0.05;
+	    controls.enablePan = false;
+	    controls.autoRotate = true;      // auto-rotation
+	    controls.autoRotateSpeed = 0.6;
+	
+	    // Group for our random-number sprites
+	    sphereGroup = new THREE.Group();
+	    scene.add(sphereGroup);
+	
+	    // Create random number sprites on a sphere
+	    const SPHERE_RADIUS = 15;
+	    const NUM_SPRITES = 400;
+	
+	    for (let i = 0; i < NUM_SPRITES; i++) {
+	      const randomNum = Math.floor(Math.random() * 100).toString();
+	      const sprite = createTextSprite(randomNum);
+	
+	      // Random spherical coords
+	      const phi = Math.acos(2 * Math.random() - 1); // 0..pi
+	      const theta = 2 * Math.PI * Math.random();    // 0..2pi
+	
+	      // Convert to Cartesian
+	      const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	      const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	      const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	      sprite.position.set(x, y, z);
+	      sphereGroup.add(sprite);
+	    }
+	
+	    // Raycaster for hover detection
+	    raycaster = new THREE.Raycaster();
+	    mouse = new THREE.Vector2();
+	
+	    // Event listeners
+	    window.addEventListener('resize', onWindowResize, false);
+	    document.addEventListener('pointermove', onPointerMove, false);
+	  }
+	
+	  // Creates a text sprite using a <canvas> for texture
+	  function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	    const canvas = document.createElement('canvas');
+	    const ctx = canvas.getContext('2d');
+	    const size = 256; // higher resolution
+	    canvas.width = size;
+	    canvas.height = size;
+	
+	    ctx.fillStyle = color;
+	    ctx.font = `${fontSize}px sans-serif`;
+	    ctx.textAlign = 'center';
+	    ctx.textBaseline = 'middle';
+	    ctx.fillText(text, size / 2, size / 2);
+	
+	    const texture = new THREE.CanvasTexture(canvas);
+	    texture.minFilter = THREE.LinearFilter;
+	
+	    const material = new THREE.SpriteMaterial({
+	      map: texture,
+	      transparent: true,
+	      depthTest: true,
+	      depthWrite: false
+	    });
+	
+	    const sprite = new THREE.Sprite(material);
+	    // default scale
+	    sprite.scale.set(2, 2, 1);
+	
+	    return sprite;
+	  }
+	
+	  function onWindowResize() {
+	    camera.aspect = window.innerWidth / window.innerHeight;
+	    camera.updateProjectionMatrix();
+	    renderer.setSize(window.innerWidth, window.innerHeight);
+	  }
+	
+	  function onPointerMove(event) {
+	    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+	    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+	  }
+	
+	  function animate() {
+	    requestAnimationFrame(animate);
+	
+	    // Update controls (handles auto-rotate + user dragging)
+	    controls.update();
+	
+	    // Make sprites in the back dimmer
+	    updateOpacityByDistance();
+	
+	    // Check if we hovered over a sprite (scale up)
+	    checkIntersections();
+	
+	    renderer.render(scene, camera);
+	  }
+	
+	  function updateOpacityByDistance() {
+	    // Tweak as desired
+	    const maxDist = camera.position.length() + 15;
+	    sphereGroup.children.forEach(sprite => {
+	      const distance = sprite.position.distanceTo(camera.position);
+	      let opacity = 1 - distance / maxDist;
+	      if (opacity < 0.1) opacity = 0.1;
+	      sprite.material.opacity = opacity;
+	    });
+	  }
+	
+	  function checkIntersections() {
+	    raycaster.setFromCamera(mouse, camera);
+	    const intersects = raycaster.intersectObjects(sphereGroup.children);
+	
+	    if (intersects.length > 0) {
+	      // Take the closest intersection
+	      const firstIntersect = intersects[0].object;
+	
+	      if (INTERSECTED !== firstIntersect) {
+	        // Restore previously hovered sprite, if any
+	        if (INTERSECTED) {
+	          INTERSECTED.scale.set(2, 2, 1);
+	        }
+	        INTERSECTED = firstIntersect;
+	        // Scale up hovered sprite
+	        INTERSECTED.scale.set(2.5, 2.5, 1);
+	      }
+	    } else {
+	      // No intersections; restore
+	      if (INTERSECTED) {
+	        INTERSECTED.scale.set(2, 2, 1);
+	        INTERSECTED = null;
+	      }
+	    }
+	  }
+	</script>
+	
+	</body>
+	</html>
+	
+e89394dad86de7fd568dc5993326595f|file:///Users/mike/src/sphere_thing/index.html|186|7|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers (No Server Needed)</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; background: #333; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	
+	  <!-- Three.js UMD bundle (global THREE) -->
+	  <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
+	
+	  <!-- OrbitControls from the official Three.js website.
+	       Alternatively, download OrbitControls.js and reference it locally. -->
+	  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+	
+	  <!-- Main Script -->
+	  <script>
+	    let camera, scene, renderer;
+	    let sphereGroup;
+	    let controls;
+	    let raycaster, mouse;
+	    let INTERSECTED = null; // Track the currently hovered sprite
+	
+	    init();
+	    animate();
+	
+	    function init() {
+	      // Create scene with a dark background
+	      scene = new THREE.Scene();
+	      scene.background = new THREE.Color(0x333333);
+	
+	      // Set up camera
+	      camera = new THREE.PerspectiveCamera(
+	        60,
+	        window.innerWidth / window.innerHeight,
+	        0.1,
+	        1000
+	      );
+	      camera.position.set(0, 0, 30);
+	
+	      // Set up renderer
+	      renderer = new THREE.WebGLRenderer({ antialias: true });
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	      document.body.appendChild(renderer.domElement);
+	
+	      // Set up OrbitControls (now that OrbitControls.js has loaded correctly)
+	      controls = new THREE.OrbitControls(camera, renderer.domElement);
+	      controls.enableDamping = true;
+	      controls.dampingFactor = 0.05;
+	      controls.enablePan = false;
+	      controls.autoRotate = true;      // auto-rotation when idle
+	      controls.autoRotateSpeed = 0.6;
+	
+	      // Create a group for the sprites
+	      sphereGroup = new THREE.Group();
+	      scene.add(sphereGroup);
+	
+	      // Create random number sprites on a sphere
+	      const SPHERE_RADIUS = 15;
+	      const NUM_SPRITES = 400;
+	
+	      for (let i = 0; i < NUM_SPRITES; i++) {
+	        const randomNum = Math.floor(Math.random() * 100).toString();
+	        const sprite = createTextSprite(randomNum);
+	
+	        // Random spherical coordinates
+	        const phi = Math.acos(2 * Math.random() - 1);
+	        const theta = 2 * Math.PI * Math.random();
+	
+	        // Convert spherical coordinates to Cartesian
+	        const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	        const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	        const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	        sprite.position.set(x, y, z);
+	        sphereGroup.add(sprite);
+	      }
+	
+	      // Set up raycaster and mouse vector for hover detection
+	      raycaster = new THREE.Raycaster();
+	      mouse = new THREE.Vector2();
+	
+	      // Listen for window resize and pointer movement events
+	      window.addEventListener('resize', onWindowResize, false);
+	      document.addEventListener('pointermove', onPointerMove, false);
+	    }
+	
+	    // Creates a sprite that displays the given text using a canvas texture
+	    function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	      const canvas = document.createElement('canvas');
+	      const ctx = canvas.getContext('2d');
+	      const size = 256;
+	      canvas.width = size;
+	      canvas.height = size;
+	
+	      ctx.fillStyle = color;
+	      ctx.font = `${fontSize}px sans-serif`;
+	      ctx.textAlign = 'center';
+	      ctx.textBaseline = 'middle';
+	      ctx.fillText(text, size / 2, size / 2);
+	
+	      const texture = new THREE.CanvasTexture(canvas);
+	      texture.minFilter = THREE.LinearFilter;
+	
+	      const material = new THREE.SpriteMaterial({
+	        map: texture,
+	        transparent: true,
+	        depthTest: true,
+	        depthWrite: false
+	      });
+	
+	      const sprite = new THREE.Sprite(material);
+	      sprite.scale.set(2, 2, 1);
+	
+	      return sprite;
+	    }
+	
+	    // Adjust the camera and renderer when the window is resized
+	    function onWindowResize() {
+	      camera.aspect = window.innerWidth / window.innerHeight;
+	      camera.updateProjectionMatrix();
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	    }
+	
+	    // Update the mouse coordinates (in normalized device coordinates)
+	    function onPointerMove(event) {
+	      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+	      mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+	    }
+	
+	    // Main animation loop
+	    function animate() {
+	      requestAnimationFrame(animate);
+	
+	      // Update OrbitControls (for auto-rotate and drag interaction)
+	      controls.update();
+	
+	      // Update sprite opacity based on distance from the camera
+	      updateOpacityByDistance();
+	
+	      // Check if the mouse is hovering over a sprite and scale it up
+	      checkIntersections();
+	
+	      renderer.render(scene, camera);
+	    }
+	
+	    // Adjust each sprite's opacity based on its distance to the camera
+	    function updateOpacityByDistance() {
+	      const maxDist = camera.position.length() + 15;
+	      sphereGroup.children.forEach(sprite => {
+	        const distance = sprite.position.distanceTo(camera.position);
+	        let opacity = 1 - distance / maxDist;
+	        if (opacity < 0.1) opacity = 0.1;
+	        sprite.material.opacity = opacity;
+	      });
+	    }
+	
+	    // Check for sprite intersections with the mouse pointer and scale the hovered sprite
+	    function checkIntersections() {
+	      raycaster.setFromCamera(mouse, camera);
+	      const intersects = raycaster.intersectObjects(sphereGroup.children);
+	
+	      if (intersects.length > 0) {
+	        const firstIntersect = intersects[0].object;
+	
+	        if (INTERSECTED !== firstIntersect) {
+	          if (INTERSECTED) {
+	            INTERSECTED.scale.set(2, 2, 1);
+	          }
+	          INTERSECTED = firstIntersect;
+	          INTERSECTED.scale.set(2.5, 2.5, 1);
+	        }
+	      } else {
+	        if (INTERSECTED) {
+	          INTERSECTED.scale.set(2, 2, 1);
+	          INTERSECTED = null;
+	        }
+	      }
+	    }
+	  </script>
+	
+	</body>
+	</html>
+bc2a799ad824e492c0b2fba2a56088e2|file:///Users/mike/src/sphere_thing/index.html|175|7|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers (No Server Needed)</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; background: #333; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	
+	  <!-- Three.js UMD build (r151.3) -->
+	  <script src="https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.min.js"></script>
+	  
+	  <!-- OrbitControls for r151.3 -->
+	  <script src="https://cdn.jsdelivr.net/npm/three@0.151.3/examples/js/controls/OrbitControls.js"></script>
+	
+	  <!-- Main Script -->
+	  <script>
+	    let camera, scene, renderer;
+	    let sphereGroup;
+	    let controls;
+	    let raycaster, mouse;
+	    let INTERSECTED = null; // Track the currently hovered sprite
+	
+	    init();
+	    animate();
+	
+	    function init() {
+	      // Create scene with a dark background
+	      scene = new THREE.Scene();
+	      scene.background = new THREE.Color(0x333333);
+	
+	      // Set up camera
+	      camera = new THREE.PerspectiveCamera(
+	        60,
+	        window.innerWidth / window.innerHeight,
+	        0.1,
+	        1000
+	      );
+	      camera.position.set(0, 0, 30);
+	
+	      // Set up renderer
+	      renderer = new THREE.WebGLRenderer({ antialias: true });
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	      document.body.appendChild(renderer.domElement);
+	
+	      // Set up OrbitControls
+	      controls = new THREE.OrbitControls(camera, renderer.domElement);
+	      controls.enableDamping = true;
+	      controls.dampingFactor = 0.05;
+	      controls.enablePan = false;
+	      controls.autoRotate = true;      // auto-rotation when idle
+	      controls.autoRotateSpeed = 0.6;
+	
+	      // Create a group for the sprites
+	      sphereGroup = new THREE.Group();
+	      scene.add(sphereGroup);
+	
+	      // Create random number sprites on a sphere
+	      const SPHERE_RADIUS = 15;
+	      const NUM_SPRITES = 400;
+	
+	      for (let i = 0; i < NUM_SPRITES; i++) {
+	        const randomNum = Math.floor(Math.random() * 100).toString();
+	        const sprite = createTextSprite(randomNum);
+	
+	        // Random spherical coordinates
+	        const phi = Math.acos(2 * Math.random() - 1);
+	        const theta = 2 * Math.PI * Math.random();
+	
+	        // Convert spherical coordinates to Cartesian
+	        const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	        const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	        const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	        sprite.position.set(x, y, z);
+	        sphereGroup.add(sprite);
+	      }
+	
+	      // Set up raycaster and mouse vector for hover detection
+	      raycaster = new THREE.Raycaster();
+	      mouse = new THREE.Vector2();
+	
+	      // Listen for window resize and pointer movement events
+	      window.addEventListener('resize', onWindowResize, false);
+	      document.addEventListener('pointermove', onPointerMove, false);
+	    }
+	
+	    // Creates a sprite that displays the given text using a canvas texture
+	    function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	      const canvas = document.createElement('canvas');
+	      const ctx = canvas.getContext('2d');
+	      const size = 256;
+	      canvas.width = size;
+	      canvas.height = size;
+	
+	      ctx.fillStyle = color;
+	      ctx.font = `${fontSize}px sans-serif`;
+	      ctx.textAlign = 'center';
+	      ctx.textBaseline = 'middle';
+	      ctx.fillText(text, size / 2, size / 2);
+	
+	      const texture = new THREE.CanvasTexture(canvas);
+	      texture.minFilter = THREE.LinearFilter;
+	
+	      const material = new THREE.SpriteMaterial({
+	        map: texture,
+	        transparent: true,
+	        depthTest: true,
+	        depthWrite: false
+	      });
+	
+	      const sprite = new THREE.Sprite(material);
+	      sprite.scale.set(2, 2, 1);
+	
+	      return sprite;
+	    }
+	
+	    // Adjust the camera and renderer when the window is resized
+	    function onWindowResize() {
+	      camera.aspect = window.innerWidth / window.innerHeight;
+	      camera.updateProjectionMatrix();
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	    }
+	
+	    // Update the mouse coordinates (in normalized device coordinates)
+	    function onPointerMove(event) {
+	      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+	      mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+	    }
+	
+	    // Main animation loop
+	    function animate() {
+	      requestAnimationFrame(animate);
+	
+	      // Update OrbitControls (for auto-rotate and drag interaction)
+	      controls.update();
+	
+	      // Update sprite opacity based on distance from the camera
+	      updateOpacityByDistance();
+	
+	      // Check if the mouse is hovering over a sprite and scale it up
+	      checkIntersections();
+	
+	      renderer.render(scene, camera);
+	    }
+	
+	    // Adjust each sprite's opacity based on its distance to the camera
+	    function updateOpacityByDistance() {
+	      const maxDist = camera.position.length() + 15;
+	      sphereGroup.children.forEach(sprite => {
+	        const distance = sprite.position.distanceTo(camera.position);
+	        let opacity = 1 - distance / maxDist;
+	        if (opacity < 0.1) opacity = 0.1;
+	        sprite.material.opacity = opacity;
+	      });
+	    }
+	
+	    // Check for sprite intersections with the mouse pointer and scale the hovered sprite
+	    function checkIntersections() {
+	      raycaster.setFromCamera(mouse, camera);
+	      const intersects = raycaster.intersectObjects(sphereGroup.children);
+	
+	      if (intersects.length > 0) {
+	        const firstIntersect = intersects[0].object;
+	
+	        if (INTERSECTED !== firstIntersect) {
+	          if (INTERSECTED) {
+	            INTERSECTED.scale.set(2, 2, 1);
+	          }
+	          INTERSECTED = firstIntersect;
+	          INTERSECTED.scale.set(2.5, 2.5, 1);
+	        }
+	      } else {
+	        if (INTERSECTED) {
+	          INTERSECTED.scale.set(2, 2, 1);
+	          INTERSECTED = null;
+	        }
+	      }
+	    }
+	  </script>
+	
+	</body>
+	</html>
+c03992fbc9bd6d26a6ab418d76e8d555|file:///Users/mike/src/sphere_thing/index.html|166|7|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers (UMD + OrbitControls)</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; background: #333; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	
+	<!--
+	  Using r151 for both three.min.js and OrbitControls.js from raw.githack.com:
+	  - "raw.githack.com" sets the correct MIME type (application/javascript).
+	  - This avoids the "nosniff" / MIME mismatch errors that many CDNs have for old examples/js.
+	-->
+	
+	<script src="https://raw.githack.com/mrdoob/three.js/r151/build/three.min.js"></script>
+	<script src="https://raw.githack.com/mrdoob/three.js/r151/examples/js/controls/OrbitControls.js"></script>
+	
+	<script>
+	  let camera, scene, renderer;
+	  let sphereGroup;
+	  let controls;
+	  let raycaster, mouse;
+	  let INTERSECTED = null;
+	
+	  init();
+	  animate();
+	
+	  function init() {
+	    // Scene
+	    scene = new THREE.Scene();
+	    scene.background = new THREE.Color(0x333333);
+	
+	    // Camera
+	    camera = new THREE.PerspectiveCamera(
+	      60,
+	      window.innerWidth / window.innerHeight,
+	      0.1,
+	      1000
+	    );
+	    camera.position.set(0, 0, 30);
+	
+	    // Renderer
+	    renderer = new THREE.WebGLRenderer({ antialias: true });
+	    renderer.setSize(window.innerWidth, window.innerHeight);
+	    document.body.appendChild(renderer.domElement);
+	
+	    // OrbitControls
+	    // (Now properly loaded, no MIME errors.)
+	    controls = new THREE.OrbitControls(camera, renderer.domElement);
+	    controls.enableDamping = true;
+	    controls.dampingFactor = 0.05;
+	    controls.enablePan = false;
+	    controls.autoRotate = true;
+	    controls.autoRotateSpeed = 0.6;
+	
+	    // Create a group for the sprites
+	    sphereGroup = new THREE.Group();
+	    scene.add(sphereGroup);
+	
+	    // Create random number sprites on a sphere
+	    const SPHERE_RADIUS = 15;
+	    const NUM_SPRITES = 400;
+	
+	    for (let i = 0; i < NUM_SPRITES; i++) {
+	      const randomNum = Math.floor(Math.random() * 100).toString();
+	      const sprite = createTextSprite(randomNum);
+	
+	      const phi = Math.acos(2 * Math.random() - 1);
+	      const theta = 2 * Math.PI * Math.random();
+	
+	      const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	      const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	      const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	      sprite.position.set(x, y, z);
+	      sphereGroup.add(sprite);
+	    }
+	
+	    // Raycaster for hover detection
+	    raycaster = new THREE.Raycaster();
+	    mouse = new THREE.Vector2();
+	
+	    // Listeners
+	    window.addEventListener('resize', onWindowResize, false);
+	    document.addEventListener('pointermove', onPointerMove, false);
+	  }
+	
+	  // Create a sprite from text
+	  function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	    const canvas = document.createElement('canvas');
+	    const ctx = canvas.getContext('2d');
+	    const size = 256;
+	    canvas.width = size;
+	    canvas.height = size;
+	
+	    ctx.fillStyle = color;
+	    ctx.font = `${fontSize}px sans-serif`;
+	    ctx.textAlign = 'center';
+	    ctx.textBaseline = 'middle';
+	    ctx.fillText(text, size / 2, size / 2);
+	
+	    const texture = new THREE.CanvasTexture(canvas);
+	    texture.minFilter = THREE.LinearFilter;
+	
+	    const material = new THREE.SpriteMaterial({
+	      map: texture,
+	      transparent: true,
+	      depthTest: true,
+	      depthWrite: false
+	    });
+	
+	    const sprite = new THREE.Sprite(material);
+	    sprite.scale.set(2, 2, 1);
+	
+	    return sprite;
+	  }
+	
+	  function onWindowResize() {
+	    camera.aspect = window.innerWidth / window.innerHeight;
+	    camera.updateProjectionMatrix();
+	    renderer.setSize(window.innerWidth, window.innerHeight);
+	  }
+	
+	  function onPointerMove(event) {
+	    // convert to normalized device coordinates
+	    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+	    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+	  }
+	
+	  function animate() {
+	    requestAnimationFrame(animate);
+	    controls.update();               // auto-rotate + drag
+	    updateOpacityByDistance();       // dim far sprites
+	    checkIntersections();            // hover detection
+	    renderer.render(scene, camera);
+	  }
+	
+	  function updateOpacityByDistance() {
+	    const maxDist = camera.position.length() + 15;
+	    sphereGroup.children.forEach(sprite => {
+	      const distance = sprite.position.distanceTo(camera.position);
+	      let opacity = 1 - distance / maxDist;
+	      if (opacity < 0.1) opacity = 0.1;
+	      sprite.material.opacity = opacity;
+	    });
+	  }
+	
+	  function checkIntersections() {
+	    raycaster.setFromCamera(mouse, camera);
+	    const intersects = raycaster.intersectObjects(sphereGroup.children);
+	
+	    if (intersects.length > 0) {
+	      const firstIntersect = intersects[0].object;
+	      if (INTERSECTED !== firstIntersect) {
+	        if (INTERSECTED) {
+	          INTERSECTED.scale.set(2, 2, 1);
+	        }
+	        INTERSECTED = firstIntersect;
+	        INTERSECTED.scale.set(2.5, 2.5, 1);
+	      }
+	    } else {
+	      if (INTERSECTED) {
+	        INTERSECTED.scale.set(2, 2, 1);
+	        INTERSECTED = null;
+	      }
+	    }
+	  }
+	</script>
+	
+	</body>
+	</html>
+ccb06f1dc3e878ac0fb7e95d55f638d5|file:///Users/mike/src/sphere_thing/index.html|132|7|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers (UMD + Local OrbitControls)</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; background: #333; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	
+	  <!-- UMD build of Three.js (r151.3) -->
+	  <script src="https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.min.js"></script>
+	  
+	  <!-- OrbitControls, self-hosted locally (make sure OrbitControls.js is in the same folder) -->
+	  <script src="./OrbitControls.js"></script>
+	
+	  <!-- Our main script -->
+	  <script>
+	    let camera, scene, renderer;
+	    let sphereGroup;
+	    let controls;
+	    let raycaster, mouse;
+	    let INTERSECTED = null;
+	
+	    init();
+	    animate();
+	
+	    function init() {
+	      // Create scene
+	      scene = new THREE.Scene();
+	      scene.background = new THREE.Color(0x333333);
+	
+	      // Camera
+	      camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+	      camera.position.set(0, 0, 30);
+	
+	      // Renderer
+	      renderer = new THREE.WebGLRenderer({ antialias: true });
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	      document.body.appendChild(renderer.domElement);
+	
+	      // OrbitControls
+	      controls = new THREE.OrbitControls(camera, renderer.domElement);
+	      controls.enableDamping = true;
+	      controls.dampingFactor = 0.05;
+	      controls.enablePan = false;
+	      controls.autoRotate = true;
+	      controls.autoRotateSpeed = 0.6;
+	
+	      // Create a group for the random-number sprites
+	      sphereGroup = new THREE.Group();
+	      scene.add(sphereGroup);
+	
+	      // Populate the sphere with sprites
+	      const SPHERE_RADIUS = 15;
+	      const NUM_SPRITES = 400;
+	
+	      for (let i = 0; i < NUM_SPRITES; i++) {
+	        const randomNum = Math.floor(Math.random() * 100).toString();
+	        const sprite = createTextSprite(randomNum);
+	
+	        // Random spherical coordinates
+	        const phi = Math.acos(2 * Math.random() - 1);
+	        const theta = 2 * Math.PI * Math.random();
+	        
+	        // Convert to Cartesian
+	        const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	        const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	        const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	        sprite.position.set(x, y, z);
+	        sphereGroup.add(sprite);
+	      }
+	
+	      // Raycaster for hover detection
+	      raycaster = new THREE.Raycaster();
+	      mouse = new THREE.Vector2();
+	
+	      // Listeners
+	      window.addEventListener('resize', onWindowResize, false);
+	      document.addEventListener('pointermove', onPointerMove, false);
+	    }
+	
+	    function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	      const canvas = document.createElement('canvas');
+	      const ctx = canvas.getContext('2d');
+	      const size = 256;
+	      canvas.width = size;
+	      canvas.height = size;
+	
+	      ctx.fillStyle = color;
+	      ctx.font = `${fontSize}px sans-serif`;
+	      ctx.textAlign = 'center';
+	      ctx.textBaseline = 'middle';
+	      ctx.fillText(text, size / 2, size / 2);
+	
+	      const texture = new THREE.CanvasTexture(canvas);
+	      texture.minFilter = THREE.LinearFilter;
+	
+	      const material = new THREE.SpriteMaterial({
+	        map: texture,
+	        transparent: true,
+	        depthTest: true,
+	        depthWrite: false
+	      });
+	
+	      const sprite = new THREE.Sprite(material);
+	      sprite.scale.set(2, 2, 1);
+	      return sprite;
+	    }
+	
+	    function onWindowResize() {
+	      camera.aspect = window.innerWidth / window.innerHeight;
+	      camera.updateProjectionMatrix();
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	    }
+	
+	    function onPointerMove(event) {
+	      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+	      mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+	    }
+	
+	    function animate() {
+	      requestAnimationFrame(animate);
+	      controls.update();
+	      updateOpacityByDistance();
+	      checkIntersections();
+	      renderer.render(scene, camera);
+	    }
+	
+	    function updateOpacityByDistance() {
+	      const maxDist = camera.position.length() + 15;
+	      sphereGroup.children.forEach(sprite => {
+	        const distance = sprite.position.distanceTo(camera.position);
+	        let opacity = 1 - distance / maxDist;
+	        if (opacity < 0.1) opacity = 0.1;
+	        sprite.material.opacity = opacity;
+	      });
+	    }
+	
+	    function checkIntersections() {
+	      raycaster.setFromCamera(mouse, camera);
+	      const intersects = raycaster.intersectObjects(sphereGroup.children);
+	
+	      if (intersects.length > 0) {
+	        const firstIntersect = intersects[0].object;
+	        if (INTERSECTED !== firstIntersect) {
+	          if (INTERSECTED) {
+	            INTERSECTED.scale.set(2, 2, 1);
+	          }
+	          INTERSECTED = firstIntersect;
+	          INTERSECTED.scale.set(2.5, 2.5, 1);
+	        }
+	      } else {
+	        if (INTERSECTED) {
+	          INTERSECTED.scale.set(2, 2, 1);
+	          INTERSECTED = null;
+	        }
+	      }
+	    }
+	  </script>
+	
+	</body>
+	</html>
+3ccf680d03b4596a8fda33e2964c950e|file:///Users/mike/src/sphere_thing/index.html|1|1|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	<script type="module">
+	  import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.module.js';
+	
+	  // ----- SCENE, CAMERA, RENDERER SETUP -----
+	  const scene = new THREE.Scene();
+	
+	  // Set up camera: field of view, aspect ratio, near plane, far plane
+	  const camera = new THREE.PerspectiveCamera(
+	    60,
+	    window.innerWidth / window.innerHeight,
+	    0.1,
+	    1000
+	  );
+	  camera.position.z = 30;  // pull the camera back
+	
+	  const renderer = new THREE.WebGLRenderer({ antialias: true });
+	  renderer.setSize(window.innerWidth, window.innerHeight);
+	  document.body.appendChild(renderer.domElement);
+	
+	  // Handle window resize
+	  window.addEventListener('resize', () => {
+	    camera.aspect = window.innerWidth / window.innerHeight;
+	    camera.updateProjectionMatrix();
+	    renderer.setSize(window.innerWidth, window.innerHeight);
+	  }, false);
+	
+	  // ----- CREATE A GROUP TO HOLD OUR RANDOM-NUMBER SPRITES -----
+	  const sphereGroup = new THREE.Group();
+	  scene.add(sphereGroup);
+	
+	  // Parameters for our sphere
+	  const SPHERE_RADIUS = 15;
+	  const NUM_SPRITES   = 400;
+	
+	  // Utility: Creates a Sprite with given text
+	  function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	    // Create a tiny 2D canvas to draw the text
+	    const canvas = document.createElement('canvas');
+	    const ctx = canvas.getContext('2d');
+	    const size = 256; // for sharper text
+	    canvas.width = size;
+	    canvas.height = size;
+	
+	    // Draw text centered
+	    ctx.fillStyle = color;
+	    ctx.font = `${fontSize}px sans-serif`;
+	    ctx.textAlign = 'center';
+	    ctx.textBaseline = 'middle';
+	    ctx.fillText(text, size / 2, size / 2);
+	
+	    // Use the canvas as a texture
+	    const texture = new THREE.CanvasTexture(canvas);
+	    texture.minFilter = THREE.LinearFilter; // keep text sharp when scaled
+	
+	    // Create a sprite material
+	    const material = new THREE.SpriteMaterial({
+	      map: texture,
+	      transparent: true,
+	      depthTest: true,
+	      depthWrite: false
+	    });
+	
+	    // Create the sprite
+	    const sprite = new THREE.Sprite(material);
+	    // Scale down so the text isn't huge
+	    sprite.scale.set(2, 2, 1);
+	
+	    return sprite;
+	  }
+	
+	  // Randomly place sprites on the surface of a sphere
+	  for (let i = 0; i < NUM_SPRITES; i++) {
+	    // Generate a random number
+	    const randomNum = Math.floor(Math.random() * 100).toString();
+	
+	    // Create the sprite
+	    const sprite = createTextSprite(randomNum);
+	
+	    // Randomly pick a point on the sphere using spherical coordinates
+	    const phi = Math.acos(2 * Math.random() - 1);  // 0..pi
+	    const theta = 2 * Math.PI * Math.random();     // 0..2pi
+	
+	    // Convert spherical coords to Cartesian (x,y,z)
+	    const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	    const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	    const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	    sprite.position.set(x, y, z);
+	    sphereGroup.add(sprite);
+	  }
+	
+	  // ----- ANIMATION LOOP -----
+	  const clock = new THREE.Clock();
+	
+	  function animate() {
+	    requestAnimationFrame(animate);
+	
+	    const elapsed = clock.getElapsedTime();
+	
+	    // Slowly rotate the entire group
+	    sphereGroup.rotation.y = elapsed * 0.2;
+	    sphereGroup.rotation.x = Math.sin(elapsed * 0.1) * 0.1;
+	
+	    // Update each sprite's opacity based on its distance from the camera
+	    sphereGroup.children.forEach(sprite => {
+	      const distance = sprite.position.distanceTo(camera.position);
+	      // The maximum distance from camera to the far side of the sphere
+	      const maxDist = camera.position.z + SPHERE_RADIUS;
+	      // A simple linear fade: front gets opacity ~1, back gets ~0
+	      let opacity = 1 - distance / maxDist;
+	      if (opacity < 0.1) opacity = 0.1; // don't go fully invisible
+	      sprite.material.opacity = opacity;
+	    });
+	
+	    renderer.render(scene, camera);
+	  }
+	
+	  animate();
+	</script>
+	</body>
+	</html>
+d4c4a3911a26c58ec68587c07ff3a3ca|file:///Users/mike/src/sphere_thing/index.html|835|7|V|html
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>3D Sphere of Random Numbers</title>
+	  <style>
+	    body { margin: 0; overflow: hidden; }
+	    canvas { display: block; }
+	  </style>
+	</head>
+	<body>
+	<script type="module">
+	  import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.module.js';
+	
+	  // ----- SCENE, CAMERA, RENDERER SETUP -----
+	  const scene = new THREE.Scene();
+	
+	  // Set up camera: field of view, aspect ratio, near plane, far plane
+	  const camera = new THREE.PerspectiveCamera(
+	    60,
+	    window.innerWidth / window.innerHeight,
+	    0.1,
+	    1000
+	  );
+	  camera.position.z = 30;  // pull the camera back
+	
+	  const renderer = new THREE.WebGLRenderer({ antialias: true });
+	  renderer.setSize(window.innerWidth, window.innerHeight);
+	  document.body.appendChild(renderer.domElement);
+	
+	  // Handle window resize
+	  window.addEventListener('resize', () => {
+	    camera.aspect = window.innerWidth / window.innerHeight;
+	    camera.updateProjectionMatrix();
+	    renderer.setSize(window.innerWidth, window.innerHeight);
+	  }, false);
+	
+	  // ----- CREATE A GROUP TO HOLD OUR RANDOM-NUMBER SPRITES -----
+	  const sphereGroup = new THREE.Group();
+	  scene.add(sphereGroup);
+	
+	  // Parameters for our sphere
+	  const SPHERE_RADIUS = 15;
+	  const NUM_SPRITES   = 400;
+	
+	  // Utility: Creates a Sprite with given text
+	  function createTextSprite(text, color = '#ffffff', fontSize = 64) {
+	    // Create a tiny 2D canvas to draw the text
+	    const canvas = document.createElement('canvas');
+	    const ctx = canvas.getContext('2d');
+	    const size = 256; // for sharper text
+	    canvas.width = size;
+	    canvas.height = size;
+	
+	    // Draw text centered
+	    ctx.fillStyle = color;
+	    ctx.font = `${fontSize}px sans-serif`;
+	    ctx.textAlign = 'center';
+	    ctx.textBaseline = 'middle';
+	    ctx.fillText(text, size / 2, size / 2);
+	
+	    // Use the canvas as a texture
+	    const texture = new THREE.CanvasTexture(canvas);
+	    texture.minFilter = THREE.LinearFilter; // keep text sharp when scaled
+	
+	    // Create a sprite material
+	    const material = new THREE.SpriteMaterial({
+	      map: texture,
+	      transparent: true,
+	      depthTest: true,
+	      depthWrite: false
+	    });
+	
+	    // Create the sprite
+	    const sprite = new THREE.Sprite(material);
+	    // Scale down so the text isn't huge
+	    sprite.scale.set(2, 2, 1);
+	
+	    return sprite;
+	  }
+	
+	  // Randomly place sprites on the surface of a sphere
+	  for (let i = 0; i < NUM_SPRITES; i++) {
+	    // Generate a random number
+	    const randomNum = Math.floor(Math.random() * 100).toString();
+	
+	    // Create the sprite
+	    const sprite = createTextSprite(randomNum);
+	
+	    // Randomly pick a point on the sphere using spherical coordinates
+	    const phi = Math.acos(2 * Math.random() - 1);  // 0..pi
+	    const theta = 2 * Math.PI * Math.random();     // 0..2pi
+	
+	    // Convert spherical coords to Cartesian (x,y,z)
+	    const x = SPHERE_RADIUS * Math.sin(phi) * Math.cos(theta);
+	    const y = SPHERE_RADIUS * Math.sin(phi) * Math.sin(theta);
+	    const z = SPHERE_RADIUS * Math.cos(phi);
+	
+	    sprite.position.set(x, y, z);
+	    sphereGroup.add(sprite);
+	  }
+	
+	  // ----- ANIMATION LOOP -----
+	  const clock = new THREE.Clock();
+	
+	  function animate() {
+	    requestAnimationFrame(animate);
+	
+	    const elapsed = clock.getElapsedTime();
+	
+	    // Slowly rotate the entire group
+	    sphereGroup.rotation.y = elapsed * 0.2;
+	    sphereGroup.rotation.x = Math.sin(elapsed * 0.1) * 0.1;
+	
+	    // Update each sprite's opacity based on its distance from the camera
+	    sphereGroup.children.forEach(sprite => {
+	      const distance = sprite.position.distanceTo(camera.position);
+	      // The maximum distance from camera to the far side of the sphere
+	      const maxDist = camera.position.z + SPHERE_RADIUS;
+	      // A simple linear fade: front gets opacity ~1, back gets ~0
+	      let opacity = 1 - distance / maxDist;
+	      if (opacity < 0.1) opacity = 0.1; // don't go fully invisible
+	      sprite.material.opacity = opacity;
+	    });
+	
+	    renderer.render(scene, camera);
+	  }
+	
+	  animate();
+	</script>
+	</body>
+	</html>
+	
+002ed31cb2395f558e330770d8c0f47b|file:///Users/mike/.config/nvim/init.vim|25|1|V|vim
+	Plug 
+156fd75291febff0d5cb3866965dded2|file:///Users/mike/.config/nvim/init.vim|57|47|V|vim
+	Plug 'ojroques/vim-oscyank'
+15db1594d92b00ab26542fc356f4bb78|file:///Users/mike/.config/nvim/init.vim|280|1|V|vim
+	" Fine Cmdline
+	"
+	  vim.keymap.set('n', ':', '<cmd>FineCmdline<CR>')
+	
+	
+d7511e5f7f87b0bf4261ff1abd2bb1ca|file:///Users/mike/.config/nvim/init.vim|23|1|V|vim
+	Plug 'MunifTanjim/nui.nvim'
+	Plug 'VonHeikemen/fine-cmdline.nvim'
+430ef8f65202ffe51f57bbd778470880|file:///Users/mike/.config/nvim/init.vim|23|1|V|vim
+	Plug 'jparise/vim-graphql'
+	Plug 'APZelos/blamer.nvim'
+2810bcc288845965d13296cb93db054e|file:///Users/mike/.config/nvim/init.vim|23|15|V|vim
+	Plug 'MunifTanjim/nui.nvim'
+1286e401a8daa41ae117af15d187de4f|file:///Users/mike/.config/nvim/init.vim|23|15|V|vim
+	Plug 'VonHeikemen/fine-cmdline.nvim'
+fd356c8464ba0140d22d289ee1eca62c|file:///Users/mike/.config/nvim/init.vim|279|1|V|vim
+	" CmdPalette
+4eb69f46ed3c21fce49aedca39d7edab|file:///Users/mike/.config/nvim/init.vim|279|1|V|vim
+	require("cmdpalette").setup({})
+f97e05d89aed010797e8b1d338e0f9d0|file:///Users/mike/.config/nvim/init.vim|698|1|V|vim
+	require('gitsigns').setup()
+a4fd7b11c8f9299dfc4cf86ccf80002a|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|12|25|V|typescript
+	  private readonly baseURL = 'https://api.openai.com/v1/chat/completions';
+3d79ad752f3140eb31d31a134a592cd8|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|12|25|V|typescript
+	      // model: 'gpt-3.5-turbo-0613',
+93473a7344419b15c4219cc2b6c64c6f|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|1|1|v|typescript
+	import
+8617a6c09eb76d9882db8ee31a420654|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|1|1|v|typescript
+	import 
+1931a940f89492d8df6b1bb19ed33fc8|file:///Users/mike/.config/nvim/init.vim|52|14|V|vim
+	Plug 'github/copilot.vim'
+5ca1482e87e370fc9b2359be7fac01f1|file:///Users/mike/.config/nvim/init.vim|19|1|V|vim
+	" Plug 'peitalin/vim-jsx-typescript'
+c2e595272255f9752933a81ec73becf0|file:///Users/mike/.config/nvim/init.vim|26|1|V|vim
+	Plug 'yuezk/vim-js'
+2bfca4a241051861f6f929c19a90b243|file:///Users/mike/.config/nvim/init.vim|26|1|V|vim
+	Plug 'MaxMEllon/vim-jsx-pretty'
+d38b24ef60f8bb96a3c49161ad9d8797|file:///Users/mike/.config/nvim/init.vim|26|1|V|vim
+	Plug 'peitalin/vim-jsx-typescript'
+97adaad46ec3e1027ce7eec0fa5bde97|file:///Users/mike/.config/nvim/init.vim|27|1|V|vim
+	Plug 'HerringtonDarkholme/yats.vim'
+e0ac3f058df3170bd1bcfc7cba682f03|file:///Users/mike/.config/nvim/init.vim|48|20|V|vim
+	Plug 'evanleck/vim-svelte'
+40831066cc7036705d69653c614a6d39|file:///Users/mike/.config/nvim/init.vim|34|20|V|vim
+	Plug 'lilyball/vim-swift'
+afd347f40f0be8c7d578a3c0fef7fdf8|file:///Users/mike/.config/nvim/init.vim|38|20|V|vim
+	Plug 'jph00/swift-apple'
+11a67a9bc5e1472fa6df1a47119fd381|file:///Users/mike/.config/nvim/init.vim|69|1|V|vim
+	autocmd! User avante.nvim lua << EOF
+	require('avante').setup()
+	EOF
+89f39d3ad1533656e6441adfa33ae4d5|file:///Users/mike/.config/nvim/init.vim|710|1|V|vim
+	require('avante').setup()
+71666b7488f36495b48190411d354a3f|file:///Users/mike/.config/nvim/init.vim|708|26|v|vim
+	lua << EOF
+5198f7450aa059f4cdac37d21ff5af2e|file:///Users/mike/.config/nvim/init.vim|708|1|V|vim
+	autocmd! User avante.nvim 
+ebecde888b963fecf87d1f1fe442f14b|file:///Users/mike/.config/nvim/init.vim|707|1|V|vim
+	autocmd User avante.nvim lua require('avante').setup()
+124177335bfbe2b0e145f051959b9fa2|file:///Users/mike/.config/nvim/init.vim|706|1|v|vim
+	autocmd Use
+37975fc86ee3a4ba0ac23b690b808c22|file:///Users/mike/.config/nvim/init.vim|706|1|v|vim
+	r avante.nvim lua 
+e4099a4ef8c1b70ce67e9f135a0d539a|file:///Users/mike/.config/nvim/init.vim|43|36|v|vim
+	or ava
+a31195783361c2b11c9a7563f7c8c4aa|file:///Users/mike/.config/nvim/init.vim|43|36|v|vim
+	nte.
+eb85abbe9c32d7ecafbd9f2d77b25fa3|file:///Users/mike/.config/nvim/init.vim|43|36|v|vim
+	nvim lua 
+301c52a6b94c7463e9446a1a1b382939|file:///Users/mike/.config/nvim/init.vim|10|1|V|vim
+	else " we are plain old vim
+ea444b1162580ed6b1f7fdf7101b5042|file:///Users/mike/.config/nvim/init.vim|3|1|V|vim
+	" git-plug plugin manager ______________________________________________________
+8f9bfe9d1345237cb3b2b205864da075|file:///Users/mike/.config/nvim/init.vim|69|9|v|vim
+	User
+580499e9115e692485600583217d8d29|file:///Users/mike/.config/nvim/init.vim|69|20|v|vim
+	avante.nvim 
+e7b0b6ac9fcfbaf89ac050b0d5d6aad4|file:///Users/mike/.config/nvim/init.vim|69|14|V|vim
+	autocmd VimEnter * lua require('avante').setup()
+19b53bd657be6c68054681a2c555adad|file:///Users/mike/.config/nvim/init.vim|67|1|V|vim
+	
+	"
+	"
+	" Yay, pass source=true if you want to build from source
+	Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+	autocmd VimEnter * lua require('avante').setup()
+e7f0d8e6d9375d7369eef065fab42383|file:///Users/mike/.config/nvim/init.vim|68|1|V|vim
+	autocmd! User avante.nvim lua << EOF
+	require('avante').setup()
+	EOF
+	
+3db4df6447d73394ceb1fcefd11a7286|file:///Users/mike/.config/nvim/init.vim|66|40|V|vim
+	Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+	
+f6140433d9809504a5576ce08be9c918|file:///Users/mike/.config/nvim/init.vim|702|2|V|vim
+	
+	//require("cmdpalette").setup({})
+	//vim.keymap.set("n", ":", "<Plug>(cmdpalette)")
+	
+309c25fa1572d301910b7ebcb4d6ed5c|file:///Users/mike/.config/nvim/init.vim|67|1|V|vim
+	Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+07eb0e3f9448c419f1a8dbcd41eb6466|file:///Users/mike/.zshrc|167|167|v|zsh
+	vim_backups"
+	  
+	    # Create the backup directory if it doesn't exist
+	    mkdir -p $backup_dir
+	  
+	    # Get current date and time
+	    datetime=$(date '+%Y%m%d%H%M%S')
+	
+	    # Create the backup
+	    tar -czf "$backup_dir/nvim_config_backup_$datetime.tar.gz" -C "$HOME/.config" ./nvim -C "$HOME" ./.zshrc
+	
+	    # Get the count of backup files
+	    file_count=$(ls -1 $backup_dir/nvim_config_backup_*.tar.gz | wc -l)
+	
+	    # If there are more than 5 backup files, remove the oldest ones
+	    if (( file_count > 5 )); then
+	      ls -1t $backup_dir/nvim_config_backup_*.tar.gz | tail -n +6 | xargs -I {} rm -f -- {}
+	    fi
+	
+	alias vim=nvim
+	alias killport3000='lsof -i :3000 | awk '\''NR!=1 {print $2}'\'' | xargs kill'
+	
+	# Added by LM Studio CLI (lms)
+	export PATH="$PATH:/Users/mike/.cache/lm-studio/bin"
+	
+	
+	# Avante for NeoVim
+	# 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
+fee5b6c329d420ed08bf41edf7c820e4|file:///Users/mike/.zshrc|167|23|v|zsh
+	vim_backups"      # Create the backup directory if it doesn't exist    mkdir -p $backup_dir      # Get current date and time    datetime=$(date '+%Y%m%d%H%M%S')    # Create the backup    tar -czf "$backup_dir/nvim_config_backup_$datetime.tar.gz" -C "$HOME/.config" ./nvim -C "$HOME" ./.zshrc    # Get the count of backup files    file_count=$(ls -1 $backup_dir/nvim_config_backup_*.tar.gz | wc -l)    # If there are more than 5 backup files, remove the oldest ones    if (( file_count > 5 )); then      ls -1t $backup_dir/nvim_config_backup_*.tar.gz | tail -n +6 | xargs -I {} rm -f -- {}    fialias vim=nvimalias killport3000='lsof -i :3000 | awk '\''NR!=1 {print $2}'\'' | xargs kill'# Added by LM Studio CLI (lms)export PATH="$PATH:/Users/mike/.cache/lm-studio/bin"# Avante for NeoVim# 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
+dd8539db62077fec425ff26b0f155450|file:///Users/mike/.config/nvim/init.vim|68|14|V|vim
+	autocmd! User avante.nvim lua require("avante").setup()
+a80f80e9b2e0b4a48141f6f4c3554237|file:///Users/mike/.config/nvim/init.vim|703|2|V|vim
+	map <silent> <space>aa :AvanteChat<CR>
+	map <silent> <space>ar :AvanteRefresh<CR>
+	map <silent> <space>af :AvanteFocus<CR>
+	map <silent> <space>ae :AvanteEdit<CR>
+	
+f8252410fe78dfa4bfaad8934a28e4dc|file:///Users/mike/.config/nvim/init.vim|69|1|v|vim
+	autocmd User avante.nvim 
+3f47ec4193fea9bf1566e1a45a8a592f|file:///Users/mike/.config/nvim/init.vim|72|3|V|vim
+	function SetupAvante()
+c444858e0aaeb727da73d2eae62321ad|file:///Users/mike/.config/nvim/init.vim|80|15|v|vim
+	leader
+57e7633f8d58cf9b926b47b6bd980fcc|file:///Users/mike/.config/nvim/init.vim|81|7|V|vim
+	      edit = "<space>qe",
+ff2364a0be3d20e46cc69efb36afe9a5|file:///Users/mike/.config/nvim/init.vim|80|15|v|vim
+	space
+61bb1018096d7393829040467456233d|file:///Users/mike/.config/nvim/init.vim|83|7|V|vim
+	      refresh = "<leader>cr"
+a062df543aaafd0c60678578a4379339|file:///Users/mike/.config/nvim/init.vim|79|4|V|vim
+	    mappings = {
+	      chat = "<space>dc"
+	      ask = "<space>da",
+	      edit = "<space>de",
+	      refresh = "<space>dr"
+	    },
+b4d7066e3b1f9631351bf653af31dd95|file:///Users/mike/.config/nvim/init.vim|82|7|V|vim
+	      edit = "<leader>ve",
+9603bcd4ca36e4a7dfd411f07d4e96a4|file:///Users/mike/.config/nvim/init.vim|79|16|V|vim
+	    windows = {},
+53ef37c8d372cd689bb901218a8b1c76|file:///Users/mike/.config/nvim/init.vim|68|1|V|vim
+	" autocmd! User avante.nvim lua require("avante").setup()
+c38c30b40fedf56eecb8fae8320c2756|file:///Users/mike/.config/nvim/init.vim|69|1|V|vim
+	lua vim.notify("hello world")
+f47dd338304ed580b372ebde00709724|file:///Users/mike/.config/nvim/init.vim|86|1|V|vim
+	  vim.notify("SetupAvante has run", vim.log.levels.INFO)
+c6b8427066bbcf5ea2a3991a7fca8ee0|file:///Users/mike/.config/nvim/init.vim|90|19|v|vim
+	avante.nvim
+6d9c7b6d66e90657453a3d197431846f|file:///Users/mike/.config/nvim/init.vim|68|1|V|vim
+	
+	lua << EOF
+	function SetupAvante()
+	  vim.notify("SetupAvante has run", vim.log.levels.INFO)
+	  require("avante").setup({
+	    provider = "openai",
+	    openai = {
+	      api_key = os.getenv("OPENAI_API_KEY"),
+	      model = "o3-mini-high", -- Use o3-mini-high instead of the default
+	      temperature = 0.2,
+	    },
+	    windows = {},
+	    mappings = {
+	      chat = "<space>cc",
+	      ask = "<leader>v",
+	      edit = "<leader>ve",
+	      refresh = "<leade>vr"
+	    },avante.nvim
+	  })
+	end
+	EOF
+	
+	autocmd! User avante.nvim lua SetupAvante()
+7482f9a538d4c04f8ddabd189e289cbb|file:///Users/mike/.config/nvim/init.vim|68|1|V|vim
+	
+	autocmd VimEnter * lua vim.schedule(function()  require("avante").setup({    provider = "openai",    openai = {      api_key = os.getenv("OPENAI_API_KEY"),      model = "o3-mini-high",      temperature = 0.2,    },    windows = {},    mappings = {      ask = "<leader>qa",      edit = "<leader>qe",      refresh = "<leader>qr"    },  })  vim.notify("SetupAvante has run", vim.log.levels.INFO)end)
+462ed47ca901feb8d18ef851cd5a8032|file:///Users/mike/.config/nvim/init.vim|69|178|v|vim
+	-high
+cdbea5f07633e88529f386e1ec9440c7|file:///Users/mike/.config/nvim/init.vim|87|3|V|vim
+	
+	"
+	"
+	"
+	"
+	"
+	"
+	"
+70a2618841be507a3850c3d3e1f859dd|file:///Users/mike/.config/nvim/init.vim|90|1|V|vim
+	-- In a separate Lua block or file:
+fbf566d0025ea4a378c62ba288609363|file:///Users/mike/.config/nvim/init.vim|105|1|V|vim
+	
+	  vim.notify("SetupAvante has run", vim.log.levels.INFO)end
+db7b656c4e1a5e722defdf011ae8b69c|file:///Users/mike/.config/nvim/init.vim|69|1|V|vim
+	" autocmd VimEnter * lua vim.schedule(function()  require("avante").setup({    provider = "openai",    openai = {      api_key = os.getenv("OPENAI_API_KEY"),      model = "o3-mini",      temperature = 0.2,    },    windows = {},    mappings = {      ask = "<leader>qa",      edit = "<leader>qe",      refresh = "<leader>qr"    },  })  vim.notify("SetupAvante has run", vim.log.levels.INFO)end)
+	
+	
+	
+	
+997604c0f105a8b5ab97de7757222c78|file:///Users/mike/.config/nvim/init.vim|69|1|V|vim
+	
+	
+	
+	
+	" post install (yarn install | npm install) then load plugin only for editing
+2c04f98759d784b2d79bd72e8df2457c|file:///Users/mike/.config/nvim/init.vim|87|7|V|vim
+	       
+42805f7bc2de824ebe3e63a0853d3674|file:///Users/mike/.config/nvim/init.vim|87|14|V|vim
+	      api_key = os.getenv("OPENAI_API_KEY"),
+9307992cc0145c5d5598e4a2f5880ba6|file:///Users/mike/.config/nvim/init.vim|54|1|V|vim
+	" Deps
+	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'stevearc/dressing.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'MunifTanjim/nui.nvim'
+	Plug 'MeanderingProgrammer/render-markdown.nvim'
+	
+	" Option.al deps
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'nvim-tree/nvim-web-devicons' "or Plug 'eechasnovski/mini.icons'
+	Plug 'HakonHarnes/img-clip.nvim'
+	Plug 'zbirenbaum/copilot.lua'
+	
+	Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+e0996a02605517f8123f7df1ebe036f4|file:///Users/mike/.config/nvim/init.vim|78|1|V|vim
+	"
+	" Avante Setup
+	"
+	lua << EOF
+	function SetupAvante()
+	   -- Configure render-markdown.nvim to handle both markdown and Avante filetypes  
+	  require('render-markdown').setup({    
+	    file_types = { "markdown", "Avante" },
+	  })
+	  require("avante").setup({
+	    provider = "openai",
+	    openai = {
+	      endpoint = "https://api.openai.com/v1",
+	      model = "o3-mini",
+	      timeout = 3000,
+	      temperature = 0,
+	      max_tokens = 4096,
+	      reasoning_effort = "high",
+	    },
+	    windows = {},
+	    mappings = {
+	      ask = "<leader>qa",
+	      edit = "<leader>qe",
+	      refresh = "<leader>qr"
+	    },
+	  })
+	end
+	EOF
+	
+	autocmd VimEnter * lua SetupAvante()
+	
+3941e1e3bad5d2e00ee2e8511cc3ccbe|file:///Users/mike/.config/nvim/init.vim|75|2|v|vim
+	all plug#end()
+48991daf0362de66fffdbc850b452dd3|file:///Users/mike/.config/nvim/init.vim|71|1|V|vim
+	" Plug 'prettier/vim-prettier', {
+	"   \ 'do': 'yarn install',
+497d5a85ebae7935cb87ef72e9a2987a|file:///Users/mike/.config/nvim/init.vim|74|1|V|vim
+	
+	call plug#end()
+0cf31b2c283ce3431794586df7b0996d|file:///Users/mike/.config/nvim/init.vim|139|7|v|vim
+	    
+33028ce3930781c56d63b0ad1dd80fda|file:///Users/mike/.config/nvim/init.vim|1|1|V|vim
+	" This vimrc attempts to be nvim/vim agnostic, but it's a better experience in nvim.
+	
+770c1a66a4c315291272ba40a463ea6b|file:///Users/mike/.config/nvim/init.vim|7|5|V|vim
+	else
+		" because plain old vim doesn't change the cursor shape for us in insert mode
+a70342f205af5fa0ee3a46d1b3879ee1|file:///Users/mike/.config/nvim/init.vim|5|3|V|vim
+	    call plug#begin(stdpath('data') . '/plugged')
+	    Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+68934a3e9455fa72420237eb05902327|file:///Users/mike/.config/nvim/init.vim|80|20|v|vim
+	false
+9383784b9e83d9f687ea09ef278e4aad|file:///Users/mike/.config/nvim/init.vim|82|9|V|vim
+	        border = "rounded",
+	        focus_on_apply = "ours",
+b326b5062b2f0e69046810717534cb09|file:///Users/mike/.config/nvim/init.vim|80|20|v|vim
+	true
+1e16818f3c3f8e1f161f143ae274a26e|file:///Users/mike/.config/nvim/init.vim|85|6|V|vim
+	      chat = {
+	        floating = false,
+	      }
+7c0410351b1dfc51d39ce3e0d26fa869|file:///Users/mike/.config/nvim/init.vim|87|14|v|vim
+	<C-a>a
+c72f44a000aadab2eb3809a68b0cfe12|file:///Users/mike/.config/nvim/init.vim|88|15|v|vim
+	C-a>c
+5fe871bd9ee20ed4ae6ef0cc0e3eccd2|file:///Users/mike/.config/nvim/init.vim|89|15|v|vim
+	<C-a>e
+41d23debf0a48be5481d844dacac5b0d|file:///Users/mike/.config/nvim/init.vim|90|18|v|vim
+	<C-a>r
+c628df4261c99d4b7e43899630ad2cd8|file:///Users/mike/.config/nvim/init.vim|51|1|V|vim
+	Plug 'HakonHarnes/img-clip.nvim'
+	Plug 'zbirenbaum/copilot.lua'
+179a1a6a16a5d17d40f2815ddc5ac7f8|file:///Users/mike/.config/nvim/init.vim|57|1|V|vim
+	" Avante Setup _________________________________________________________________
+	lua << EOF
+ef0381f6711112338d6d4b21585f1cce|file:///Users/mike/.config/nvim/init.vim|62|5|V|vim
+	  })
+	  require("avante").setup({
+6c2196eb277bb807468a1f1c45ac811f|file:///Users/mike/.config/nvim/init.vim|63|3|V|vim
+	  require("avante").setup({
+	    provider = "openai",
+d7f5939b736aa15bc3e42f756d0b574c|file:///Users/mike/.config/nvim/init.vim|55|1|v|vim
+	call plug#end()
+	
+	" Avante Setup _________________________________________________________________
+	lua << EOF
+	function SetupAvante()
+	  require('render-markdown').setup({    
+	    file_types = { "markdown", "Avante" },
+	  })
+	  require("avante").setup({
+	    provider = "openai",
+	    openai = {
+	      endpoint = "https://api.openai.com/v1",
+	      model = "o3-mini",
+	      timeout = 3000,
+	      temperature = 0,
+	      max_tokens = 4096,
+	      reasoning_effort = "high",
+	    },
+	    windows = {
+	      sidebar_header = {
+	        enabled = true,
+	        align = "center",
+	        rounded = true,
+	      },
+	      ask = {
+	        floating = false,
+	        start_insert = true,
+	        border = "rounded",
+	        focus_on_apply = "ours",
+	      },
+	    },
+	    mappings = {
+	      ask = ";a",
+	      chat = ";c",
+	      edit = ";
+c3092e21dc74ba4618849f0007b24eb4|file:///Users/mike/.config/nvim/init.vim|88|1|V|vim
+	      chat = ";c",
+ccbc1e66495294bb9e171882c22baed8|file:///Users/mike/.config/nvim/init.vim|521|36|V|vim
+	nnoremap <silent> ;c :AvanteChat<CR>
+55dcdf017b51fc96f7b5f9d63013b95d|file:///Users/mike/.config/nvim/init.vim|522|29|v|vim
+	Chat
+e27224fa88a118795576a609e483ffec|file:///Users/mike/.config/nvim/init.vim|522|1|V|vim
+	nnoremap <silent> ;c :AvanteToggle<CR>
+6d6bf987107471d5535dc7bbe0113c5c|file:///Users/mike/.config/nvim/init.vim|68|7|V|vim
+	      timeout = 3000,
+4ab55575ea1b8c15c63ef88cb71338d1|file:///Users/mike/.config/kitty/kitty.conf|729|29|V|conf
+	editor /usr/local/bin/nvim
+dc3430d1d97c6f891834e7a9cea4c350|file:///Users/mike/src/clapback/src/modules/openai/openai.service.ts|66|15|V|typescript
+	            );
+	            return JSON.parse(

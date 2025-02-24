@@ -1,0 +1,374 @@
+{
+  "extensions": {
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile": [
+      " "
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww%2Fmobile": [
+      " "
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww": [
+      "jk"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "CocInsta",
+      "C",
+      "esl",
+      " op"
+    ]
+  },
+  "commands": {
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile": [
+      "work"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww%2Fmobile": [
+      "rename"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww": [
+      "rename",
+      "ts",
+      "q"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "highli",
+      "works",
+      "folder",
+      "folders",
+      "plu",
+      "rename"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fweb": [
+      "eslint"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fmobile": [
+      "fix"
+    ]
+  },
+  "outline": {
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile": [
+      "format"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Ffixes%2Forder_item_wont_delete%2Fwww%2Fmobile": [
+      "OrderItem",
+      "OrderI",
+      "hand"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Frepo": [
+      "order"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Ffixes%2Forder_item_wont_delete%2Fwww": [
+      "handle"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww": [
+      "Balance",
+      "handleNext",
+      "Step\\",
+      "Flow",
+      "Currenc",
+      "Cur",
+      "Instant",
+      "StepProps",
+      "CurrencySe",
+      "CurrencySel",
+      "onColse",
+      "refresh",
+      "Button",
+      "handleNe",
+      "Disclaimer",
+      "Prop",
+      "onClick",
+      "Content",
+      "Styl",
+      "j",
+      "user",
+      "preferen",
+      "add_pre",
+      "add",
+      "Currenc ",
+      "CurrencySelector",
+      "command",
+      "StepPro",
+      "CoinbaseTransfer",
+      "CoinbaseTrans",
+      "DepositCon",
+      "De",
+      "D",
+      "DepositF",
+      "DepositCOnfirmatio",
+      "DepositConfirm",
+      "DepositConf",
+      "StepPresen",
+      "DepositConfir",
+      "Cui",
+      "DepositConfi",
+      "DepositConfirmation",
+      "Deposit",
+      "T",
+      "deposit",
+      "Deposi",
+      "FiatWith",
+      "BankAccount",
+      "BankAccountInstn",
+      "BankAccountInstnat",
+      "BankAccountInstanttra",
+      "BankAccountInstant",
+      "CryptoWithdrawlAddressProps",
+      "BankAccountTrans",
+      "TransferMe",
+      "Bank",
+      "MethodSelector",
+      "BankAccountInstantTrans",
+      "ret",
+      "Curren",
+      "Currency",
+      "TransferMethod",
+      "TransferSuccessS",
+      "transferMethod",
+      "CurrencySelectorStep",
+      "Props",
+      "Transfer",
+      "TransferStep",
+      "Step",
+      "Confirm",
+      "Adapter",
+      "Confi",
+      "ConfirmationRoleP",
+      "ConfirmationRoleProps",
+      "TransferFlow",
+      "ConfirmationRolePro",
+      "ConfirmationRole",
+      "Confirmation"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "InstantTrn",
+      "ConfirmatioNStep",
+      "TransferSuccess",
+      "TransferMethodSte",
+      "Trans",
+      "TransferMethodSuccess",
+      "TransferSuccessStep",
+      "ConfirmationStepP",
+      "Withdrawalconf",
+      "ConfirmationroleProps",
+      "ConfirmationInfo",
+      "CollectedBankTrans",
+      "ConfirmationInfoProps",
+      "ConfirmationStepProps",
+      "Collected",
+      "component",
+      "banktrans",
+      "BankTransferStep",
+      "InstantB",
+      "BankTransfer",
+      "Confirmation",
+      "PostToML",
+      "2FA",
+      "TwoFA",
+      "useFetch",
+      "TransferSuccessSt",
+      "cOnfirmation",
+      "ConfirmationSte",
+      "apiTrasn",
+      "ConfirmationRole",
+      "Con",
+      "ConfirmationStepProp",
+      "ConfirmationStep",
+      "ConfirmationRolePro",
+      "ConfirmationRoleProp",
+      "Confirmationrole",
+      "ConfirmationRoleProps",
+      "DepositConfirmationSte",
+      "Depo",
+      "Instant",
+      "WithdrawalConfirmationinfo",
+      "WithdrawalLimitsRole",
+      "WithdrawaLimitsSte",
+      "WithdrawalLim",
+      "InstantTransfer",
+      "InstantTrans",
+      "BankAccountTransferProp",
+      "WithdrawLimit",
+      "BankAccountInst",
+      "WithdrawalLimi",
+      "BankInstan",
+      "BankInstant",
+      "StepPresenterProps",
+      "onWith",
+      "Adap",
+      "BankAcounTransferProps",
+      "BankA",
+      "handle",
+      "BankAcc",
+      "Bank",
+      "BankAccountIns",
+      "WithdrawalLimits",
+      "Adapter",
+      "Step",
+      "BankAccountTransferStep",
+      "ApiUserHoldB",
+      "Withdrawal",
+      "justify",
+      "justi",
+      "colo",
+      "WithdrawalStep",
+      "holdBa",
+      "StepProps",
+      "Props",
+      "TransferFl",
+      "BankACcountTransfer",
+      "InstantUSDNote",
+      "type",
+      "Select",
+      "limit",
+      "Warning",
+      "hintT",
+      "WarningHin",
+      "styles",
+      "Transfer",
+      "stylesjkj",
+      "BankAccountTransfer",
+      "BankAccountInstant",
+      "BankAccountTransferPr",
+      "BankAc",
+      "withdr",
+      "TransferFlow",
+      "web/BankACcoun",
+      "warning",
+      "war",
+      "warningHintjk",
+      "hint",
+      "warningHint",
+      "warningHInt",
+      "warningHi",
+      "test",
+      "Confirm",
+      "DepositCOn",
+      "DepositCon",
+      "Deposit",
+      "DepositSt",
+      "DepositStep",
+      "DepositConfirm"
+    ],
+    "%2Fprivate%2Fvar%2Ftmp%2F_bazel_mikemanzano%2Ffd83f284c4b193bc22b031a7085e294f%2Fexecroot%2Fcoinbazel%2Fbazel-out%2Fdarwin-fastbuild%2Fbin%2Fpro%2Fapi2%2Fapi": [
+      "apiholds",
+      "apiUserHoldBalances",
+      "pendingHolds",
+      "ApiUserPendingHol",
+      "apiUserPending",
+      "ApiUserPending"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Frr%2Frepo": [
+      "apiHold"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fweb": [
+      "isDeposi",
+      "onMaxC"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fmobile": [
+      "style"
+    ]
+  },
+  "lists": {
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww%2Fmobile": [
+      "symbols"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "C",
+      "diag",
+      "out",
+      "output",
+      "di",
+      "yank"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fweb": [
+      "dia",
+      "di",
+      "outop",
+      "output"
+    ]
+  },
+  "symbols": {
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww%2Fmobile": [
+      "in"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Ffixes%2Forder_item_wont_delete%2Fwww%2Fmobile": [
+      "handle"
+    ],
+    "%2FUsers%2Fmichaelmanzano%2Fsrc%2Fpro-mobile%2Fwww": [
+      "refreshAll",
+      "ew",
+      "DefaultStyleModal ",
+      "Modal",
+      "deviceStore",
+      "StyledContainer",
+      "CryptoDepositAddressSe",
+      "CurrencySelector",
+      "DefaultStyledModal",
+      "Margin oMargin",
+      "TransferComponentMap",
+      "DepositConfirmationStep",
+      "Depositc",
+      "DepositConfirmationAdapter",
+      "useIsInInstant",
+      "TransferM",
+      "ApiCoinbaseAccountAvailalew",
+      "useIsIn"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "TransferFlow",
+      "TickerPrice",
+      "MarginAlert",
+      "uh",
+      "WithdrawalConfirmationProps",
+      "WithdrawalConfirmation",
+      "TransferComponentMap",
+      "DetailValue",
+      "Text",
+      "Link",
+      "ApiUserHoldBalances'",
+      "isWeeklyPaymentPolicy",
+      "useIsInstantUSD",
+      "Withd",
+      "WithdrawalLimitsRoleProps",
+      "Clawback:",
+      "StyledButton",
+      "capitalize",
+      "useAccount",
+      "ApiCurrency",
+      "convertCurrency",
+      "convertCur",
+      "Money",
+      "hasClawback",
+      "usePaymentMethods",
+      "CryptoDeposit"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fmobile": [
+      "warningHint oUser"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fios": [
+      "App"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Freact-native": [
+      "Prices"
+    ]
+  },
+  "services": {
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "qa"
+    ]
+  },
+  "diagnostics": {
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww": [
+      "kjkk",
+      " a",
+      " i",
+      "j",
+      "set"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fweb": [
+      ":q"
+    ],
+    "%2FUsers%2Fmikemanzano%2Fsrc%2Fpro%2Fwww%2Fmobile": [
+      "kk"
+    ]
+  }
+}

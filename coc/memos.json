@@ -1,0 +1,1494 @@
+{
+  "coc-eslint|global": {
+    "eslintAlwaysAllowExecution": true
+  },
+  "coc-python|global": {
+    "INTERPRETERS_CACHE_v3_CondaEnvFileService": [],
+    "INTERPRETERS_CACHE_v3_CondaEnvService": [],
+    "INTERPRETERS_CACHE_v3_VirtualEnvService": [],
+    "/usr/local/bin/python3.11.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "aa1675b6db5fb126a929daf6a7a24837c4afe01ac26531afeb17a36bbb209fa1041a468da7726dd79d887cd186a2e7fc6468f8e3592fc9769815ffbd3e31f174"
+      },
+      "expiry": 1684798712015
+    },
+    "/usr/local/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641"
+      },
+      "expiry": 1684798712016
+    },
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf"
+      },
+      "expiry": 1684798712014
+    },
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "8bbb2763b2650dc1db33ddea5a73e39fe89b2331050098408dcf91c3652f3ab232dc944d881ce05f5944284d5de08f78646113724445a478df793ec0a7ab9181"
+      },
+      "expiry": 1684798712015
+    },
+    "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3.11.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "24b6e1113d1e773d8ed6a2e06b87dff1a76121f5c24e8a8762ea8902b4c3e83974f57fc382f3c142dd2d9a853f1f8e3c06b412b3393b01471328839a780537f7"
+      },
+      "expiry": 1684798712017
+    },
+    "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006"
+      },
+      "expiry": 1684798712017
+    },
+    "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "87059bbb1a68f43499e6ed9b32793415fabfd887e0ce1fc0e8d0f93c28b91644259819e8a248dbe7b564fbc90fdec7210d96939fd4a506957ae0252492607163"
+      },
+      "expiry": 1684798712018
+    },
+    "INTERPRETERS_CACHE_v3_CurrentPathService": [
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "87059bbb1a68f43499e6ed9b32793415fabfd887e0ce1fc0e8d0f93c28b91644259819e8a248dbe7b564fbc90fdec7210d96939fd4a506957ae0252492607163",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518",
+        "type": "Unknown"
+      }
+    ],
+    "/Users/mike/src/nominator/venv/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "fa39ea00564c2c5c6f0dd3870a520fe10e5c399ba1996c503c370c3cba5173da3473ee4cdab3ca3137431c417bdc6d0ca281171c5fff18fbe324343b6207644d"
+      },
+      "expiry": 1684798712092
+    },
+    "/Users/mike/src/nominator/venv/bin/python3.11.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518"
+      },
+      "expiry": 1684798712092
+    },
+    "/Users/mike/src/nominator/venv/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "87fd80bdba3644c6c117d2572ab6e5a77d4b04b763aec2f96ded1fff543a6baf9ed378eea1c6d442af19db3fc69ba323f0abb2902677939110333f7baf79560e"
+      },
+      "expiry": 1684798712093
+    },
+    "/opt/homebrew/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/homebrew/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.9-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 9,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.9-final"
+        },
+        "sysPrefix": "/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "7690e341f106b1426dc7b6e54d9fb72e8bac8a17f17f1658a5904af9e5436b51253b86f3246fa38d29e95cf7bcad106c9742c0fd59c0fbc144fbb7fd44d197a3"
+      },
+      "expiry": 1684798712049
+    },
+    "/opt/homebrew/bin/python3.9.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/homebrew/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.9-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 9,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.9-final"
+        },
+        "sysPrefix": "/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "349b5964440ca0dc8ad0dcfd668de196f88c3c6a9b51d3cde4e126c4503acb0478391303c15bba34d1b1eebc5fce73807831747042500b01fc62f2133ba9703b"
+      },
+      "expiry": 1684798712050
+    },
+    "InterpreterAutoSeletionRule-workspaceEnvs": {
+      "architecture": 3,
+      "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/Users/mike/src/nominator/venv",
+      "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518",
+      "envName": "venv",
+      "type": "Venv"
+    },
+    "InterpreterAutoSeletionRule-currentPath": {
+      "architecture": 3,
+      "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/Users/mike/src/nominator/venv",
+      "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518",
+      "type": "Unknown"
+    },
+    "preferredGlobalPyInterpreter": {
+      "architecture": 3,
+      "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+      "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+      "type": "Unknown"
+    },
+    "/Users/mike/src/nominator/venv/bin/python3.11.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518"
+      },
+      "expiry": 1684798712090
+    },
+    "/Users/mike/src/nominator/venv/bin/python3.11.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.11.3 64-bit ('venv': venv)",
+        "hash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518-cba582f00e265cc1124db24686943790"
+      },
+      "expiry": 1684798712122
+    },
+    "PipEnvInformation": [
+      {
+        "pythonPath": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+        "workspaceFolder": "/Users/mike/src/nominator",
+        "envName": "nominator"
+      }
+    ],
+    "/usr/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.6-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.6-final"
+        },
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9",
+        "fileHash": "ae6134e762003b5d938990e003d94578de64f5b7513a6509e3d54df3ab2638b5c05c90749342ac2a0c29d17012f4dbf19e40154b3f7512b9838f9ba30d475473"
+      },
+      "expiry": 1684798716141
+    },
+    "INTERPRETERS_CACHE_v3_KnownPathsService": [
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "87059bbb1a68f43499e6ed9b32793415fabfd887e0ce1fc0e8d0f93c28b91644259819e8a248dbe7b564fbc90fdec7210d96939fd4a506957ae0252492607163",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "24b6e1113d1e773d8ed6a2e06b87dff1a76121f5c24e8a8762ea8902b4c3e83974f57fc382f3c142dd2d9a853f1f8e3c06b412b3393b01471328839a780537f7",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "aa1675b6db5fb126a929daf6a7a24837c4afe01ac26531afeb17a36bbb209fa1041a468da7726dd79d887cd186a2e7fc6468f8e3592fc9769815ffbd3e31f174",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "aa1675b6db5fb126a929daf6a7a24837c4afe01ac26531afeb17a36bbb209fa1041a468da7726dd79d887cd186a2e7fc6468f8e3592fc9769815ffbd3e31f174",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "8bbb2763b2650dc1db33ddea5a73e39fe89b2331050098408dcf91c3652f3ab232dc944d881ce05f5944284d5de08f78646113724445a478df793ec0a7ab9181",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/opt/homebrew/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.9-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 9,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.9-final"
+        },
+        "sysPrefix": "/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "7690e341f106b1426dc7b6e54d9fb72e8bac8a17f17f1658a5904af9e5436b51253b86f3246fa38d29e95cf7bcad106c9742c0fd59c0fbc144fbb7fd44d197a3",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/opt/homebrew/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.9-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 9,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.9-final"
+        },
+        "sysPrefix": "/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "349b5964440ca0dc8ad0dcfd668de196f88c3c6a9b51d3cde4e126c4503acb0478391303c15bba34d1b1eebc5fce73807831747042500b01fc62f2133ba9703b",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "aa1675b6db5fb126a929daf6a7a24837c4afe01ac26531afeb17a36bbb209fa1041a468da7726dd79d887cd186a2e7fc6468f8e3592fc9769815ffbd3e31f174",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.6-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.6-final"
+        },
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9",
+        "fileHash": "ae6134e762003b5d938990e003d94578de64f5b7513a6509e3d54df3ab2638b5c05c90749342ac2a0c29d17012f4dbf19e40154b3f7512b9838f9ba30d475473",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+        "fileHash": "aa1675b6db5fb126a929daf6a7a24837c4afe01ac26531afeb17a36bbb209fa1041a468da7726dd79d887cd186a2e7fc6468f8e3592fc9769815ffbd3e31f174",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.6-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.6-final"
+        },
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9",
+        "fileHash": "ae6134e762003b5d938990e003d94578de64f5b7513a6509e3d54df3ab2638b5c05c90749342ac2a0c29d17012f4dbf19e40154b3f7512b9838f9ba30d475473",
+        "type": "Unknown"
+      }
+    ],
+    "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.11.3 64-bit ('nominator': pipenv)",
+        "hash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006-f9370c8fe33c65c379c6322ca4a18ee7"
+      },
+      "expiry": 1684798716159
+    },
+    "/Users/mike/src/nominator/venv/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.11.3 64-bit ('venv': venv)",
+        "hash": "87fd80bdba3644c6c117d2572ab6e5a77d4b04b763aec2f96ded1fff543a6baf9ed378eea1c6d442af19db3fc69ba323f0abb2902677939110333f7baf79560e-0f1efc6ef0caba0b74f9c4a400388013"
+      },
+      "expiry": 1684798716160
+    },
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.11.3 64-bit",
+        "hash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf-203beec6d71c6855e488be628b558b1b"
+      },
+      "expiry": 1684798716161
+    },
+    "/opt/homebrew/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.9 64-bit",
+        "hash": "7690e341f106b1426dc7b6e54d9fb72e8bac8a17f17f1658a5904af9e5436b51253b86f3246fa38d29e95cf7bcad106c9742c0fd59c0fbc144fbb7fd44d197a3-d8e98d876448d5416dda7dd3bf84eaea"
+      },
+      "expiry": 1684798716167
+    },
+    "/usr/local/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.11.3 64-bit",
+        "hash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641-3a9764539c10afaca4df79f23c32cd27"
+      },
+      "expiry": 1684798716168
+    },
+    "/usr/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.6 64-bit",
+        "hash": "ae6134e762003b5d938990e003d94578de64f5b7513a6509e3d54df3ab2638b5c05c90749342ac2a0c29d17012f4dbf19e40154b3f7512b9838f9ba30d475473-208b0eab8d6c51318435015a6cef6f31"
+      },
+      "expiry": 1684798716187
+    },
+    "InterpreterAutoSeletionRule-system": {
+      "architecture": 3,
+      "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+      "fileHash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf",
+      "type": "Unknown",
+      "displayName": "Python 3.11.3 64-bit"
+    },
+    "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.11.3-final",
+            "major": 3,
+            "minor": 11,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.11.3-final"
+          },
+          "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+          "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/mike/src/nominator",
+          "envName": "nominator",
+          "displayName": "Python 3.11.3 64-bit ('nominator': pipenv)"
+        }
+      },
+      "expiry": 1684798716233
+    },
+    "/Users/mike/src/nominator/venv/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "87fd80bdba3644c6c117d2572ab6e5a77d4b04b763aec2f96ded1fff543a6baf9ed378eea1c6d442af19db3fc69ba323f0abb2902677939110333f7baf79560e",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/mike/src/nominator/venv/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.11.3-final",
+            "major": 3,
+            "minor": 11,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.11.3-final"
+          },
+          "sysPrefix": "/Users/mike/src/nominator/venv",
+          "fileHash": "87fd80bdba3644c6c117d2572ab6e5a77d4b04b763aec2f96ded1fff543a6baf9ed378eea1c6d442af19db3fc69ba323f0abb2902677939110333f7baf79560e",
+          "envName": "venv",
+          "type": "Venv",
+          "displayName": "Python 3.11.3 64-bit ('venv': venv)"
+        }
+      },
+      "expiry": 1684798716236
+    },
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf",
+        "info": {
+          "architecture": 3,
+          "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.11.3-final",
+            "major": 3,
+            "minor": 11,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.11.3-final"
+          },
+          "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+          "fileHash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf",
+          "type": "Unknown",
+          "displayName": "Python 3.11.3 64-bit"
+        }
+      },
+      "expiry": 1684798716239
+    },
+    "/opt/homebrew/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "7690e341f106b1426dc7b6e54d9fb72e8bac8a17f17f1658a5904af9e5436b51253b86f3246fa38d29e95cf7bcad106c9742c0fd59c0fbc144fbb7fd44d197a3",
+        "info": {
+          "architecture": 3,
+          "path": "/opt/homebrew/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.9-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 9,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.9-final"
+          },
+          "sysPrefix": "/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9",
+          "fileHash": "7690e341f106b1426dc7b6e54d9fb72e8bac8a17f17f1658a5904af9e5436b51253b86f3246fa38d29e95cf7bcad106c9742c0fd59c0fbc144fbb7fd44d197a3",
+          "type": "Unknown",
+          "displayName": "Python 3.9.9 64-bit"
+        }
+      },
+      "expiry": 1684798716243
+    },
+    "/usr/local/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/local/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.11.3-final",
+            "major": 3,
+            "minor": 11,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.11.3-final"
+          },
+          "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+          "fileHash": "4b349d487907b729bd2a8d82f7bf1b56a8502b7e9f46ec1a697badb00db5467d8bcfb22b85dc5053c281fd268785ec49a6a960fd19386619e01e1e551dd60641",
+          "type": "Unknown",
+          "displayName": "Python 3.11.3 64-bit"
+        }
+      },
+      "expiry": 1684798716246
+    },
+    "/usr/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ae6134e762003b5d938990e003d94578de64f5b7513a6509e3d54df3ab2638b5c05c90749342ac2a0c29d17012f4dbf19e40154b3f7512b9838f9ba30d475473",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.6-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 6,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.6-final"
+          },
+          "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9",
+          "fileHash": "ae6134e762003b5d938990e003d94578de64f5b7513a6509e3d54df3ab2638b5c05c90749342ac2a0c29d17012f4dbf19e40154b3f7512b9838f9ba30d475473",
+          "type": "Unknown",
+          "displayName": "Python 3.9.6 64-bit"
+        }
+      },
+      "expiry": 1684798716250
+    },
+    "InterpreterAutoSeletionRule-cachedInterpreters": {
+      "architecture": 3,
+      "path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.11",
+      "fileHash": "203c2929d0a2c8159c2ad027d186f068153027a4956f1b47b14f87832ae79fe3eabc4b8298c7e276d4cab58dfe181ae4b37ce60b3fc2381aff02a4a00073dbbf",
+      "type": "Unknown",
+      "displayName": "Python 3.11.3 64-bit"
+    },
+    "ProposeLSBanner": false
+  },
+  "coc-python|/Users/mike/src/nominator": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "87fd80bdba3644c6c117d2572ab6e5a77d4b04b763aec2f96ded1fff543a6baf9ed378eea1c6d442af19db3fc69ba323f0abb2902677939110333f7baf79560e",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "fa39ea00564c2c5c6f0dd3870a520fe10e5c399ba1996c503c370c3cba5173da3473ee4cdab3ca3137431c417bdc6d0ca281171c5fff18fbe324343b6207644d",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:9db398fe5bd4f08a0cd4301ad01c579a": [
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "87fd80bdba3644c6c117d2572ab6e5a77d4b04b763aec2f96ded1fff543a6baf9ed378eea1c6d442af19db3fc69ba323f0abb2902677939110333f7baf79560e",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "fa39ea00564c2c5c6f0dd3870a520fe10e5c399ba1996c503c370c3cba5173da3473ee4cdab3ca3137431c417bdc6d0ca281171c5fff18fbe324343b6207644d",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/src/nominator/venv",
+        "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "SelectedPythonPath": "/Users/mike/src/nominator/venv/bin/python3.11",
+    "INTERPRETERS_CACHE_v3_PipEnvService:9db398fe5bd4f08a0cd4301ad01c579a": [
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/mike/src/nominator"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.3-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.3-final"
+        },
+        "sysPrefix": "/Users/mike/.local/share/virtualenvs/nominator-p63-aKGk",
+        "fileHash": "468a35a40c286ae927ceb5f01131b4b7ed2670f5b1b83d990e0963c851a00df0f380fcb3caa5b6374065a66f136f54c3e6b503c8aa3cc4a2c7e5ac833c953006",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/mike/src/nominator"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/Users/mike/src/nominator": {
+      "architecture": 3,
+      "path": "/Users/mike/src/nominator/venv/bin/python3.11",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/Users/mike/src/nominator/venv",
+      "fileHash": "0ee1f6c72bf93e64fad2778bac15432571cc5e595cd74b1dee70986081c7c1e8f9eef38283dd51a87e6d8523881e16c53069b47451ab4840a869573143640518",
+      "envName": "venv",
+      "type": "Venv"
+    }
+  },
+  "coc-json|global": {
+    "json-schema-cache": {
+      "https://json.schemastore.org/package.json": {
+        "etag": "\"80e4d0496aead91:0\"",
+        "fileName": "473f72b44c2905902dfbcc770aab7f7a.schema.json",
+        "updateTime": 1697258050836
+      },
+      "http://json.schemastore.org/prettierrc": {
+        "etag": "\"80ea857572e2d91:0\"",
+        "fileName": "b2ed7a7b6c79e58baf94e4ce160282de.schema.json",
+        "updateTime": 1697258050864
+      },
+      "https://json.schemastore.org/prettierrc.json": {
+        "etag": "\"80ea857572e2d91:0\"",
+        "fileName": "ea5ab10330a3ab77dfd6d00a735b0925.schema.json",
+        "updateTime": 1697258051069
+      },
+      "https://json.schemastore.org/jscpd.json": {
+        "etag": "\"80bec5ba1984d81:0\"",
+        "fileName": "22bfc1ab1ff56aae62322f6ce45dab5a.schema.json",
+        "updateTime": 1697258051060
+      },
+      "https://json.schemastore.org/ava.json": {
+        "etag": "\"80cdbd40989d91:0\"",
+        "fileName": "635f57185b22bce9d3a56c68f5da4ad7.schema.json",
+        "updateTime": 1697258051067
+      },
+      "https://json.schemastore.org/stylelintrc.json": {
+        "etag": "\"0d52dd6eabd91:0\"",
+        "fileName": "000bfbdd14d2fb8ec5b0d59bec32ef98.schema.json",
+        "updateTime": 1697258051073
+      },
+      "https://json.schemastore.org/eslintrc.json": {
+        "etag": "\"09c10cf5f2bd91:0\"",
+        "fileName": "c5064f140d4cfdbf4d6fbe68f68abbb1.schema.json",
+        "updateTime": 1697258051076
+      },
+      "https://json.schemastore.org/semantic-release.json": {
+        "etag": "\"808cdec3a9a4d81:0\"",
+        "fileName": "fbc95702ba6eddb3e2de4f52e31ca82a.schema.json",
+        "updateTime": 1697258051078
+      },
+      "https://json.schemastore.org/tsconfig.json": {
+        "etag": "\"034bc39c6a2d91:0\"",
+        "fileName": "a28507e42e8bfd5fba830538461d5db3.schema.json",
+        "updateTime": 1692731591935
+      },
+      "https://json.schemastore.org/nest-cli": {
+        "etag": "\"058aaf85ca4d91:0\"",
+        "fileName": "71f7cb72efcdb4198bbe557caba30dce.schema.json",
+        "updateTime": 1689355588063
+      },
+      "https://json.schemastore.org/apibuilder.json": {
+        "etag": "\"80d74535124d91:0\"",
+        "fileName": "96ae0d4f5ba9e87bbeb3db593f3ab731.schema.json",
+        "updateTime": 1689355535053
+      },
+      "https://unpkg.com/graphql-config/config-schema.json": {
+        "etag": "\"edf-PsUJVfHtiLgcoCbK9HIBn54uXqc\"",
+        "fileName": "3e1fd812b357d445221286b9a7927ec9.schema.json",
+        "updateTime": 1687583953145
+      },
+      "https://raw.githubusercontent.com/SAP/ui5-manifest/master/schema.json": {
+        "etag": "W/\"50b7de019c07f30b6713a2da41bf3260d48f8303fc08450ce8cab4380a07a477\"",
+        "fileName": "3969e8f5a7ad638765a3460eaa7e2f5b.schema.json",
+        "updateTime": 1689810187717
+      },
+      "https://json.schemastore.org/webextension.json": {
+        "etag": "\"0723a2b8ad2d81:0\"",
+        "fileName": "b731fe11a3d127fd02a39912a2530816.schema.json",
+        "updateTime": 1689744578429
+      },
+      "https://json.schemastore.org/foxx-manifest.json": {
+        "etag": "\"8020ee6d181ad91:0\"",
+        "fileName": "5e1deef4adbcb453011b95df734ed4a0.schema.json",
+        "updateTime": 1689744578431
+      },
+      "https://json.schemastore.org/web-manifest-combined.json": {
+        "etag": "\"43e0aa0326ad81:0\"",
+        "fileName": "b06e2f702dd4972ea2bb3d76ff088406.schema.json",
+        "updateTime": 1689744578641
+      },
+      "https://adaptivecards.io/schemas/adaptive-card.json": {
+        "etag": "\"085da3fe973d91:0\"",
+        "fileName": "0863533f98e59f79ae414d38abf849d8.schema.json",
+        "updateTime": 1689810188200
+      },
+      "https://json.schemastore.org/web-manifest-share-target.json": {
+        "etag": "\"8059190326ad81:0\"",
+        "fileName": "cdeb8e92350ff78b8eec26631dae6f2d.schema.json",
+        "updateTime": 1689744579376
+      },
+      "https://json.schemastore.org/web-manifest-app-info.json": {
+        "etag": "\"b27da80326ad81:0\"",
+        "fileName": "37e25b60beaa201ec2222b96a2ea00d6.schema.json",
+        "updateTime": 1689744579378
+      },
+      "https://json.schemastore.org/web-manifest.json": {
+        "etag": "\"8059190326ad81:0\"",
+        "fileName": "6edb6ea4435d040104641056c40c6326.schema.json",
+        "updateTime": 1689744579379
+      }
+    }
+  }
+}
