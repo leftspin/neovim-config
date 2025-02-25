@@ -1,0 +1,23 @@
+# Lazycommit Configuration for LazyGit
+
+This file needs to be placed in: `~/Library/Application Support/lazygit`
+
+## Custom Commands Configuration
+
+Below is the configuration for custom commands:
+
+```yaml
+customCommands:
+  - key: "<c-a>" # Ctrl + A
+    description: "Generate AI Commit Message"
+    command: 'echo "{{.Form.Msg}}" > .git/COMMIT_EDITMSG && nvim .git/COMMIT_EDITMSG && [ -s .git/COMMIT_EDITMSG ] && git commit -F .git/COMMIT_EDITMSG || echo "Commit message is empty, commit aborted."'
+    context: "files"
+    subprocess: true
+    prompts:
+      - type: "menuFromCommand"
+        title: "AI Commit Messages"
+        key: "Msg"
+        command: 'npx @m7medvision/lazycommit@latest'
+        filter: '^(?P<number>\d+)\.\s(?P<message>.+)$'
+        valueFormat: "{{ .message }}"
+        labelFormat: "{{ .number }}: {{ .message | green }}"
