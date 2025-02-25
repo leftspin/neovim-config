@@ -1,6 +1,8 @@
 -------------------------------------------------------
 -- lua/user/misc.lua
 -------------------------------------------------------
+
+-- Reveal the highlight group under the cursor
 function _G.SynGroup()
   local pos = vim.fn.synID(vim.fn.line("."), vim.fn.col("."), 1)
   local name = vim.fn.synIDattr(pos, "name")

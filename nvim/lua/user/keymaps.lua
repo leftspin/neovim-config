@@ -8,19 +8,19 @@ local opts   = { silent = true }
 -- TELESCOPE
 --------------------------
 -- <space>o => find_files
-keymap("n", "<space>o", function()
-  require("telescope.builtin").find_files()
-end, opts)
+-- keymap("n", "<space>o", function()
+--   require("telescope.builtin").find_files()
+-- end, opts)
 
 -- <space>B => buffers
-keymap("n", "<space>B", function()
-  require("telescope.builtin").buffers()
-end, opts)
+-- keymap("n", "<space>B", function()
+--   require("telescope.builtin").buffers()
+-- end, opts)
 
 -- <space>g => live_grep
-keymap("n", "<space>g", function()
-  require("telescope.builtin").live_grep()
-end, opts)
+-- keymap("n", "<space>g", function()
+--   require("telescope.builtin").live_grep()
+-- end, opts)
 
 -- "Conflicts" => search for '<<<<<<'
 -- old config had "command! Conflicts Ag<<<<<<"

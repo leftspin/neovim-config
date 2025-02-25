@@ -10,7 +10,7 @@ if version > 580
 endif
 let g:colors_name="clarity"
 
-hi Normal         guifg=#a5e9ff     guibg=#18304d
+hi Normal       guifg=#a5e9ff     guibg=#18304d
 
 hi DiffDelete   guifg=#304050     guibg=#203040
 hi DiffAdd      guibg=#002851
@@ -139,3 +139,44 @@ hi typescriptObjectLiteral          guifg=#84bacc guibg=none gui=none
 hi typescriptNull                   guifg=#ffe381 gui=none
 hi typescriptNumber                 guifg=#ffe381 gui=none
 hi typescriptPredefinedType         guifg=#ffe381 gui=none
+
+"""
+""" Snacks
+"""
+
+" Text color of a file ln a listing
+hi SnacksPickerFile                 guifg=#ffffff gui=none
+" The text color folder in a listing
+hi SnacksPickerDirectory            guifg=#00ffff gui=none
+" The text color of the path part of a listing
+hi SnacksPickerDir                  guifg=#8f9ae5 gui=none
+" The text color in search boxes
+hi SnacksPickerCursorLine           guifg=#fefefe gui=none
+" The text color of pane titles
+hi SnacksPickerTitle                guifg=#ffe000 gui=none
+
+" Box line color of listing panels
+hi SnacksPickerBoxBorder            guifg=#8f9ae5 gui=none
+" Separator line between search and listing
+hi SnacksPickerInputBorder          guifg=#8f9ae5 gui=none
+" Separator line of preview panels
+hi SnacksPickerPreviewBorder        guifg=#8f9ae5 gui=none
+" The selection color
+hi SnacksPickerListCursorLine       guifg=#ffe381 guibg=#3D5560
+"
+" ???
+hi SnacksPicker                     guifg=#ffff00 gui=none
+hi SnacksPickerListBorder            guifg=#00ff00 gui=none
+
+
+
+
+
+
+
+
+
+
+
+
+

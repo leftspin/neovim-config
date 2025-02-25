@@ -50,21 +50,21 @@ autocmd("WinLeave", {
 })
 
 -- Number toggle
-augroup("numbertoggle", { clear = true })
-autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
-  group = "numbertoggle",
-  callback = function()
-    vim.opt.number = true
-    vim.opt.relativenumber = true
-  end,
-})
-autocmd("WinLeave", {
-  group = "numbertoggle",
-  callback = function()
-    vim.opt.number = false
-    vim.opt.relativenumber = false
-  end,
-})
+-- augroup("numbertoggle", { clear = true })
+-- autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
+--   group = "numbertoggle",
+  -- callback = function()
+    -- vim.opt.number = true
+    -- vim.opt.relativenumber = true
+  -- end,
+-- })
+-- autocmd("WinLeave", {
+--   group = "numbertoggle",
+--   callback = function()
+    -- vim.opt.number = false
+    -- vim.opt.relativenumber = false
+  -- end,
+-- })
 
 -- OSCYank
 autocmd("TextYankPost", {

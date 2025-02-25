@@ -34,5 +34,3 @@ require("user.plugin_config.neoscroll")
 require("user.plugin_config.typecheck")
 require("user.plugin_config.telescope")
 require("user.plugin_config.neotest")
-
-require("user.plugin_config.gp_commit")
