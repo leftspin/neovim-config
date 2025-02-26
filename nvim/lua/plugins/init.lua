@@ -3,17 +3,79 @@
 -- Now using Telescope instead of fzf,
 -- and neotest instead of vim-test.
 -------------------------------------------------------
-return {
-  -- 1) Coc.nvim
-  { "neoclide/coc.nvim", branch = "release" },
+-- override LSP diagnostic signs with nerd font icons
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
-  -- 2) vim-graphql
+return {
+
+  -- nvim-cmp & friends
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    config = function()
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
+
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            luasnip.lsp_expand(args.body)
+          end,
+        },
+        mapping = cmp.mapping.preset.insert({
+          ["<CR>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            if luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+            elseif cmp.visible() then
+              cmp.select_next_item()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            elseif cmp.visible() then
+              cmp.select_prev_item()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+        }),
+        sources = cmp.config.sources({
+          { name = "nvim_lsp_signature_help" },
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+          { name = "buffer" },
+          { name = "path" },
+        }),
+      })
+    end,
+  },
+
+  -- vim-graphql
   { "jparise/vim-graphql" },
 
-  -- 3) GitHub Copilot
-  { "github/copilot.vim" },
-
-  -- 5) vim-scripts/lightline
+  -- vim-scripts/lightline
   { "vim-scripts/lightline" },
 
   -- Gitsigns plugin
@@ -22,6 +84,13 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("gitsigns").setup({
+        -- signs = {
+        -- 	add          = { text = "" },
+        -- 	change       = { text = "" },
+        -- 	delete       = { text = "" },
+        -- 	topdelete    = { text = "" },
+        -- 	changedelete = { text = "" },
+        -- },
         -- You can enable inline blame with:
         current_line_blame = true, -- set to true if you want it on by default
         current_line_blame_opts = {
@@ -37,11 +106,42 @@ return {
     end,
   },
 
+  -- which-key
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    keys = {
+      {
+        "<space>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
+  },
+
+  -- noice.nvim
   {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-      -- add any options here
+      messages = {
+        enabled = true,
+        view_history = "messages",
+      },
+      cmdline = {
+        opts = {
+          position = {
+            row = "30%",
+          },
+        },
+      },
     },
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
@@ -50,78 +150,91 @@ return {
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
-      }
+    },
   },
 
-  -- 7) vim-gutentags
-  { "ludovicchabant/vim-gutentags" },
-
-  -- 8) tpope/vim-surround
+  -- vim-surround
   { "tpope/vim-surround" },
 
-  -- 9) tpope/vim-vinegar
+  -- vim-vinegar
   { "tpope/vim-vinegar" },
 
-  -- 11) tpope/vim-commentary
+  -- vim-commentary
   { "tpope/vim-commentary" },
 
-  -- 12) tpope/vim-rhubarb
+  -- vim-rhubarb
   { "tpope/vim-rhubarb" },
 
-  -- 13) tpope/vim-dispatch
+  -- vim-dispatch
   { "tpope/vim-dispatch" },
 
-  -- 14) bkad/CamelCaseMotion
+  -- CamelCaseMotion
   { "bkad/CamelCaseMotion" },
 
-  -- 17) justinmk/vim-sneak
+  -- vim-sneak
   { "justinmk/vim-sneak" },
 
-  -- 18) mattn/emmet-vim
+  -- emmet-vim
   { "mattn/emmet-vim" },
 
-  -- 19) hallzy/lightline-onedark
+  -- lightline-onedark
   { "hallzy/lightline-onedark" },
 
-  -- 20) alvan/vim-closetag
+  -- vim-closetag
   { "alvan/vim-closetag" },
 
-  -- 21) airblade/vim-gitgutter
-  { "airblade/vim-gitgutter" },
-
-  -- 22) jamestthompson3/nvim-remote-containers
+  -- nvim-remote-containers
   { "jamestthompson3/nvim-remote-containers" },
 
-  -- 24) asyncrun.vim
+  -- asyncrun.vim
   { "skywind3000/asyncrun.vim" },
 
-  -- 25) vim-oscyank
-  { "ojroques/vim-oscyank", branch = "main" },
+  -- vim-oscyank
+  { "ojroques/vim-oscyank",                  branch = "main" },
 
-  -- 26) neoscroll.nvim
-  { "karb94/neoscroll.nvim" },
-
-  -- 27) indentLine
-  { "Yggdroot/indentLine" },
-
-  -- 28) nvim-treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
-  },
-
+  -- nvim-treesitter with playground
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     dependencies = { "nvim-treesitter/playground" },
     opts = {
-      ensure_installed = "all",  -- or a list of languages like { "lua", "vim", "python" }
+      ensure_installed = "all", -- or a list of languages like { "lua", "vim", "python" }
       highlight = { enable = true },
       playground = {
         enable = true,
         disable = {},
-        updatetime = 25,           -- debounce time for highlighting nodes in the playground from source code
-        persist_queries = false,   -- whether the query persists across vim sessions
+        updatetime = 25,     -- debounce time for highlighting nodes in the playground from source code
+        persist_queries = false, -- whether the query persists across vim sessions
+        keybindings = {
+          toggle_query_editor = "o",
+          toggle_hl_groups = "i",
+          toggle_injected_languages = "t",
+          toggle_anonymous_nodes = "a",
+          toggle_language_display = "I",
+          focus_language = "f",
+          unfocus_language = "F",
+          update = "R",
+          goto_node = "<cr>",
+          show_help = "?",
+        },
+      },
+    },
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    dependencies = { "nvim-treesitter/playground" },
+    opts = {
+      ensure_installed = "all", -- or a list of languages like { "lua", "vim", "python" }
+      highlight = { enable = true },
+      playground = {
+        enable = true,
+        disable = {},
+        updatetime = 25,     -- debounce time for highlighting nodes in the playground from source code
+        persist_queries = false, -- whether the query persists across vim sessions
         keybindings = {
           toggle_query_editor = "o",
           toggle_hl_groups = "i",
@@ -141,43 +254,37 @@ return {
     end,
   },
 
-  -- 29) dressing.nvim
+  -- dressing.nvim
   { "stevearc/dressing.nvim" },
 
-  -- 30) plenary.nvim
+  -- plenary.nvim
   { "nvim-lua/plenary.nvim" },
 
-  -- 31) nui.nvim
+  -- nui.nvim
   { "MunifTanjim/nui.nvim" },
 
-  -- 32) render-markdown.nvim
+  -- render-markdown.nvim
   { "MeanderingProgrammer/render-markdown.nvim" },
 
-  -- 33) nvim-cmp
-  { "hrsh7th/nvim-cmp" },
-
-  -- 34) nvim-web-devicons
+  -- nvim-web-devicons
   { "nvim-tree/nvim-web-devicons" },
 
-  -- 35) img-clip.nvim
+  -- img-clip.nvim
   { "HakonHarnes/img-clip.nvim" },
 
-  -- 36) copilot.lua (disabled)
-  { "zbirenbaum/copilot.lua", enabled = false },
-
-  -- 37) avante.nvim
+  -- avante.nvim
   {
     "yetone/avante.nvim",
     branch = "main",
-    build = "make"
+    build = "make",
   },
 
   -- neogit
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim",         -- required
-      "sindrets/diffview.nvim",        -- optional - Diff integration
+      "nvim-lua/plenary.nvim", -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
 
       -- Only one of these is needed.
       "nvim-telescope/telescope.nvim", -- optional
@@ -187,12 +294,66 @@ return {
     -- config = true,
     config = function()
       require("neogit").setup({
-        kind = "split",  -- Opens in a horizontal split
+        kind = "split", -- Opens in a horizontal split
       })
     end,
   },
 
-  -- Snacks
+  -- null-ls & mason-null-ls integration
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    dependencies = {
+      "jayp0521/mason-null-ls.nvim",
+    },
+    config = function()
+      require("mason-null-ls").setup({
+        ensure_installed = {
+          "eslint_d", -- Linter for TypeScript/JavaScript
+          "prettierd", -- Formatter for TypeScript/JavaScript
+          "swiftlint", -- Linter for Swift
+          "swiftformat", -- Formatter for Swift
+          "shellcheck", -- Linter for Bash
+          "shfmt",  -- Formatter for Bash
+          "stylua", -- Formatter for Lua
+          "luacheck", -- Linter for Lua
+        },
+        automatic_installation = true,
+      })
+      local null_ls = require("null-ls")
+      null_ls.setup({
+        sources = {
+          -- TypeScript / JavaScript
+          null_ls.builtins.formatting.prettierd,
+          null_ls.builtins.diagnostics.eslint_d,
+          null_ls.builtins.code_actions.eslint_d,
+          -- Swift
+          null_ls.builtins.formatting.swiftformat,
+          null_ls.builtins.diagnostics.swiftlint,
+          -- Bash
+          null_ls.builtins.formatting.shfmt,
+          null_ls.builtins.diagnostics.shellcheck,
+          -- Lua
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.diagnostics.luacheck,
+        },
+        on_attach = function(client, bufnr)
+          if client.supports_method("textDocument/formatting") then
+            local formatting_group = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
+            vim.api.nvim_clear_autocmds({ group = formatting_group, buffer = bufnr })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              group = formatting_group,
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format({ async = false })
+              end,
+            })
+          end
+        end,
+      })
+    end,
+  },
+
+  -- snacks
   {
     "folke/snacks.nvim",
     priority = 1000,
@@ -213,24 +374,76 @@ return {
       scope = { enabled = true },
       scroll = { enabled = true },
       statuscolumn = { enabled = true },
+      toggle = {
+        which_key = true,
+        notify = true,
+      },
       words = { enabled = true },
     },
     keys = {
-      { "<C- >",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
+      {
+        "<leader>\\",
+        function()
+          Snacks.terminal()
+        end,
+        desc = "Toggle Terminal",
+      },
       -- -- Top Pickers & Explorer
-      { "<space>o", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-      { "<space>B", function() Snacks.picker.buffers() end, desc = "Buffers" },
-      { "<space>g", function() Snacks.picker.grep() end, desc = "Grep" },
+      {
+        "<space>o",
+        function()
+          Snacks.picker.smart()
+        end,
+        desc = "Smart Find Files",
+      },
+      {
+        "<space>B",
+        function()
+          Snacks.picker.buffers()
+        end,
+        desc = "Buffers",
+      },
+      {
+        "<space>g",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Grep",
+      },
       -- { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
-      { "<space>`", function() Snacks.picker.notifications() end, desc = "Notification History" },
-      { "<space>e", function() Snacks.explorer() end, desc = "File Explorer" },
+      {
+        "<space>`",
+        function()
+          Snacks.picker.notifications()
+        end,
+        desc = "Notification History",
+      },
+      {
+        "<space>e",
+        function()
+          Snacks.explorer()
+        end,
+        desc = "File Explorer",
+      },
       -- -- find
       -- { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
-      { "<space>,", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
+      {
+        "<space>,",
+        function()
+          Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+        end,
+        desc = "Find Config File",
+      },
       -- { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
       -- { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
       -- { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
-      { "<space>r", function() Snacks.picker.recent() end, desc = "Recent" },
+      {
+        "<space>r",
+        function()
+          Snacks.picker.recent()
+        end,
+        desc = "Recent",
+      },
       -- -- git
       -- { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
       -- { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
@@ -240,7 +453,13 @@ return {
       -- { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
       -- { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
       -- -- Grep
-      { "<space>l", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
+      {
+        "<space>l",
+        function()
+          Snacks.picker.lines()
+        end,
+        desc = "Buffer Lines",
+      },
       -- { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
       -- { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
       -- { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
@@ -254,7 +473,13 @@ return {
       -- { "<space>i", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
       -- { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
       -- { "<leader>sh", function() Snacks.picker.help() end, desc = "Help Pages" },
-      { "<space>h", function() Snacks.picker.highlights() end, desc = "Highlights" },
+      {
+        "<space>h",
+        function()
+          Snacks.picker.highlights()
+        end,
+        desc = "Highlights",
+      },
       -- { "<space>i", function() Snacks.picker.icons() end, desc = "Icons" },
       -- { "<leader>sj", function() Snacks.picker.jumps() end, desc = "Jumps" },
       -- { "<leader>sk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
@@ -310,27 +535,24 @@ return {
     }, -- keys
   }, -- snacks
 
-  -----------------------------------------------------------------------
-  -- ADD TELESCOPE + FZF NATIVE
-  -----------------------------------------------------------------------
+  -- telescope.nvim
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = {
-      { "nvim-lua/plenary.nvim" }
+      { "nvim-lua/plenary.nvim" },
     },
   },
+  -- telescope-fzf-native.nvim
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make",
     dependencies = {
-      "nvim-telescope/telescope.nvim"
+      "nvim-telescope/telescope.nvim",
     },
   },
 
-  -----------------------------------------------------------------------
-  -- ADD NEOTEST
-  -----------------------------------------------------------------------
+  -- neotest
   {
     "nvim-neotest/neotest",
     dependencies = {
@@ -342,10 +564,81 @@ return {
     },
   },
 
-  -- Lazygit
+  -- lazygit.nvim
   {
     "kdheepak/lazygit.nvim",
     cmd = "LazyGit",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
+
+  -- mason.nvim
+  {
+    "williamboman/mason.nvim",
+    lazy = false,
+    config = function()
+      require("mason").setup()
+    end,
+  },
+
+  -- mason-lspconfig.nvim
+  {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = false,
+    dependencies = { "williamboman/mason.nvim" },
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "ts_ls", -- TypeScript/JavaScript/React
+          -- "gopls",       -- Go
+          "bashls", -- Shell scripting
+          "lua_ls", -- Lua
+        },
+      })
+    end,
+  },
+
+  -- nvim-lspconfig
+  {
+    "neovim/nvim-lspconfig",
+    lazy = false,
+    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
+    config = function()
+      local lspconfig = require("lspconfig")
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+      local on_attach = function(client, bufnr)
+        require("user.lsp_keymaps").setup(bufnr)
+      end
+
+      local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls" }
+      for _, server in ipairs(servers) do
+        if server == "ts_ls" then
+          lspconfig[server].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            init_options = {
+              preferences = {
+                completeFunctionCalls = true,
+                includeCompletionsWithSnippetText = true,
+              },
+            },
+          })
+        elseif server == "sourcekit" then
+          lspconfig[server].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "sourcekit-lsp" },
+            filetypes = { "swift" },
+          })
+        else
+          lspconfig[server].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+          })
+        end
+      end
+    end,
+  },
 }
+

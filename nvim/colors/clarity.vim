@@ -1,6 +1,9 @@
 "Name:          clarity
 "Version:       1.0
 
+"====================================================
+" Global Setup
+"====================================================
 set background=dark
 if version > 580
     hi clear
@@ -10,16 +13,24 @@ if version > 580
 endif
 let g:colors_name="clarity"
 
+"====================================================
+" Base Colors (Vim Built-in Groups)
+" These groups are provided by Vim by default.
+"====================================================
 hi Normal       guifg=#a5e9ff     guibg=#18304d
 
 hi DiffDelete   guifg=#304050     guibg=#203040
 hi DiffAdd      guibg=#002851
 hi DiffChange   guifg=#450303
-hi DiffText     guibg=#990909     gui=none
+hi DiffText     guifg=#990909     gui=none
 
 hi diffAdded    guifg=#00bf00     guibg=#1d2c1b
 hi diffRemoved  guifg=#e00000     guibg=#2d1c20
 
+"====================================================
+" UI Elements (Built-in and Plugin-defined Groups)
+" These groups control the appearance of interface elements.
+"====================================================
 hi Cursor       guibg=#ffbd00     guifg=#13233c
 hi VertSplit    guibg=#102030     guifg=#102030   gui=none
 hi Folded       guifg=#cccccc     guibg=#405060
@@ -27,7 +38,7 @@ hi FoldColumn   guibg=grey30      guifg=tan
 hi IncSearch    guifg=slategrey   guibg=khaki
 hi LineNr       guifg=#4382CB     guibg=#18304d
 hi CursorLineNr guifg=#60A1D8     guibg=#18304d
-hi GitSignsCurrentLineBlame guifg=#60A1D8
+hi GitSignsCurrentLineBlame guifg=#60A1D8   " Defined by GitSigns.nvim plugin
 hi ModeMsg      guifg=goldenrod
 hi MoreMsg      guifg=SeaGreen
 hi NonText      guifg=#304050     guibg=#18304d
@@ -42,6 +53,10 @@ hi WarningMsg   guifg=salmon
 hi Directory    guifg=#a6e22e
 hi SignColumn   guifg=#a6e22e     guibg=#18304d
 
+"====================================================
+" Text and Popup Colors (Built-in Vim Groups)
+" These groups affect text highlights and pop-up menus.
+"====================================================
 hi String       guifg=#fb5baa     guibg=none
 
 hi PMenuSel gui=standout,bold
@@ -57,6 +72,10 @@ if version >= 703
     hi ColorColumn  guifg=#e8ecf0 guibg=#283848
 endif
 
+"====================================================
+" Syntax Highlighting (Standard Vim Syntax Groups)
+" These standard groups are used for comments, constants, identifiers, etc.
+"====================================================
 hi Comment    guifg=#8f9ae5   gui=none
 hi Constant   guifg=#ffe381   gui=none
 hi Identifier guifg=#70d080   gui=none
@@ -69,6 +88,10 @@ hi Number     guifg=#ffff80
 hi Ignore     guifg=grey40    gui=none
 hi Todo       guifg=orangered guibg=#304050 gui=none
 
+"====================================================
+" JSX Colors (Defined by JSX Syntax Plugins, e.g., vim-jsx)
+" Custom highlight groups for JSX files.
+"====================================================
 hi jsxElement guifg=white gui=none
 hi jsxTag guifg=white gui=none
 hi jsxTagName guifg=white gui=none
@@ -90,6 +113,10 @@ hi jsxBraces            guifg=#f258a4 gui=none
 hi jsxString            guifg=#ffe381 guibg=none
 hi jsxDot               guifg=#f258a4 gui=none
 
+"====================================================
+" JavaScript Colors (Defined by JavaScript Syntax Plugins, e.g., vim-javascript)
+" Custom highlight groups for JavaScript files.
+"====================================================
 hi jsFunctionCall       guifg=#ff9f59 gui=none
 hi jsComment            guifg=#7f4e66 gui=none
 hi jsArrow              guifg=#ff9f59 gui=none
@@ -100,6 +127,10 @@ hi jsAssignmentColon    guifg=#82d567 guibg=none
 hi jsComma              guifg=#82d567 guibg=none
 hi jsDot                guifg=#82d567 guibg=none
 
+"====================================================
+" TypeScript Colors (Defined by TypeScript Syntax Plugins, e.g., vim-typescript or yats.vim)
+" These groups are custom and are not part of Neovim's built-in LSP highlights.
+"====================================================
 hi typescriptImport         guifg=#5fa1db gui=italic guibg=none
 hi typescriptExport         guifg=#5fa1db gui=italic guibg=none
 hi typescriptTry            guifg=#5fa1db gui=italic guibg=none
@@ -140,6 +171,10 @@ hi typescriptNull                   guifg=#ffe381 gui=none
 hi typescriptNumber                 guifg=#ffe381 gui=none
 hi typescriptPredefinedType         guifg=#ffe381 gui=none
 
+"====================================================
+" Snacks.nvim Colors (Defined by Snacks.nvim plugin)
+" Per-color snacks comments are preserved.
+"====================================================
 """
 """ Snacks
 """
@@ -166,17 +201,4 @@ hi SnacksPickerListCursorLine       guifg=#ffe381 guibg=#3D5560
 "
 " ???
 hi SnacksPicker                     guifg=#ffff00 gui=none
-hi SnacksPickerListBorder            guifg=#00ff00 gui=none
-
-
-
-
-
-
-
-
-
-
-
-
-
+hi SnacksPickerListBorder           guifg=#00ff00 gui=none

@@ -9,7 +9,10 @@ function _G.SynGroup()
   local trans_name = vim.fn.synIDattr(vim.fn.synIDtrans(pos), "name")
   print(name .. " -> " .. trans_name)
 end
-vim.keymap.set("n", "\\h", function() SynGroup() end, { silent = true })
+
+vim.keymap.set("n", "\\h", function()
+  SynGroup()
+end, { silent = true })
 
 function _G.FillLine(str)
   local tw = 80
@@ -22,7 +25,10 @@ function _G.FillLine(str)
     vim.api.nvim_set_current_line(line)
   end
 end
-vim.keymap.set("n", "<space>-", function() FillLine("_") end, { silent = true })
+
+vim.keymap.set("n", "<space>-", function()
+  FillLine("_")
+end, { silent = true })
 
 local function VerticalSplitBuffer(bufnr)
   vim.cmd("vert belowright sb" .. bufnr)
@@ -31,4 +37,5 @@ vim.api.nvim_create_user_command("Vsb", function(args)
   VerticalSplitBuffer(args.args)
 end, { nargs = 1 })
 
--- "Conflicts" now replaced by a telescope search (see keymaps.lua)
+-- set it so vim asks to to throw away a file if the buffer isn't saved instead of just denying you
+vim.opt.confirm = true

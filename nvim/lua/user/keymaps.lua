@@ -29,17 +29,8 @@ vim.api.nvim_create_user_command("Conflicts", function()
   require("telescope.builtin").grep_string({ search = "<<<<<<" })
 end, {})
 
---------------------------
--- COC / Format
---------------------------
-keymap("n", "<space>p", ":Format<CR>", opts)
-
 -- Buffer navigation
 keymap("n", "<space>b", ":bn<CR>", opts)
-
--- Diagnostics (CocAction)
-keymap("n", "<space>j", function() vim.fn.CocAction("diagnosticNext") end, opts)
-keymap("n", "<space>k", function() vim.fn.CocAction("diagnosticPrevious") end, opts)
 
 -- Utility
 keymap("n", "<space>w", ":up<bar>bp<bar>sp<bar>bn<bar>bd<CR>", opts)
@@ -50,11 +41,6 @@ keymap("i", "<C-l>", "copilot#Accept('')", { silent = true, script = true, expr 
 keymap("i", "<C-j>", "<Plug>(copilot-next)", {})
 keymap("i", "<C-k>", "<Plug>(copilot-previous)", {})
 keymap("i", "<C-\\>", "<Plug>(copilot-dismiss)", {})
-
--- Code action & fix
-keymap("n", "<space><CR>", "<Plug>(coc-fix-current)", opts)
-keymap("n", "<space>\\", "<Plug>(coc-codeaction)", opts)
-keymap("n", "<space>O", ":CocList mru<CR>", opts)
 
 -- CamelCaseMotion
 keymap("n", ",w", "<Plug>CamelCaseMotion_w", opts)

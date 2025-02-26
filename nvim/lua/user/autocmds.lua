@@ -73,12 +73,3 @@ autocmd("TextYankPost", {
   end,
 })
 
--- Watchbuild with Coc
-augroup("coc_watchbuild", { clear = true })
-autocmd("User", {
-  pattern = "CocNvimInit",
-  group = "coc_watchbuild",
-  callback = function()
-    vim.fn.CocAction("runCommand", "tsserver.watchBuild")
-  end,
-})
