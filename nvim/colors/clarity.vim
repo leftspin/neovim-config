@@ -53,10 +53,19 @@ hi WarningMsg   guifg=salmon
 hi Directory    guifg=#a6e22e
 hi SignColumn   guifg=#a6e22e     guibg=#18304d
 
+" Inline Diagnostics
+" hi DiagnosticError    guifg=#E34312 guibg=#3B2F28
+hi DiagnosticError    guifg=#FF4500 guibg=#4D271B
+
 "====================================================
 " Text and Popup Colors (Built-in Vim Groups)
 " These groups affect text highlights and pop-up menus.
 "====================================================
+
+" Diagnostic popup
+hi NormalFloat  guibg=#2A1A05 guibg=#18304d
+hi FloatBorder  guifg=#ecad2b guibg=#18304d
+
 hi String       guifg=#fb5baa     guibg=none
 
 hi PMenuSel gui=standout,bold
@@ -173,11 +182,7 @@ hi typescriptPredefinedType         guifg=#ffe381 gui=none
 
 "====================================================
 " Snacks.nvim Colors (Defined by Snacks.nvim plugin)
-" Per-color snacks comments are preserved.
 "====================================================
-"""
-""" Snacks
-"""
 
 " Text color of a file ln a listing
 hi SnacksPickerFile                 guifg=#ffffff gui=none
@@ -198,7 +203,16 @@ hi SnacksPickerInputBorder          guifg=#8f9ae5 gui=none
 hi SnacksPickerPreviewBorder        guifg=#8f9ae5 gui=none
 " The selection color
 hi SnacksPickerListCursorLine       guifg=#ffe381 guibg=#3D5560
+" The selection color in preview windows
+hi SnacksPickerPreviewCursorLine    guifg=#2A1A05 guibg=#ecad2b
 "
 " ???
 hi SnacksPicker                     guifg=#ffff00 gui=none
 hi SnacksPickerListBorder           guifg=#00ff00 gui=none
+
+"====================================================
+" Noice.nvim Colors (Defined by Noice.nvim plugin)
+"====================================================
+
+hi NoiceConfirm                     guifg=#a5e9ff guibg=#18304d
+hi NoiceFormatConfirm               guifg=#fefeff guibg=#304E73

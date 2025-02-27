@@ -5,14 +5,22 @@
 -- Connect signature help to noice so that signature popups are styled by noice
 -------------------------------------------------------
 
-
-
 -- Diagnostic signs
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+-- Configure diagnostics to use a rounded border for floating windows
+vim.diagnostic.config({
+  float = {
+    border = "rounded",             -- Use a rounded border for diagnostics
+    source = "if_many",             -- Display diagnostic source if multiple diagnostics are present
+    header = "",                    -- No header in the popup
+    prefix = "",                    -- No prefix for each diagnostic message
+  },
+})
 
 -- Map "K" in normal mode to show hover documentation (no auto doc popups)
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show Hover Documentation" })
@@ -112,7 +120,7 @@ return {
           border = "rounded",
         },
         floating_window = true,
-        hint_enable = true,      -- show parameter hints
+        hint_enable = true, -- show parameter hints
         hint_prefix = " ",
       })
     end,
@@ -178,8 +186,8 @@ return {
       -- Show signature help upon typing (the normal behavior)
       lsp = {
         signature = {
-          enabled = true,
-          auto_open = { trigger = true },
+          enabled = false,
+          -- auto_open = { trigger = true },
         },
       },
       -- Show :messages in a noice-style split for easy copying
@@ -187,14 +195,6 @@ return {
         enabled = true,
       },
       routes = {
-        -- route #1: hide normal messages
-        {
-          filter = {
-            event = "msg_show",
-            kind = { "" }, -- usually normal messages have kind=""
-          },
-          opts = { skip = true },
-        },
         -- route #2: confirm prompt in a popup
         {
           filter = {
@@ -288,7 +288,7 @@ return {
   { "skywind3000/asyncrun.vim" },
 
   -- vim-oscyank
-  { "ojroques/vim-oscyank", branch = "main" },
+  { "ojroques/vim-oscyank",                  branch = "main" },
 
   -- nvim-treesitter with playground
   {
