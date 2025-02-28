@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clarity Theme Color Palette</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 2rem;
+        color: #333;
+      }
+      h1,
+      h2 {
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 3em;
+      }
+      th,
+      td {
+        padding: 0.75em 1em;
+        border: 1px solid #ccc;
+        vertical-align: top;
+      }
+      th {
+        background-color: #f5f5f5;
+      }
+      .color-swatch {
+        display: inline-block;
+        width: 2em;
+        height: 1em;
+        margin-right: 0.5em;
+        border: 1px solid #aaa;
+        vertical-align: middle;
+      }
+      .section-title {
+        margin-top: 3em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .notes {
+        color: #555;
+      }
+
+      /* Neovim simulation container */
+      .neovim-preview {
+        background-color: #18304d;  /* Normal bg */
+        padding: 1rem;
+        border: 1px solid #304050;  /* Border color (Storm Gray) */
+        font-family: monospace;
+        overflow-x: auto;
+        margin-bottom: 2rem;
+        position: relative;
+        color: #a5e9ff; /* Default foreground (Aqua Mist) */
+      }
+      .nvim-line {
+        line-height: 1.4em;
+        white-space: pre;
+      }
+      /* Simulated sign column */
+      .sign-col {
+        display: inline-block;
+        width: 2ch;
+        margin-right: 0.5ch;
+        text-align: center;
+      }
+      /* Cursor line highlight (#304E73) */
+      .cursor-line {
+        background-color: #304E73;
+      }
+      /* Cursor column highlight also #304E73 */
+      .cursor-col {
+        background-color: #304E73;
+      }
+      /* Lightline at the bottom (status line) */
+      .lightline {
+        background-color: #102030; /* from StatusLine */
+        color: #b3b3b3; /* grey70 */
+        padding: 0.25rem;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      .ll-left {
+        margin-left: 0.5rem;
+      }
+      .ll-right {
+        margin-right: 0.5rem;
+      }
+
+      /* Inline token colors for the simulation */
+      .nvim-line .linenum {
+        color: #4382cb; /* Cornflower Blue for line numbers */
+      }
+      /* We'll show some GitSigns-like color for sign column */
+      .git-plus {
+        color: #82d567; /* Spring Moss or Neon Lime (#a6e22e) is also possible */
+      }
+      .git-minus {
+        color: #e00000; /* Bright Red for removed lines */
+      }
+      .git-blame {
+        color: #60A1D8; /* Light Cornflower (GitSignsCurrentLineBlame) */
+      }
+      /* Example usage for strings, comments, keywords, etc. */
+      .ts-keyword { color: #5fa1db; }    /* Statement / TS keyword */
+      .ts-string  { color: #ffe381; }    /* Burnt Yellow */
+      .ts-type    { color: #8cd0d3; }    /* Seafoam */
+      .ts-var     { color: #F2836B; }    /* Coral Sand */
+      .ts-operator { color: #f258a4; }   /* Desert Rose or #4b8bc3 if needed? */
+      .ts-comment { color: #8f9ae5; }    /* Periwinkle Smoke */
+      .ts-interface { color: #82d567; }  /* Spring Moss */
+      .ts-special { color: #55dbff; }    /* e.g. arrow func, etc. */
+
+      /* For code snippet boxes that flow inline, let's do something similar. */
+      .snippet-container {
+        margin-top: 2rem;
+      }
+      .snippet-box {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        max-width: 360px; /* so they can flow */
+        margin: 1rem;
+        border: 1px solid #304050;
+        background-color: #18304d; /* same Normal BG for snippet */
+        font-family: monospace;
+        color: #a5e9ff; /* default fg */
+      }
+      .snippet-title {
+        background-color: #203040; /* Something darker for the "tab" */
+        color: white;
+        padding: 0.3rem 0.6rem;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 0 0.5rem 0;
+      }
+      .snippet-line {
+        line-height: 1.4em;
+        white-space: pre;
+        padding: 0 0.5rem;
+      }
+      /* We'll do minimal sign column for snippets. */
+      .snippet-sign {
+        display: inline-block;
+        width: 2ch;
+        margin-right: 0.5ch;
+        text-align: center;
+      }
+      /* We'll mimic the color scheme for each snippet's tokens. */
+      .js-keyword { color: #5fa1db; } /* same as TS for statements */
+      .js-func    { color: #ff9f59; } /* Sunset Orange */
+      .js-comment { color: #7f4e66; } /* Dusty Mauve */
+      .js-string  { color: #fb5baa; } /* Rose Petal or #ffe381? */
+      .js-number  { color: #ffff80; }
+      .swift-keyword { color: #5fa1db; }
+      .swift-string  { color: #fb5baa; }
+      .swift-type    { color: #8cd0d3; }
+      .swift-comment { color: #8f9ae5; }
+      .lua-keyword   { color: #5fa1db; }
+      .lua-comment   { color: #8f9ae5; }
+      .lua-string    { color: #ffe381; }
+      .py-keyword    { color: #5fa1db; }
+      .py-string     { color: #fb5baa; }
+      .py-comment    { color: #8f9ae5; }
+      .py-number     { color: #ffff80; }
+    </style>
+  </head>
+  <body>
+    <h1>Clarity Theme – Color Palette Overview</h1>
+    <p>
+      Below is the extracted palette from the
+      <strong>clarity.vim</strong> theme. We’ve grouped the colors into what
+      appears to be the <strong>core palette</strong>
+      (earthy, comfortable tones used extensively in syntax and UI) and
+      <strong>“weird” colors</strong> that don’t fit the overall vibe and may
+      need updating.
+    </p>
+
+    <!-- Simulated Neovim Session (TypeScript) -->
+    <h2 class="section-title">Simulated Neovim Session (TypeScript)</h2>
+    <div class="neovim-preview">
+      <!-- Lines with line numbers, sign column, token colors, etc. -->
+      
+      <!-- line 1 -->
+      <div class="nvim-line">
+        <span class="linenum"> 1</span>
+        <span class="sign-col git-plus">++</span>
+        <span class="ts-keyword">import</span> {<span style="color:#a5e9ff;"> SomeType</span>, <span style="color:#a5e9ff;">AnotherType</span>} <span class="ts-keyword">from</span> <span class="ts-string">"package"</span>;
+      </div>
+      <!-- line 2 -->
+      <div class="nvim-line">
+        <span class="linenum"> 2</span>
+        <span class="sign-col"></span>
+        <span class="ts-keyword">export</span> <span class="ts-keyword">function</span> <span class="ts-special">doSomething</span>(<span class="ts-var">arg</span>: <span class="ts-type">string</span>) {
+      </div>
+      <!-- line 3 -->
+      <div class="nvim-line">
+        <span class="linenum"> 3</span>
+        <span class="sign-col"></span>
+        <span class="ts-comment">  /**</span>
+      </div>
+      <!-- line 4 -->
+      <div class="nvim-line">
+        <span class="linenum"> 4</span>
+        <span class="sign-col"></span>
+        <span class="ts-comment">   * @note This doc comment references typescriptDocTags & typescriptDocNotation</span>
+      </div>
+      <!-- line 5 => cursor line -->
+      <div class="nvim-line cursor-line">
+        <span class="linenum"> 5</span>
+        <span class="sign-col git-blame">bl</span>
+        <span class="ts-comment">   */</span>
+        <!-- Cursor column highlight -->
+        <span class="cursor-col ts-operator">-></span>
+        <span class="ts-keyword">const</span> <span class="ts-var">value</span> <span class="ts-operator">=</span> <span class="ts-string">"Hello"</span>;
+      </div>
+      <!-- line 6 -->
+      <div class="nvim-line">
+        <span class="linenum"> 6</span>
+        <span class="sign-col git-minus">--</span>
+        <span class="ts-keyword">try</span> { <span class="ts-special">throwError</span>(<span class="ts-string">"Oops"</span>); }
+        <span class="ts-keyword">catch</span>(<span class="ts-var">err</span>) {}
+      </div>
+      <!-- line 7 -->
+      <div class="nvim-line">
+        <span class="linenum"> 7</span>
+        <span class="sign-col"></span>
+        <span class="ts-interface">interface</span> <span class="ts-interface" style="font-weight:bold;">MyData</span> {
+          <span style="color:#4d8b38;">status?</span>: <span class="ts-type">string</span>;
+        }
+      </div>
+      <!-- line 8 -->
+      <div class="nvim-line">
+        <span class="linenum"> 8</span>
+        <span class="sign-col"></span>
+        <span class="ts-interface">type</span> <span class="ts-interface" style="font-style:italic; font-weight:bold;">Alias</span> <span class="ts-operator">=</span> (<span class="ts-var">x</span>: <span class="ts-type">number</span>) <span class="ts-special">=></span> <span class="ts-type">boolean</span>;
+      </div>
+      <!-- line 9 -->
+      <div class="nvim-line">
+        <span class="linenum"> 9</span>
+        <span class="sign-col"></span>
+        <span class="ts-keyword">let</span> <span class="ts-var">optionalNum</span>: <span class="ts-type">number</span> | <span class="ts-string">null</span> <span class="ts-operator">=</span> <span style="color:#ffff80;">42</span>;
+      </div>
+      <!-- line 10 -->
+      <div class="nvim-line">
+        <span class="linenum">10</span>
+        <span class="sign-col"></span>
+        <span class="ts-keyword">const</span> [<span class="ts-var">a</span>, <span class="ts-var">b</span>] <span class="ts-operator">=</span> [<span style="color:#ffff80;">1</span>, <span style="color:#ffff80;">2</span>]; <span class="ts-comment">// destructuring</span>
+      </div>
+      <!-- line 11 -->
+      <div class="nvim-line">
+        <span class="linenum">11</span>
+        <span class="sign-col"></span>
+        <span class="ts-keyword">return</span> (<span class="ts-var">arg</span>) <span class="ts-operator">=></span> {
+          <span style="color:#82d567;">console</span>.<span style="color:#82d567;">log</span>(<span class="ts-var">arg</span>);
+        };
+      </div>
+      <!-- line 12 -->
+      <div class="nvim-line">
+        <span class="linenum">12</span>
+        <span class="sign-col"></span>
+        }
+      </div>
+
+      <!-- Simulated lightline at the bottom -->
+      <div class="lightline">
+        <div class="ll-left">NORMAL</div>
+        <div class="ll-right">Clarity Theme</div>
+      </div>
+    </div>
+
+    <!-- Code snippets in flow boxes, each with background #18304d and inline syntax coloring -->
+    <h2 class="section-title">Code Snippets</h2>
+    <div class="snippet-container">
+      <!-- TypeScript snippet -->
+      <div class="snippet-box">
+        <div class="snippet-title">TypeScript</div>
+        <div class="snippet-line">
+          <span class="linenum">1</span>
+          <span class="snippet-sign git-plus">+</span>
+          <span class="ts-keyword">import</span> {<span style="color:#a5e9ff;"> greet</span>} <span class="ts-keyword">from</span> <span class="ts-string">"utils"</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">2</span>
+          <span class="snippet-sign"></span>
+          <span class="ts-keyword">export</span> <span class="ts-keyword">async</span> <span class="ts-keyword">function</span> <span class="ts-special">testTS</span>
+          &lt;<span class="ts-type">T</span>&gt;(<span class="ts-var">input</span>: <span class="ts-type">T</span>): <span class="ts-type">Promise</span>&lt;<span style="color:#ffff80;">number</span>&gt; {
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">3</span>
+          <span class="snippet-sign"></span>
+          <span class="ts-keyword">let</span> <span class="ts-var">num</span>: <span class="ts-type">number</span> <span class="ts-operator">=</span> <span style="color:#ffff80;">42</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">4</span>
+          <span class="snippet-sign git-blame">bl</span>
+          <span style="color:#82d567;">console</span>.<span style="color:#82d567;">log</span>(<span class="ts-var">input</span>)
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">5</span>
+          <span class="snippet-sign"></span>
+          <span class="ts-keyword">return</span> <span class="ts-var">num</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">6</span>
+          <span class="snippet-sign"></span>
+          }
+        </div>
+      </div>
+
+      <!-- JavaScript snippet -->
+      <div class="snippet-box">
+        <div class="snippet-title">JavaScript</div>
+        <div class="snippet-line">
+          <span class="linenum">1</span>
+          <span class="snippet-sign js-comment">//</span>
+          <span class="js-comment"> A simple JS snippet</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">2</span>
+          <span class="snippet-sign"></span>
+          <span class="js-keyword">function</span> <span class="js-func">greet</span>(name) {
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">3</span>
+          <span class="snippet-sign"></span>
+          <span class="js-keyword">let</span> message <span style="color:#f258a4;">=</span> <span class="js-string">"Hello, "</span> <span style="color:#f258a4;">+</span> name
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">4</span>
+          <span class="snippet-sign"></span>
+          <span class="js-keyword">return</span> message
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">5</span>
+          <span class="snippet-sign"></span>
+          }
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">6</span>
+          <span class="snippet-sign"></span>
+          <span class="js-keyword">const</span> arrow <span style="color:#f258a4;">=</span> <span class="js-func">()</span> <span style="color:#f258a4;">=></span> {
+            <span style="color:#82d567;">console</span>.<span style="color:#82d567;">log</span>(<span class="js-string">"JS arrow!"</span>)
+          }
+        </div>
+      </div>
+
+      <!-- Swift snippet -->
+      <div class="snippet-box">
+        <div class="snippet-title">Swift</div>
+        <div class="snippet-line">
+          <span class="linenum">1</span>
+          <span class="snippet-sign"></span>
+          <span class="swift-keyword">import</span> <span class="swift-type">Foundation</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">2</span>
+          <span class="snippet-sign swift-comment">//</span>
+          <span class="swift-comment"> Swift sample snippet</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">3</span>
+          <span class="snippet-sign"></span>
+          <span class="swift-keyword">struct</span> <span class="swift-type">User</span> {
+            <span class="swift-keyword">var</span> name: <span class="swift-type">String</span>
+          }
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">4</span>
+          <span class="snippet-sign"></span>
+          <span class="swift-keyword">func</span> greet(_ user: User) {
+            print(<span class="swift-string">"Hello \\(user.name)!"</span>)
+          }
+        </div>
+      </div>
+
+      <!-- Lua snippet -->
+      <div class="snippet-box">
+        <div class="snippet-title">Lua</div>
+        <div class="snippet-line">
+          <span class="linenum">1</span>
+          <span class="snippet-sign lua-comment">--</span>
+          <span class="lua-comment"> Lua example</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">2</span>
+          <span class="snippet-sign"></span>
+          <span class="lua-keyword">local</span> function sum(a, b)
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">3</span>
+          <span class="snippet-sign"></span>
+          <span class="lua-comment">-- Add them up</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">4</span>
+          <span class="snippet-sign"></span>
+          <span class="lua-keyword">return</span> a <span style="color:#f258a4;">+</span> b
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">5</span>
+          <span class="snippet-sign"></span>
+          <span class="lua-keyword">end</span>
+        </div>
+      </div>
+
+      <!-- Python snippet -->
+      <div class="snippet-box">
+        <div class="snippet-title">Python</div>
+        <div class="snippet-line">
+          <span class="linenum">1</span>
+          <span class="snippet-sign py-comment">#</span>
+          <span class="py-comment"> Python code sample</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">2</span>
+          <span class="snippet-sign"></span>
+          <span class="py-keyword">def</span> greet(name):
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">3</span>
+          <span class="snippet-sign"></span>
+          <span class="py-comment"># show a numeric, string, etc.</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">4</span>
+          <span class="snippet-sign"></span>
+          age <span style="color:#f258a4;">=</span> <span class="py-number">42</span>
+        </div>
+        <div class="snippet-line">
+          <span class="linenum">5</span>
+          <span class="snippet-sign"></span>
+          <span class="py-keyword">return</span> f<span class="py-string">"Hello {name} ({age})"</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================== CORE PALETTE =========================== -->
+    <h2 class="section-title">Core Palette</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Color Name</th>
+          <th>Hex Code</th>
+          <th>Swatch</th>
+          <th>Usage Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- #18304d -->
+        <tr>
+          <td><strong>Deep Navy</strong></td>
+          <td>#18304d</td>
+          <td>
+            <span class="color-swatch" style="background-color: #18304d"></span>
+          </td>
+          <td class="notes">
+            Main background (<code>Normal</code>), also used for
+            <code>NonText</code> bg, <code>LineNr</code> bg, and other UI
+            elements.
+          </td>
+        </tr>
+
+        <!-- #a5e9ff -->
+        <tr>
+          <td><strong>Aqua Mist</strong></td>
+          <td>#a5e9ff</td>
+          <td>
+            <span class="color-swatch" style="background-color: #a5e9ff"></span>
+          </td>
+          <td class="notes">
+            Foreground for <code>Normal</code>, used in various braces/objects
+            in JSX and TypeScript.
+          </td>
+        </tr>
+
+        <!-- #304050 -->
+        <tr>
+          <td><strong>Storm Gray</strong></td>
+          <td>#304050</td>
+          <td>
+            <span class="color-swatch" style="background-color: #304050"></span>
+          </td>
+          <td class="notes">
+            Used as <code>DiffDelete</code> fg, <code>NonText</code> fg,
+            <code>Todo</code> bg. Contributes a muted, earthy gray-blue tone.
+          </td>
+        </tr>
+
+        <!-- #8f9ae5 -->
+        <tr>
+          <td><strong>Periwinkle Smoke</strong></td>
+          <td>#8f9ae5</td>
+          <td>
+            <span class="color-swatch" style="background-color: #8f9ae5"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Comment</code> text, also for
+            <code>SnacksPickerDir</code>. A soft, slightly purple-toned
+            highlight.
+          </td>
+        </tr>
+
+        <!-- #ffe381 -->
+        <tr>
+          <td><strong>Burnt Yellow</strong></td>
+          <td>#ffe381</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ffe381"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Constant</code>, <code>jsxString</code>,
+            <code>typescriptNull</code>, <code>typescriptNumber</code>. A warm,
+            gentle yellow.
+          </td>
+        </tr>
+
+        <!-- #70d080 -->
+        <tr>
+          <td><strong>Mint Green</strong></td>
+          <td>#70d080</td>
+          <td>
+            <span class="color-swatch" style="background-color: #70d080"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Identifier</code> text. A calming green that fits the
+            earthy theme.
+          </td>
+        </tr>
+
+        <!-- #5fa1db -->
+        <tr>
+          <td><strong>Ocean Blue</strong></td>
+          <td>#5fa1db</td>
+          <td>
+            <span class="color-swatch" style="background-color: #5fa1db"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Statement</code>, <code>typescriptImport</code>,
+            <code>typescriptExport</code>, etc. A cool mid-tone blue.
+          </td>
+        </tr>
+
+        <!-- #8cd0d3 -->
+        <tr>
+          <td><strong>Seafoam</strong></td>
+          <td>#8cd0d3</td>
+          <td>
+            <span class="color-swatch" style="background-color: #8cd0d3"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Type</code>. Soft, oceanic teal color.
+          </td>
+        </tr>
+
+        <!-- #ecad2b -->
+        <tr>
+          <td><strong>Saffron</strong></td>
+          <td>#ecad2b</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ecad2b"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Special</code>, <code>FloatBorder</code>,
+            <code>SnacksPickerPreviewCursorLine</code> bg. A warm, earthy
+            golden-yellow.
+          </td>
+        </tr>
+
+        <!-- #8090a0 -->
+        <tr>
+          <td><strong>Steel Gray</strong></td>
+          <td>#8090a0</td>
+          <td>
+            <span class="color-swatch" style="background-color: #8090a0"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Delimiter</code>. Muted blue-gray accent.
+          </td>
+        </tr>
+
+        <!-- #ffff80 -->
+        <tr>
+          <td><strong>Light Banana</strong></td>
+          <td>#ffff80</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ffff80"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Number</code>. Bright but still soft enough to
+            complement the palette.
+          </td>
+        </tr>
+
+        <!-- orangered -->
+        <tr>
+          <td><strong>Fiery Red</strong></td>
+          <td>orangered</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: orangered"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>Todo</code> fg. Adds a pop of alerting red for to-do
+            highlights.
+          </td>
+        </tr>
+
+        <!-- #f258a4 -->
+        <tr>
+          <td><strong>Desert Rose</strong></td>
+          <td>#f258a4</td>
+          <td>
+            <span class="color-swatch" style="background-color: #f258a4"></span>
+          </td>
+          <td class="notes">
+            Used in JSX for <code>jsxAttrib</code>, <code>jsxEqual</code>, etc.
+            A pinkish-red accent.
+          </td>
+        </tr>
+
+        <!-- #fb5baa -->
+        <tr>
+          <td><strong>Rose Petal</strong></td>
+          <td>#fb5baa</td>
+          <td>
+            <span class="color-swatch" style="background-color: #fb5baa"></span>
+          </td>
+          <td class="notes">
+            Used for <code>String</code> (and JSX strings). A bright pink with
+            warm undertones.
+          </td>
+        </tr>
+
+        <!-- #ff9f59 -->
+        <tr>
+          <td><strong>Sunset Orange</strong></td>
+          <td>#ff9f59</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ff9f59"></span>
+          </td>
+          <td class="notes">
+            Used for JavaScript calls (<code>jsFunctionCall</code>,
+            <code>jsArrow</code>). A warm, earthy orange.
+          </td>
+        </tr>
+
+        <!-- #7f4e66 -->
+        <tr>
+          <td><strong>Dusty Mauve</strong></td>
+          <td>#7f4e66</td>
+          <td>
+            <span class="color-swatch" style="background-color: #7f4e66"></span>
+          </td>
+          <td class="notes">
+            Used for <code>jsComment</code>. Subtle purple-brown commentary
+            color.
+          </td>
+        </tr>
+
+        <!-- #82d567 -->
+        <tr>
+          <td><strong>Spring Moss</strong></td>
+          <td>#82d567</td>
+          <td>
+            <span class="color-swatch" style="background-color: #82d567"></span>
+          </td>
+          <td class="notes">
+            Used for JS object keys, TypeScript interfaces, etc. A fresh,
+            subdued green.
+          </td>
+        </tr>
+
+        <!-- #4d8b38 -->
+        <tr>
+          <td><strong>Forest Moss</strong></td>
+          <td>#4d8b38</td>
+          <td>
+            <span class="color-swatch" style="background-color: #4d8b38"></span>
+          </td>
+          <td class="notes">
+            Used for <code>typescriptMember</code>. Darker, earthy green tone.
+          </td>
+        </tr>
+
+        <!-- #4b8bc3 -->
+        <tr>
+          <td><strong>Cloudy Blue</strong></td>
+          <td>#4b8bc3</td>
+          <td>
+            <span class="color-swatch" style="background-color: #4b8bc3"></span>
+          </td>
+          <td class="notes">
+            Used for <code>typescriptDocTags</code>,
+            <code>typescriptOperator</code>. A medium, gentle blue.
+          </td>
+        </tr>
+
+        <!-- #F2836B -->
+        <tr>
+          <td><strong>Coral Sand</strong></td>
+          <td>#F2836B</td>
+          <td>
+            <span class="color-swatch" style="background-color: #f2836b"></span>
+          </td>
+          <td class="notes">
+            Used for <code>typescriptVariable</code>. Warm pinkish-orange.
+          </td>
+        </tr>
+
+        <!-- #55dbff -->
+        <tr>
+          <td><strong>Sky Glow</strong></td>
+          <td>#55dbff</td>
+          <td>
+            <span class="color-swatch" style="background-color: #55dbff"></span>
+          </td>
+          <td class="notes">
+            Used for TypeScript arrows, functions, etc. A bright aqua highlight.
+          </td>
+        </tr>
+
+        <!-- #84bacc -->
+        <tr>
+          <td><strong>Seaside Gray</strong></td>
+          <td>#84bacc</td>
+          <td>
+            <span class="color-swatch" style="background-color: #84bacc"></span>
+          </td>
+          <td class="notes">
+            Used for TypeScript object labels. A calm, muted teal-gray.
+          </td>
+        </tr>
+
+        <!-- #2A1A05 -->
+        <tr>
+          <td><strong>Dark Walnut</strong></td>
+          <td>#2A1A05</td>
+          <td>
+            <span class="color-swatch" style="background-color: #2a1a05"></span>
+          </td>
+          <td class="notes">
+            Used as background for <code>NormalFloat</code>. A deep brown shade
+            that grounds popups.
+          </td>
+        </tr>
+
+        <!-- #203040 -->
+        <tr>
+          <td><strong>Midnight Gray</strong></td>
+          <td>#203040</td>
+          <td>
+            <span class="color-swatch" style="background-color: #203040"></span>
+          </td>
+          <td class="notes">
+            Used as <code>DiffDelete</code> bg, a cool dark gray.
+          </td>
+        </tr>
+
+        <!-- #002851 -->
+        <tr>
+          <td><strong>Deep Teal</strong></td>
+          <td>#002851</td>
+          <td>
+            <span class="color-swatch" style="background-color: #002851"></span>
+          </td>
+          <td class="notes">
+            Used as <code>DiffAdd</code> bg. Very dark, oceanic teal.
+          </td>
+        </tr>
+
+        <!-- #450303 -->
+        <tr>
+          <td><strong>Deep Maroon</strong></td>
+          <td>#450303</td>
+          <td>
+            <span class="color-swatch" style="background-color: #450303"></span>
+          </td>
+          <td class="notes">
+            Used as <code>DiffChange</code> fg. Adds a hint of red-brown.
+          </td>
+        </tr>
+
+        <!-- #990909 -->
+        <tr>
+          <td><strong>Crimson</strong></td>
+          <td>#990909</td>
+          <td>
+            <span class="color-swatch" style="background-color: #990909"></span>
+          </td>
+          <td class="notes">
+            Used as <code>DiffText</code> fg. Intense red for changed text.
+          </td>
+        </tr>
+
+        <!-- #00bf00 -->
+        <tr>
+          <td><strong>Bright Green</strong></td>
+          <td>#00bf00</td>
+          <td>
+            <span class="color-swatch" style="background-color: #00bf00"></span>
+          </td>
+          <td class="notes">
+            Used as <code>diffAdded</code> fg. A strong green for added lines.
+          </td>
+        </tr>
+
+        <!-- #1d2c1b -->
+        <tr>
+          <td><strong>Deep Olive</strong></td>
+          <td>#1d2c1b</td>
+          <td>
+            <span class="color-swatch" style="background-color: #1d2c1b"></span>
+          </td>
+          <td class="notes">
+            Used as <code>diffAdded</code> bg. Dark, earthy green.
+          </td>
+        </tr>
+
+        <!-- #e00000 -->
+        <tr>
+          <td><strong>Bright Red</strong></td>
+          <td>#e00000</td>
+          <td>
+            <span class="color-swatch" style="background-color: #e00000"></span>
+          </td>
+          <td class="notes">
+            Used as <code>diffRemoved</code> fg. High-contrast red for removals.
+          </td>
+        </tr>
+
+        <!-- #2d1c20 -->
+        <tr>
+          <td><strong>Wine</strong></td>
+          <td>#2d1c20</td>
+          <td>
+            <span class="color-swatch" style="background-color: #2d1c20"></span>
+          </td>
+          <td class="notes">
+            Used as <code>diffRemoved</code> bg. Dark purplish-brown.
+          </td>
+        </tr>
+
+        <!-- #ffbd00 -->
+        <tr>
+          <td><strong>Amber</strong></td>
+          <td>#ffbd00</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ffbd00"></span>
+          </td>
+          <td class="notes">
+            Used as <code>Cursor</code> background. Vibrant yellow-orange.
+          </td>
+        </tr>
+
+        <!-- #13233c -->
+        <tr>
+          <td><strong>Dark Indigo</strong></td>
+          <td>#13233c</td>
+          <td>
+            <span class="color-swatch" style="background-color: #13233c"></span>
+          </td>
+          <td class="notes">
+            Used as <code>Cursor</code> foreground. A very deep blue tone.
+          </td>
+        </tr>
+
+        <!-- #102030 -->
+        <tr>
+          <td><strong>Dusk Blue</strong></td>
+          <td>#102030</td>
+          <td>
+            <span class="color-swatch" style="background-color: #102030"></span>
+          </td>
+          <td class="notes">
+            Used for <code>VertSplit</code>, <code>StatusLine</code> bg, etc.
+            Another grounding, dark blue-gray.
+          </td>
+        </tr>
+
+        <!-- #cccccc -->
+        <tr>
+          <td><strong>Light Gray</strong></td>
+          <td>#cccccc</td>
+          <td>
+            <span class="color-swatch" style="background-color: #cccccc"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Folded</code> fg. Neutral highlight.
+          </td>
+        </tr>
+
+        <!-- #405060 -->
+        <tr>
+          <td><strong>Slate Blue</strong></td>
+          <td>#405060</td>
+          <td>
+            <span class="color-swatch" style="background-color: #405060"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Folded</code> bg. Soft, cool gray-blue.
+          </td>
+        </tr>
+
+        <!-- grey30 -->
+        <tr>
+          <td><strong>Grey 30</strong></td>
+          <td>grey30</td>
+          <td>
+            <span class="color-swatch" style="background-color: grey"></span>
+            <!-- 'grey30' won't be exactly the same as 'grey', but for demonstration -->
+          </td>
+          <td class="notes">
+            Used for <code>FoldColumn</code> background. Standard gray tone.
+          </td>
+        </tr>
+
+        <!-- tan -->
+        <tr>
+          <td><strong>Tan</strong></td>
+          <td>tan</td>
+          <td>
+            <span class="color-swatch" style="background-color: tan"></span>
+          </td>
+          <td class="notes">
+            Used for <code>FoldColumn</code> foreground. Warm beige accent.
+          </td>
+        </tr>
+
+        <!-- slategrey -->
+        <tr>
+          <td><strong>SlateGrey</strong></td>
+          <td>slategrey</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: slategrey"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>IncSearch</code> fg. A named slate tone.
+          </td>
+        </tr>
+
+        <!-- khaki -->
+        <tr>
+          <td><strong>Khaki</strong></td>
+          <td>khaki</td>
+          <td>
+            <span class="color-swatch" style="background-color: khaki"></span>
+          </td>
+          <td class="notes">
+            Used for <code>IncSearch</code> bg. A soft, dusty yellow.
+          </td>
+        </tr>
+
+        <!-- #4382CB -->
+        <tr>
+          <td><strong>Cornflower Blue</strong></td>
+          <td>#4382CB</td>
+          <td>
+            <span class="color-swatch" style="background-color: #4382cb"></span>
+          </td>
+          <td class="notes">
+            Used for <code>LineNr</code> fg. A crisp blue for line numbers.
+          </td>
+        </tr>
+
+        <!-- #60A1D8 -->
+        <tr>
+          <td><strong>Light Cornflower</strong></td>
+          <td>#60A1D8</td>
+          <td>
+            <span class="color-swatch" style="background-color: #60a1d8"></span>
+          </td>
+          <td class="notes">
+            Used for <code>CursorLineNr</code> fg,
+            <code>GitSignsCurrentLineBlame</code>. Slightly lighter blue accent.
+          </td>
+        </tr>
+
+        <!-- goldenrod -->
+        <tr>
+          <td><strong>Goldenrod</strong></td>
+          <td>goldenrod</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: goldenrod"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>ModeMsg</code>. A golden-brown shade.
+          </td>
+        </tr>
+
+        <!-- SeaGreen -->
+        <tr>
+          <td><strong>SeaGreen</strong></td>
+          <td>SeaGreen</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: seagreen"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>MoreMsg</code>. A named green tone.
+          </td>
+        </tr>
+
+        <!-- springgreen -->
+        <tr>
+          <td><strong>SpringGreen</strong></td>
+          <td>springgreen</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: springgreen"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>Question</code>. Bright, fresh green accent.
+          </td>
+        </tr>
+
+        <!-- #ffff7d -->
+        <tr>
+          <td><strong>Pale Yellow</strong></td>
+          <td>#ffff7d</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ffff7d"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Search</code> bg. Subtly desaturated yellow.
+          </td>
+        </tr>
+
+        <!-- yellowgreen -->
+        <tr>
+          <td><strong>YellowGreen</strong></td>
+          <td>yellowgreen</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: yellowgreen"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>SpecialKey</code>. A bright yellow-green.
+          </td>
+        </tr>
+
+        <!-- grey70 -->
+        <tr>
+          <td><strong>Grey 70</strong></td>
+          <td>grey70</td>
+          <td>
+            <span class="color-swatch" style="background-color: #b3b3b3"></span>
+          </td>
+          <td class="notes">
+            Used for <code>StatusLine</code> fg. Standard lighter gray.
+          </td>
+        </tr>
+
+        <!-- grey50 -->
+        <tr>
+          <td><strong>Grey 50</strong></td>
+          <td>grey50</td>
+          <td>
+            <span class="color-swatch" style="background-color: #7f7f7f"></span>
+          </td>
+          <td class="notes">
+            Used for <code>StatusLineNC</code> fg. Medium gray tone.
+          </td>
+        </tr>
+
+        <!-- indianred -->
+        <tr>
+          <td><strong>IndianRed</strong></td>
+          <td>indianred</td>
+          <td>
+            <span
+              class="color-swatch"
+              style="background-color: indianred"
+            ></span>
+          </td>
+          <td class="notes">
+            Used for <code>Title</code> and <code>PreProc</code>. A warm
+            red-brown.
+          </td>
+        </tr>
+
+        <!-- white -->
+        <tr>
+          <td><strong>White</strong></td>
+          <td>white</td>
+          <td>
+            <span class="color-swatch" style="background-color: white"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Visual</code> fg and other text highlights. Pure
+            white.
+          </td>
+        </tr>
+
+        <!-- #f62a00 -->
+        <tr>
+          <td><strong>Tomato Red</strong></td>
+          <td>#f62a00</td>
+          <td>
+            <span class="color-swatch" style="background-color: #f62a00"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Visual</code> bg. An intense red-orange highlight.
+          </td>
+        </tr>
+
+        <!-- salmon -->
+        <tr>
+          <td><strong>Salmon</strong></td>
+          <td>salmon</td>
+          <td>
+            <span class="color-swatch" style="background-color: salmon"></span>
+          </td>
+          <td class="notes">
+            Used for <code>WarningMsg</code>. Soft, warm alert color.
+          </td>
+        </tr>
+
+        <!-- #FF4500 -->
+        <tr>
+          <td><strong>OrangeRed</strong></td>
+          <td>#FF4500</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ff4500"></span>
+          </td>
+          <td class="notes">
+            Used for <code>DiagnosticError</code> fg. Bold error color.
+          </td>
+        </tr>
+
+        <!-- #4D271B -->
+        <tr>
+          <td><strong>Dark Brown</strong></td>
+          <td>#4D271B</td>
+          <td>
+            <span class="color-swatch" style="background-color: #4d271b"></span>
+          </td>
+          <td class="notes">
+            Used for <code>DiagnosticError</code> bg. Rich, earthy brown.
+          </td>
+        </tr>
+
+        <!-- #304E73 -->
+        <tr>
+          <td><strong>Blue Slate</strong></td>
+          <td>#304E73</td>
+          <td>
+            <span class="color-swatch" style="background-color: #304e73"></span>
+          </td>
+          <td class="notes">
+            Used for <code>CursorLine</code> and <code>CursorColumn</code> bg. A
+            darker blue-gray accent.
+          </td>
+        </tr>
+
+        <!-- cyan -->
+        <tr>
+          <td><strong>Cyan</strong></td>
+          <td>cyan</td>
+          <td>
+            <span class="color-swatch" style="background-color: cyan"></span>
+          </td>
+          <td class="notes">
+            Used for <code>MatchParen</code> bg. Standard bright cyan highlight.
+          </td>
+        </tr>
+
+        <!-- #f6f3e8 -->
+        <tr>
+          <td><strong>Off White</strong></td>
+          <td>#f6f3e8</td>
+          <td>
+            <span class="color-swatch" style="background-color: #f6f3e8"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Pmenu</code> fg. Gentle ivory tone.
+          </td>
+        </tr>
+
+        <!-- #152535 -->
+        <tr>
+          <td><strong>Dark Blue-Gray</strong></td>
+          <td>#152535</td>
+          <td>
+            <span class="color-swatch" style="background-color: #152535"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Pmenu</code> bg. A deep, subdued navy.
+          </td>
+        </tr>
+
+        <!-- #cae682 -->
+        <tr>
+          <td><strong>Light Green</strong></td>
+          <td>#cae682</td>
+          <td>
+            <span class="color-swatch" style="background-color: #cae682"></span>
+          </td>
+          <td class="notes">
+            Used for <code>PmenuSel</code> bg. Soft pastel green highlight.
+          </td>
+        </tr>
+
+        <!-- #000000 -->
+        <tr>
+          <td><strong>Black</strong></td>
+          <td>#000000</td>
+          <td>
+            <span class="color-swatch" style="background-color: #000000"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Search</code> fg, <code>PmenuSel</code> fg, etc.
+            Classic black.
+          </td>
+        </tr>
+
+        <!-- #e8ecf0 -->
+        <tr>
+          <td><strong>Light Gray Blue</strong></td>
+          <td>#e8ecf0</td>
+          <td>
+            <span class="color-swatch" style="background-color: #e8ecf0"></span>
+          </td>
+          <td class="notes">
+            Used for <code>ColorColumn</code> fg. Very light cool gray.
+          </td>
+        </tr>
+
+        <!-- #283848 -->
+        <tr>
+          <td><strong>Dark Gray Blue</strong></td>
+          <td>#283848</td>
+          <td>
+            <span class="color-swatch" style="background-color: #283848"></span>
+          </td>
+          <td class="notes">
+            Used for <code>ColorColumn</code> bg. Another subtle, dark
+            gray-blue.
+          </td>
+        </tr>
+
+        <!-- grey40 -->
+        <tr>
+          <td><strong>Grey 40</strong></td>
+          <td>grey40</td>
+          <td>
+            <span class="color-swatch" style="background-color: #666666"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Ignore</code>. Medium-dark gray for “ignored” text.
+          </td>
+        </tr>
+
+        <!-- orangered (already listed as "Fiery Red") -->
+
+        <!-- none -->
+        <tr>
+          <td><strong>None</strong></td>
+          <td>none</td>
+          <td>–</td>
+          <td class="notes">
+            Indicates no background/foreground in several places (e.g.,
+            <code>String</code> bg).
+          </td>
+        </tr>
+
+        <!-- #fefefe -->
+        <tr>
+          <td><strong>Nearly White</strong></td>
+          <td>#fefefe</td>
+          <td>
+            <span class="color-swatch" style="background-color: #fefefe"></span>
+          </td>
+          <td class="notes">
+            Used for <code>SnacksPickerCursorLine</code> fg. Very close to pure
+            white.
+          </td>
+        </tr>
+
+        <!-- #fefeff -->
+        <tr>
+          <td><strong>White Haze</strong></td>
+          <td>#fefeff</td>
+          <td>
+            <span class="color-swatch" style="background-color: #fefeff"></span>
+          </td>
+          <td class="notes">
+            Used for <code>NoiceFormatConfirm</code> fg. Extremely light,
+            near-white tone.
+          </td>
+        </tr>
+
+        <!-- #3D5560 -->
+        <tr>
+          <td><strong>Steel Blue</strong></td>
+          <td>#3D5560</td>
+          <td>
+            <span class="color-swatch" style="background-color: #3d5560"></span>
+          </td>
+          <td class="notes">
+            Used for <code>SnacksPickerListCursorLine</code> bg. Medium, muted
+            blue-gray.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- =========================== WEIRD COLORS =========================== -->
+    <h2 class="section-title">Weird / Out-of-Scheme Colors</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Color Name</th>
+          <th>Hex Code</th>
+          <th>Swatch</th>
+          <th>Usage Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Neon Lime</strong></td>
+          <td>#a6e22e</td>
+          <td>
+            <span class="color-swatch" style="background-color: #a6e22e"></span>
+          </td>
+          <td class="notes">
+            Used for <code>Directory</code>, <code>SignColumn</code>. Very
+            bright, stands out from the overall earthy palette.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Neon Cyan</strong></td>
+          <td>#00ffff</td>
+          <td>
+            <span class="color-swatch" style="background-color: #00ffff"></span>
+          </td>
+          <td class="notes">
+            Used for <code>SnacksPickerDirectory</code> fg. Very intense aqua.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Neon Yellow</strong></td>
+          <td>#ffff00</td>
+          <td>
+            <span class="color-swatch" style="background-color: #ffff00"></span>
+          </td>
+          <td class="notes">
+            Used for <code>SnacksPicker</code> fg. Straight, vivid yellow.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Neon Green</strong></td>
+          <td>#00ff00</td>
+          <td>
+            <span class="color-swatch" style="background-color: #00ff00"></span>
+          </td>
+          <td class="notes">
+            Used for <code>SnacksPickerListBorder</code>. Very bright, out of
+            place compared to the rest of the palette.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

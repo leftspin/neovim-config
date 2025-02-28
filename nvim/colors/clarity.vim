@@ -55,7 +55,7 @@ hi SignColumn   guifg=#a6e22e     guibg=#18304d
 
 " Inline Diagnostics
 " hi DiagnosticError    guifg=#E34312 guibg=#3B2F28
-hi DiagnosticError    guifg=#FF4500 guibg=#4D271B
+hi DiagnosticError    guifg=#FF4500 guibg=#4D271B gui=italic
 
 "====================================================
 " Text and Popup Colors (Built-in Vim Groups)
@@ -86,7 +86,8 @@ endif
 " These standard groups are used for comments, constants, identifiers, etc.
 "====================================================
 hi Comment    guifg=#8f9ae5   gui=none
-hi Constant   guifg=#ffe381   gui=none
+hi Constant   guifg=#ecad2b   gui=none
+" hi Constant   guifg=#ffe381   gui=none
 hi Identifier guifg=#70d080   gui=none
 hi Statement  guifg=#5fa1db   gui=none
 hi PreProc    guifg=indianred gui=none
@@ -205,10 +206,8 @@ hi SnacksPickerPreviewBorder        guifg=#8f9ae5 gui=none
 hi SnacksPickerListCursorLine       guifg=#ffe381 guibg=#3D5560
 " The selection color in preview windows
 hi SnacksPickerPreviewCursorLine    guifg=#2A1A05 guibg=#ecad2b
-"
-" ???
-hi SnacksPicker                     guifg=#ffff00 gui=none
-hi SnacksPickerListBorder           guifg=#00ff00 gui=none
+" The color of the path part of file listings on the dashboard
+hi SnacksDashboardDir               guifg=#4382CB
 
 "====================================================
 " Noice.nvim Colors (Defined by Noice.nvim plugin)
@@ -216,3 +215,16 @@ hi SnacksPickerListBorder           guifg=#00ff00 gui=none
 
 hi NoiceConfirm                     guifg=#a5e9ff guibg=#18304d
 hi NoiceFormatConfirm               guifg=#fefeff guibg=#304E73
+
+"====================================================
+" vim-easymotion
+"====================================================
+"
+hi EasyMotionTarget guifg=#ffe381 gui=bold
+hi EasyMotionTarget2First guifg=#ecad2b gui=bold
+hi EasyMotionTarget2Second guifg=#fb5baa gui=bold
+hi EasyMotionShade guifg=#8090a0 guibg=none
+hi EasyMotionIncSearch guifg=#70d080 guibg=#18304d
+hi EasyMotionMoveHL guifg=#a5e9ff guibg=#304E73
+
+hi TreesitterConstant guifg=#ffe381 gui=none

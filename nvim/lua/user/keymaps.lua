@@ -2,47 +2,241 @@
 -- lua/user/keymaps.lua
 -------------------------------------------------------
 local keymap = vim.keymap.set
-local opts   = { silent = true }
+local opts = { silent = true }
+
+--------------------------
+-- LSP KEYMAPS
+--------------------------
+-- Show hover documentation
+keymap("n", "K", vim.lsp.buf.hover, { desc = "Show Hover Documentation" })
+
+--------------------------
+-- GITSIGNS
+--------------------------
+-- Implemented in on_attach function in plugins/init.lua
+-- This is a reference for the key binding
+keymap("n", "<leader>gb", function()
+    local gs_ok, gs = pcall(require, "gitsigns")
+    if not gs_ok then
+        vim.notify("[gitsigns] failed to load.", vim.log.levels.ERROR)
+        return
+    end
+    gs.toggle_current_line_blame()
+end, { desc = "Toggle Git Line Blame" })
+
+--------------------------
+-- WHICH-KEY
+--------------------------
+keymap("n", "<space>?", function()
+    local ok, wk = pcall(require, "which-key")
+    if not ok then
+        vim.notify("[which-key] failed to load.", vim.log.levels.ERROR)
+        return
+    end
+    wk.show({ global = false })
+end, { desc = "Buffer Local Keymaps (which-key)" })
+
+--------------------------
+-- NVIM-CMP KEYMAPS
+--------------------------
+-- These keymaps will be used in the nvim-cmp setup function
+-- They need to be integrated into the cmp.setup() call in the plugin config
+
+-- Snacks.nvim configuration will use these key mappings
+local function setup_nvim_cmp_mappings()
+    local cmp_ok, cmp = pcall(require, "cmp")
+    if not cmp_ok then
+        vim.notify("[nvim-cmp] failed to load.", vim.log.levels.ERROR)
+        return {}
+    end
+    
+    local luasnip_ok, luasnip = pcall(require, "luasnip")
+    if not luasnip_ok then
+        vim.notify("[LuaSnip] failed to load.", vim.log.levels.ERROR)
+        return {}
+    end
+    
+    return cmp.mapping.preset.insert({
+        ["<CR>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+        ["<Tab>"] = cmp.mapping(function(fallback)
+            if luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            elseif cmp.visible() then
+                cmp.select_next_item()
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            elseif cmp.visible() then
+                cmp.select_prev_item()
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+    })
+end
+
+-- Export for use in the plugin configuration
+M = {}
+M.get_cmp_mappings = setup_nvim_cmp_mappings
+
+--------------------------
+-- SNACKS.NVIM
+--------------------------
+keymap("n", "<leader>\\", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open terminal.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.terminal()
+end, { desc = "Toggle Terminal" })
+
+keymap("n", "<space>o", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open smart picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.smart()
+end, { desc = "Smart Find Files" })
+
+keymap("n", "<space>B", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open buffers picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.buffers()
+end, { desc = "Buffers" })
+
+keymap("n", "<space>g", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open grep picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.grep()
+end, { desc = "Grep" })
+
+keymap("n", "<space>`", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot show notifications.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.notifications()
+end, { desc = "Notification History" })
+
+keymap("n", "<space>e", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open explorer.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.explorer()
+end, { desc = "File Explorer" })
+
+keymap("n", "<space>,", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open config file picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "Find Config File" })
+
+keymap("n", "<space>r", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open recent files picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.recent()
+end, { desc = "Recent" })
+
+keymap("n", "<space>l", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open lines picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.lines()
+end, { desc = "Buffer Lines" })
+
+keymap("n", "<space>h", function()
+    local ok, Snacks = pcall(require, "snacks")
+    if not ok then
+        vim.notify("[snacks] missing, cannot open highlights picker.", vim.log.levels.ERROR)
+        return
+    end
+    Snacks.picker.highlights()
+end, { desc = "Highlights" })
+
+--------------------------
+-- TREESITTER PLAYGROUND
+--------------------------
+-- These will be used in the plugin configuration
+-- Define the keybindings that will be passed to the setup function
+M.treesitter_playground_keybindings = {
+    toggle_query_editor = "o",
+    toggle_hl_groups = "i",
+    toggle_injected_languages = "t",
+    toggle_anonymous_nodes = "a",
+    toggle_language_display = "I",
+    focus_language = "f",
+    unfocus_language = "F",
+    update = "R",
+    goto_node = "<cr>",
+    show_help = "?",
+}
 
 --------------------------
 -- TELESCOPE
 --------------------------
--- <space>o => find_files
--- keymap("n", "<space>o", function()
---   require("telescope.builtin").find_files()
--- end, opts)
-
--- <space>B => buffers
--- keymap("n", "<space>B", function()
---   require("telescope.builtin").buffers()
--- end, opts)
-
--- <space>g => live_grep
--- keymap("n", "<space>g", function()
---   require("telescope.builtin").live_grep()
--- end, opts)
-
 -- "Conflicts" => search for '<<<<<<'
--- old config had "command! Conflicts Ag<<<<<<"
--- We'll replace with a Telescope-based search
 vim.api.nvim_create_user_command("Conflicts", function()
-  require("telescope.builtin").grep_string({ search = "<<<<<<" })
+	require("telescope.builtin").grep_string({ search = "<<<<<<" })
 end, {})
 
--- Buffer navigation
+--------------------------
+-- BUFFER NAVIGATION
+--------------------------
 keymap("n", "<space>b", ":bn<CR>", opts)
 
--- Utility
+--------------------------
+-- EASYMOTION
+--------------------------
+-- <space>f => word mode
+keymap("n", "<space>f", "<Plug>(easymotion-w)", opts)
+keymap("n", "<space>F", "<Plug>(easymotion-b)", opts)
+
+--------------------------
+-- UTILITY
+--------------------------
 keymap("n", "<space>w", ":up<bar>bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 keymap("n", "<space>n", ":noh<CR>", opts)
 
--- Copilot
+--------------------------
+-- COPILOT
+--------------------------
 keymap("i", "<C-l>", "copilot#Accept('')", { silent = true, script = true, expr = true })
 keymap("i", "<C-j>", "<Plug>(copilot-next)", {})
 keymap("i", "<C-k>", "<Plug>(copilot-previous)", {})
 keymap("i", "<C-\\>", "<Plug>(copilot-dismiss)", {})
 
--- CamelCaseMotion
+--------------------------
+-- CAMELCASEMOTION
+--------------------------
 keymap("n", ",w", "<Plug>CamelCaseMotion_w", opts)
 keymap("n", ",b", "<Plug>CamelCaseMotion_b", opts)
 keymap("n", ",e", "<Plug>CamelCaseMotion_e", opts)
@@ -57,11 +251,17 @@ keymap("n", "Tk", ":tabprev<CR>", opts)
 keymap("n", "Tw", ":tabclose<CR>", opts)
 keymap("n", "TT", ":tabn ", { silent = false })
 
+--------------------------
+-- WINDOW MANAGEMENT
+--------------------------
 keymap("n", "<space>vs", ":vert sp<CR><C-w>l", opts)
 keymap("n", "<space>sp", ":sp<CR><C-w>j", opts)
+keymap("n", "<space>gd", ':vert sp | wincmd l | execute "normal! gd"<CR>', opts)
 
-keymap("n", "<space>gd", ":vert sp | wincmd l | execute \"normal! gd\"<CR>", opts)
-
--- Avante
+--------------------------
+-- AVANTE
+--------------------------
 keymap("n", ";c", ":AvanteChat<CR>", opts)
 keymap("n", ";t", ":AvanteToggle<CR>", opts)
+
+return M

@@ -8,720 +8,578 @@
 -- Diagnostic signs
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 -- Configure diagnostics to use a rounded border for floating windows
 vim.diagnostic.config({
-  float = {
-    border = "rounded",             -- Use a rounded border for diagnostics
-    source = "if_many",             -- Display diagnostic source if multiple diagnostics are present
-    header = "",                    -- No header in the popup
-    prefix = "",                    -- No prefix for each diagnostic message
-  },
+	float = {
+		border = "rounded", -- Use a rounded border for diagnostics
+		source = "if_many", -- Display diagnostic source if multiple diagnostics are present
+		header = "", -- No header in the popup
+		prefix = "", -- No prefix for each diagnostic message
+	},
 })
 
--- Map "K" in normal mode to show hover documentation (no auto doc popups)
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show Hover Documentation" })
+-- LSP keymaps are now defined in lua/user/keymaps.lua
 
 return {
 
-  -- nvim-cmp & friends
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-cmdline",
+	-- nvim-cmp & friends
+	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
 
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
-      "rafamadriz/friendly-snippets",
-    },
-    config = function()
-      local cmp_ok, cmp = pcall(require, "cmp")
-      if not cmp_ok then
-        vim.notify("[nvim-cmp] failed to load.", vim.log.levels.ERROR)
-        return
-      end
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+			"rafamadriz/friendly-snippets",
+		},
+		config = function()
+			local cmp_ok, cmp = pcall(require, "cmp")
+			if not cmp_ok then
+				vim.notify("[nvim-cmp] failed to load.", vim.log.levels.ERROR)
+				return
+			end
 
-      local luasnip_ok, luasnip = pcall(require, "luasnip")
-      if not luasnip_ok then
-        vim.notify("[LuaSnip] failed to load.", vim.log.levels.ERROR)
-        return
-      end
+			local luasnip_ok, luasnip = pcall(require, "luasnip")
+			if not luasnip_ok then
+				vim.notify("[LuaSnip] failed to load.", vim.log.levels.ERROR)
+				return
+			end
 
-      local vscode_loader_ok, vscode_loader = pcall(require, "luasnip.loaders.from_vscode")
-      if vscode_loader_ok then
-        vscode_loader.lazy_load()
-      end
+			local vscode_loader_ok, vscode_loader = pcall(require, "luasnip.loaders.from_vscode")
+			if vscode_loader_ok then
+				vscode_loader.lazy_load()
+			end
 
-      cmp.setup({
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
-        },
-        window = {
-          -- Hide docs to avoid conflict with noice signature help
-          documentation = cmp.config.disable,
-        },
-        mapping = cmp.mapping.preset.insert({
-          ["<CR>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-          ["<Tab>"] = cmp.mapping(function(fallback)
-            if luasnip.expand_or_jumpable() then
-              luasnip.expand_or_jump()
-            elseif cmp.visible() then
-              cmp.select_next_item()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-          ["<S-Tab>"] = cmp.mapping(function(fallback)
-            if luasnip.jumpable(-1) then
-              luasnip.jump(-1)
-            elseif cmp.visible() then
-              cmp.select_prev_item()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-        }),
-        sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-          { name = "path" },
-        }),
-      })
-    end,
-  },
+			cmp.setup({
+				snippet = {
+					expand = function(args)
+						luasnip.lsp_expand(args.body)
+					end,
+				},
+				window = {
+					-- Hide docs to avoid conflict with noice signature help
+					documentation = cmp.config.disable,
+				},
+				-- Mappings for nvim-cmp are now defined in lua/user/keymaps.lua
+				mapping = require("user.keymaps").get_cmp_mappings(),
+				sources = cmp.config.sources({
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" },
+					{ name = "buffer" },
+					{ name = "path" },
+				}),
+			})
+		end,
+	},
 
-  -- ray-x/lsp_signature.nvim
-  {
-    "ray-x/lsp_signature.nvim",
-    config = function()
-      local ok, lsp_signature = pcall(require, "lsp_signature")
-      if not ok then
-        vim.notify("[lsp_signature] failed to load.", vim.log.levels.ERROR)
-        return
-      end
-      lsp_signature.setup({
-        bind = true,
-        handler_opts = {
-          border = "rounded",
-        },
-        floating_window = true,
-        hint_enable = true, -- show parameter hints
-        hint_prefix = " ",
-      })
-    end,
-  },
+	-- ray-x/lsp_signature.nvim
+	{
+		"ray-x/lsp_signature.nvim",
+		config = function()
+			local ok, lsp_signature = pcall(require, "lsp_signature")
+			if not ok then
+				vim.notify("[lsp_signature] failed to load.", vim.log.levels.ERROR)
+				return
+			end
+			lsp_signature.setup({
+				bind = true,
+				handler_opts = {
+					border = "rounded",
+				},
+				floating_window = true,
+				hint_enable = true, -- show parameter hints
+				hint_prefix = " ",
+			})
+		end,
+	},
 
-  -- vim-graphql
-  { "jparise/vim-graphql" },
+	-- vim-graphql
+	{ "jparise/vim-graphql" },
 
-  -- vim-scripts/lightline
-  { "vim-scripts/lightline" },
+	-- vim-scripts/lightline
+	{ "vim-scripts/lightline" },
 
-  -- Gitsigns plugin
-  {
-    "lewis6991/gitsigns.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      local gitsigns_ok, gitsigns = pcall(require, "gitsigns")
-      if not gitsigns_ok then
-        vim.notify("[gitsigns] failed to load.", vim.log.levels.ERROR)
-        return
-      end
-      gitsigns.setup({
-        current_line_blame = true,
-        current_line_blame_opts = {
-          delay = 300,
-          virt_text_pos = "eol",
-        },
-        on_attach = function(bufnr)
-          local gs = package.loaded.gitsigns
-          vim.keymap.set("n", "<leader>gb", gs.toggle_current_line_blame, { buffer = bufnr })
-        end,
-      })
-    end,
-  },
+	-- Gitsigns plugin
+	{
+		"lewis6991/gitsigns.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			local gitsigns_ok, gitsigns = pcall(require, "gitsigns")
+			if not gitsigns_ok then
+				vim.notify("[gitsigns] failed to load.", vim.log.levels.ERROR)
+				return
+			end
+			gitsigns.setup({
+				current_line_blame = true,
+				current_line_blame_opts = {
+					delay = 300,
+					virt_text_pos = "eol",
+				},
+				on_attach = function(bufnr)
+					local gs = package.loaded.gitsigns
+					-- Keybindings for gitsigns are now defined in lua/user/keymaps.lua
+				end,
+			})
+		end,
+	},
 
-  -- which-key
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    opts = {},
-    keys = {
-      {
-        "<space>?",
-        function()
-          local ok, wk = pcall(require, "which-key")
-          if not ok then
-            vim.notify("[which-key] failed to load.", vim.log.levels.ERROR)
-            return
-          end
-          wk.show({ global = false })
-        end,
-        desc = "Buffer Local Keymaps (which-key)",
-      },
-    },
-  },
+	-- which-key
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {},
+		-- Keybindings for which-key are now defined in lua/user/keymaps.lua
+	},
 
-  -- noice.nvim
-  {
-    "folke/noice.nvim",
-    version = "*", -- fetch the latest stable version
-    lazy = false, -- load early, no lazy/event
-    opts = {
-      -- Show signature help upon typing (the normal behavior)
-      lsp = {
-        signature = {
-          enabled = false,
-          -- auto_open = { trigger = true },
-        },
-      },
-      -- Show :messages in a noice-style split for easy copying
-      messages = {
-        enabled = true,
-      },
-      routes = {
-        -- route #2: confirm prompt in a popup
-        {
-          filter = {
-            event = "msg_show",
-            kind = "confirm",
-          },
-          view = "confirm",
-        },
-      },
-      -- Use a popup cmdline and confirm for unsaved-changes prompt
-      cmdline = {
-        enabled = true,
-        view = "cmdline_popup",
-        format = {
-          cmdline = { icon = "" },
-          search_down = { kind = "search", icon = " " },
-          search_up = { kind = "search", icon = " " },
-        },
-      },
-      popupmenu = {
-        enabled = true, -- keep popup menu for cmdline
-      },
+	-- noice.nvim
+	{
+		"folke/noice.nvim",
+		version = "*", -- fetch the latest stable version
+		lazy = false, -- load early, no lazy/event
+		opts = {
+			-- Show signature help upon typing (the normal behavior)
+			lsp = {
+				signature = {
+					enabled = false,
+					-- auto_open = { trigger = true },
+				},
+			},
+			-- Show :messages in a noice-style split for easy copying
+			messages = {
+				enabled = true,
+			},
+			routes = {
+				-- route #2: confirm prompt in a popup
+				{
+					filter = {
+						event = "msg_show",
+						kind = "confirm",
+					},
+					view = "confirm",
+				},
+			},
+			-- Use a popup cmdline and confirm for unsaved-changes prompt
+			cmdline = {
+				enabled = true,
+				view = "cmdline_popup",
+				format = {
+					cmdline = { icon = "" },
+					search_down = { kind = "search", icon = " " },
+					search_up = { kind = "search", icon = " " },
+				},
+			},
+			popupmenu = {
+				enabled = true, -- keep popup menu for cmdline
+			},
 
-      -- Show a confirm popup for unsaved changes
-      views = {
-        cmdline_popup = {
-          position = {
-            row = "30%",
-          },
-        },
-        confirm = {
-          backend = "popup",
-          relative = "editor",
-          border = {
-            style = "rounded",
-          },
-        },
-      },
-    },
-    config = function(_, opts)
-      local noice_ok, noice_mod = pcall(require, "noice")
-      if not noice_ok then
-        vim.notify("[noice] failed to load in config function.", vim.log.levels.ERROR)
-        return
-      end
-      noice_mod.setup(opts)
+			-- Show a confirm popup for unsaved changes
+			views = {
+				cmdline_popup = {
+					position = {
+						row = "30%",
+					},
+				},
+				confirm = {
+					backend = "popup",
+					relative = "editor",
+					border = {
+						style = "rounded",
+					},
+				},
+			},
+		},
+		config = function(_, opts)
+			local noice_ok, noice_mod = pcall(require, "noice")
+			if not noice_ok then
+				vim.notify("[noice] failed to load in config function.", vim.log.levels.ERROR)
+				return
+			end
+			noice_mod.setup(opts)
 
-      -- Style signature help
-      vim.api.nvim_set_hl(0, "NoiceLspSignature", { bg = "#ff0000", fg = "#ffffff" })
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
+			-- Style signature help
+			vim.api.nvim_set_hl(0, "NoiceLspSignature", { bg = "#ff0000", fg = "#ffffff" })
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+	},
 
-  -- vim-surround
-  { "tpope/vim-surround" },
+	-- vim-surround
+	{ "tpope/vim-surround" },
 
-  -- vim-vinegar
-  { "tpope/vim-vinegar" },
+	-- vim-vinegar
+	{ "tpope/vim-vinegar" },
 
-  -- vim-commentary
-  { "tpope/vim-commentary" },
+	-- vim-commentary
+	{ "tpope/vim-commentary" },
 
-  -- vim-rhubarb
-  { "tpope/vim-rhubarb" },
+	-- vim-rhubarb
+	{ "tpope/vim-rhubarb" },
 
-  -- vim-dispatch
-  { "tpope/vim-dispatch" },
+	-- vim-dispatch
+	{ "tpope/vim-dispatch" },
 
-  -- CamelCaseMotion
-  { "bkad/CamelCaseMotion" },
+	-- CamelCaseMotion
+	{ "bkad/CamelCaseMotion" },
 
-  -- vim-sneak
-  { "justinmk/vim-sneak" },
+	-- vim-sneak
+	{ "justinmk/vim-sneak" },
 
-  -- emmet-vim
-  { "mattn/emmet-vim" },
+	-- emmet-vim
+	{ "mattn/emmet-vim" },
 
-  -- lightline-onedark
-  { "hallzy/lightline-onedark" },
+	-- lightline-onedark
+	{ "hallzy/lightline-onedark" },
 
-  -- vim-closetag
-  { "alvan/vim-closetag" },
+	-- vim-closetag
+	{ "alvan/vim-closetag" },
 
-  -- nvim-remote-containers
-  { "jamestthompson3/nvim-remote-containers" },
+	-- nvim-remote-containers
+	{ "jamestthompson3/nvim-remote-containers" },
 
-  -- asyncrun.vim
-  { "skywind3000/asyncrun.vim" },
+	-- asyncrun.vim
+	{ "skywind3000/asyncrun.vim" },
 
-  -- vim-oscyank
-  { "ojroques/vim-oscyank",                  branch = "main" },
+	-- vim-oscyank
+	{ "ojroques/vim-oscyank", branch = "main" },
 
-  -- nvim-treesitter with playground
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    dependencies = { "nvim-treesitter/playground" },
-    opts = {
-      ensure_installed = "all",
-      highlight = { enable = true },
-      playground = {
-        enable = true,
-        disable = {},
-        updatetime = 25,
-        persist_queries = false,
-        keybindings = {
-          toggle_query_editor = "o",
-          toggle_hl_groups = "i",
-          toggle_injected_languages = "t",
-          toggle_anonymous_nodes = "a",
-          toggle_language_display = "I",
-          focus_language = "f",
-          unfocus_language = "F",
-          update = "R",
-          goto_node = "<cr>",
-          show_help = "?",
-        },
-      },
-    },
-    config = function(_, opts)
-      local ts_ok, ts_configs = pcall(require, "nvim-treesitter.configs")
-      if not ts_ok then
-        vim.notify("[nvim-treesitter] failed to load configs.", vim.log.levels.ERROR)
-        return
-      end
-      ts_configs.setup(opts)
-    end,
-  },
+	-- nvim-treesitter with playground
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		dependencies = { "nvim-treesitter/playground" },
+		opts = {
+			ensure_installed = "all",
+			highlight = { enable = true },
+			playground = {
+				enable = true,
+				disable = {},
+				updatetime = 25,
+				persist_queries = false,
+				-- Keybindings for treesitter playground are now defined in lua/user/keymaps.lua
+				keybindings = require("user.keymaps").treesitter_playground_keybindings,
+			},
+		},
+		config = function(_, opts)
+			local ts_ok, ts_configs = pcall(require, "nvim-treesitter.configs")
+			if not ts_ok then
+				vim.notify("[nvim-treesitter] failed to load configs.", vim.log.levels.ERROR)
+				return
+			end
+			ts_configs.setup(opts)
+		end,
+	},
 
-  -- dressing.nvim
-  { "stevearc/dressing.nvim" },
+	-- dressing.nvim
+	{ "stevearc/dressing.nvim" },
 
-  -- plenary.nvim
-  { "nvim-lua/plenary.nvim" },
+	-- plenary.nvim
+	{ "nvim-lua/plenary.nvim" },
 
-  -- nui.nvim
-  { "MunifTanjim/nui.nvim" },
+	-- nui.nvim
+	{ "MunifTanjim/nui.nvim" },
 
-  -- render-markdown.nvim
-  { "MeanderingProgrammer/render-markdown.nvim" },
+	-- render-markdown.nvim
+	{ "MeanderingProgrammer/render-markdown.nvim" },
 
-  -- nvim-web-devicons
-  { "nvim-tree/nvim-web-devicons" },
+	-- nvim-web-devicons
+	{ "nvim-tree/nvim-web-devicons" },
 
-  -- img-clip.nvim
-  { "HakonHarnes/img-clip.nvim" },
+	-- img-clip.nvim
+	{ "HakonHarnes/img-clip.nvim" },
 
-  -- avante.nvim
-  {
-    "yetone/avante.nvim",
-    branch = "main",
-    build = "make",
-  },
+	-- avante.nvim
+	{
+		"yetone/avante.nvim",
+		branch = "main",
+		build = "make",
+	},
 
-  -- neogit
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      local neogit_ok, neogit = pcall(require, "neogit")
-      if not neogit_ok then
-        vim.notify("[neogit] failed to load.", vim.log.levels.ERROR)
-        return
-      end
-      neogit.setup({ kind = "split" })
-    end,
-  },
+	-- neogit
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			local neogit_ok, neogit = pcall(require, "neogit")
+			if not neogit_ok then
+				vim.notify("[neogit] failed to load.", vim.log.levels.ERROR)
+				return
+			end
+			neogit.setup({ kind = "split" })
+		end,
+	},
 
-  -- null-ls & mason-null-ls integration
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    dependencies = {
-      "jayp0521/mason-null-ls.nvim",
-    },
-    config = function()
-      local mason_null_ok, mason_null_ls = pcall(require, "mason-null-ls")
-      local null_ls_ok, null_ls = pcall(require, "null-ls")
+	-- null-ls & mason-null-ls integration
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		dependencies = {
+			"jayp0521/mason-null-ls.nvim",
+		},
+		config = function()
+			local mason_null_ok, mason_null_ls = pcall(require, "mason-null-ls")
+			local null_ls_ok, null_ls = pcall(require, "null-ls")
 
-      if not mason_null_ok then
-        vim.notify("[mason-null-ls] failed to load.", vim.log.levels.ERROR)
-        return
-      end
-      if not null_ls_ok then
-        vim.notify("[null-ls] failed to load.", vim.log.levels.ERROR)
-        return
-      end
+			if not mason_null_ok then
+				vim.notify("[mason-null-ls] failed to load.", vim.log.levels.ERROR)
+				return
+			end
+			if not null_ls_ok then
+				vim.notify("[null-ls] failed to load.", vim.log.levels.ERROR)
+				return
+			end
 
-      mason_null_ls.setup({
-        ensure_installed = {
-          "eslint_d",
-          "prettierd",
-          "swiftlint",
-          "swiftformat",
-          "shellcheck",
-          "shfmt",
-          "stylua",
-          "luacheck",
-        },
-        automatic_installation = true,
-      })
+			mason_null_ls.setup({
+				ensure_installed = {
+					"eslint_d",
+					"prettierd",
+					"swiftlint",
+					"swiftformat",
+					"shellcheck",
+					"shfmt",
+					"stylua",
+					"luacheck",
+				},
+				automatic_installation = true,
+			})
 
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.prettierd,
-          null_ls.builtins.diagnostics.eslint_d,
-          null_ls.builtins.code_actions.eslint_d,
-          null_ls.builtins.formatting.swiftformat,
-          null_ls.builtins.diagnostics.swiftlint,
-          null_ls.builtins.formatting.shfmt,
-          null_ls.builtins.diagnostics.shellcheck,
-          null_ls.builtins.formatting.stylua,
-          null_ls.builtins.diagnostics.luacheck,
-        },
-        on_attach = function(client, bufnr)
-          if client.supports_method("textDocument/formatting") then
-            local formatting_group = vim.api.nvim_create_augroup("LspFormatting", { clear = false })
-            vim.api.nvim_clear_autocmds({ group = formatting_group, buffer = bufnr })
-            vim.api.nvim_create_autocmd("BufWritePre", {
-              group = formatting_group,
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.format({ async = false })
-              end,
-            })
-          end
-        end,
-      })
-    end,
-  },
+			null_ls.setup({
+				sources = {
+					null_ls.builtins.formatting.prettierd,
+					null_ls.builtins.diagnostics.eslint_d,
+					null_ls.builtins.code_actions.eslint_d,
+					null_ls.builtins.formatting.swiftformat,
+					null_ls.builtins.diagnostics.swiftlint,
+					null_ls.builtins.formatting.shfmt,
+					null_ls.builtins.diagnostics.shellcheck,
+					null_ls.builtins.formatting.stylua,
+					null_ls.builtins.diagnostics.luacheck,
+				},
+				on_attach = function(client, bufnr)
+					if client.supports_method("textDocument/formatting") then
+						local formatting_group = vim.api.nvim_create_augroup("LspFormatting", { clear = false })
+						vim.api.nvim_clear_autocmds({ group = formatting_group, buffer = bufnr })
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							group = formatting_group,
+							buffer = bufnr,
+							callback = function()
+								vim.lsp.buf.format({ async = false })
+							end,
+						})
+					end
+				end,
+			})
+		end,
+	},
 
-  -- snacks
-  {
-    "folke/snacks.nvim",
-    priority = 1000,
-    lazy = false,
-    opts = {
-      bigfile = { enabled = true },
-      dashboard = { enabled = true },
-      explorer = { enabled = true },
-      indent = { enabled = true },
-      input = { enabled = true },
-      picker = { enabled = true },
-      notifier = { enabled = true },
-      quickfile = { enabled = true },
-      scope = { enabled = true },
-      scroll = { enabled = true },
-      statuscolumn = { enabled = true },
-      toggle = {
-        which_key = true,
-        notify = true,
-      },
-      words = { enabled = true },
-    },
-    keys = {
-      {
-        "<leader>\\",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open terminal.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.terminal()
-        end,
-        desc = "Toggle Terminal",
-      },
-      {
-        "<space>o",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open smart picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.smart()
-        end,
-        desc = "Smart Find Files",
-      },
-      {
-        "<space>B",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open buffers picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.buffers()
-        end,
-        desc = "Buffers",
-      },
-      {
-        "<space>g",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open grep picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.grep()
-        end,
-        desc = "Grep",
-      },
-      {
-        "<space>`",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot show notifications.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.notifications()
-        end,
-        desc = "Notification History",
-      },
-      {
-        "<space>e",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open explorer.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.explorer()
-        end,
-        desc = "File Explorer",
-      },
-      {
-        "<space>,",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open config file picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
-        end,
-        desc = "Find Config File",
-      },
-      {
-        "<space>r",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open recent files picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.recent()
-        end,
-        desc = "Recent",
-      },
-      {
-        "<space>l",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open lines picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.lines()
-        end,
-        desc = "Buffer Lines",
-      },
-      {
-        "<space>h",
-        function()
-          local ok, Snacks = pcall(require, "snacks")
-          if not ok then
-            vim.notify("[snacks] missing, cannot open highlights picker.", vim.log.levels.ERROR)
-            return
-          end
-          Snacks.picker.highlights()
-        end,
-        desc = "Highlights",
-      },
-    },
-  },
+	-- snacks
+	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		opts = {
+			bigfile = { enabled = true },
+			explorer = { enabled = true },
+			indent = { enabled = true },
+			input = { enabled = true },
+			picker = { enabled = true },
+			notifier = { enabled = true },
+			quickfile = { enabled = true },
+			scope = { enabled = true },
+			scroll = { enabled = true },
+			statuscolumn = { enabled = true },
+			toggle = {
+				which_key = true,
+				notify = true,
+			},
+			words = { enabled = true },
+			dashboard = {
+				enabled = true,
+				sections = {
+					{ section = "header" },
+					-- { section = "keys", gap = 1, padding = 1 },
+					{
+						pane = 1,
+						icon = " ",
+						section = "recent_files",
+						padding = 1,
+					},
+					{
+						icon = " ",
+						title = "Projects",
+						section = "projects",
+						padding = 1,
+					},
+					{ section = "startup" },
+				},
+			},
+		},
+ -- Keybindings for snacks.nvim are now defined in lua/user/keymaps.lua
+	},
 
-  -- telescope.nvim
-  {
-    "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" },
-    },
-  },
+	-- telescope.nvim
+	{
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+		},
+	},
 
-  -- telescope-fzf-native.nvim
-  {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-    },
-  },
+	-- telescope-fzf-native.nvim
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = "make",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+	},
 
-  -- neotest
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim",
-      "haydenmeade/neotest-jest",
-      "nvim-neotest/nvim-nio",
-    },
-  },
+	-- neotest
+	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+			"haydenmeade/neotest-jest",
+			"nvim-neotest/nvim-nio",
+		},
+	},
 
-  -- lazygit.nvim
-  {
-    "kdheepak/lazygit.nvim",
-    cmd = "LazyGit",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
+	-- lazygit.nvim
+	{
+		"kdheepak/lazygit.nvim",
+		cmd = "LazyGit",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
-  -- mason.nvim
-  {
-    "williamboman/mason.nvim",
-    lazy = false,
-    config = function()
-      local mason_ok, mason = pcall(require, "mason")
-      if not mason_ok then
-        vim.notify("[mason] failed to load.", vim.log.levels.ERROR)
-        return
-      end
-      mason.setup()
-    end,
-  },
+	-- mason.nvim
+	{
+		"williamboman/mason.nvim",
+		lazy = false,
+		config = function()
+			local mason_ok, mason = pcall(require, "mason")
+			if not mason_ok then
+				vim.notify("[mason] failed to load.", vim.log.levels.ERROR)
+				return
+			end
+			mason.setup()
+		end,
+	},
 
-  -- mason-lspconfig.nvim
-  {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    dependencies = { "williamboman/mason.nvim" },
-    config = function()
-      local mlsp_ok, mlsp = pcall(require, "mason-lspconfig")
-      if not mlsp_ok then
-        vim.notify("[mason-lspconfig] failed to load.", vim.log.levels.ERROR)
-        return
-      end
-      mlsp.setup({
-        ensure_installed = {
-          "ts_ls",
-          "bashls",
-          "lua_ls",
-        },
-      })
-    end,
-  },
+	-- mason-lspconfig.nvim
+	{
+		"williamboman/mason-lspconfig.nvim",
+		lazy = false,
+		dependencies = { "williamboman/mason.nvim" },
+		config = function()
+			local mlsp_ok, mlsp = pcall(require, "mason-lspconfig")
+			if not mlsp_ok then
+				vim.notify("[mason-lspconfig] failed to load.", vim.log.levels.ERROR)
+				return
+			end
+			mlsp.setup({
+				ensure_installed = {
+					"ts_ls",
+					"bashls",
+					"lua_ls",
+				},
+			})
+		end,
+	},
 
-  -- nvim-lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    lazy = false,
-    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
-    config = function()
-      local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
-      if not lspconfig_ok then
-        vim.notify("[nvim-lspconfig] failed to load.", vim.log.levels.ERROR)
-        return
-      end
+	-- nvim-lspconfig
+	{
+		"neovim/nvim-lspconfig",
+		lazy = false,
+		dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
+		config = function()
+			local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
+			if not lspconfig_ok then
+				vim.notify("[nvim-lspconfig] failed to load.", vim.log.levels.ERROR)
+				return
+			end
 
-      local cmp_lsp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-      if not cmp_lsp_ok then
-        vim.notify("[cmp_nvim_lsp] not found, LSP completions may be limited.", vim.log.levels.WARN)
-      end
+			local cmp_lsp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+			if not cmp_lsp_ok then
+				vim.notify("[cmp_nvim_lsp] not found, LSP completions may be limited.", vim.log.levels.WARN)
+			end
 
-      local capabilities = vim.lsp.protocol.make_client_capabilities()
-      if cmp_lsp_ok then
-        capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
-        capabilities.textDocument.completion.completionItem.snippetSupport = true
-      end
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			if cmp_lsp_ok then
+				capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+				capabilities.textDocument.completion.completionItem.snippetSupport = true
+			end
 
-      local on_attach = function(client, bufnr)
-        local user_keymaps_ok, user_lsp_keymaps = pcall(require, "user.lsp_keymaps")
-        if user_keymaps_ok then
-          user_lsp_keymaps.setup(bufnr)
-        end
+			local on_attach = function(client, bufnr)
+				local user_keymaps_ok, user_lsp_keymaps = pcall(require, "user.lsp_keymaps")
+				if user_keymaps_ok then
+					user_lsp_keymaps.setup(bufnr)
+				end
 
-        -- Attach signature plugin
-        local lsp_sig_ok, lsp_signature = pcall(require, "lsp_signature")
-        if lsp_sig_ok then
-          lsp_signature.on_attach({
-            bind = true,
-            handler_opts = {
-              border = "rounded",
-            },
-            floating_window = true,
-            hint_enable = true,
-            hint_prefix = " ",
-          }, bufnr)
-        end
-      end
+				-- Attach signature plugin
+				local lsp_sig_ok, lsp_signature = pcall(require, "lsp_signature")
+				if lsp_sig_ok then
+					lsp_signature.on_attach({
+						bind = true,
+						handler_opts = {
+							border = "rounded",
+						},
+						floating_window = true,
+						hint_enable = true,
+						hint_prefix = " ",
+					}, bufnr)
+				end
+			end
 
-      local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls" }
-      for _, server in ipairs(servers) do
-        if server == "ts_ls" then
-          lspconfig[server].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            init_options = {
-              preferences = {
-                completeFunctionCalls = true,
-                includeCompletionsWithSnippetText = true,
-              },
-            },
-          })
-        elseif server == "sourcekit" then
-          lspconfig[server].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            cmd = { "sourcekit-lsp" },
-            filetypes = { "swift" },
-          })
-        else
-          lspconfig[server].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-          })
-        end
-      end
-    end,
-  },
+			local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls" }
+			for _, server in ipairs(servers) do
+				if server == "ts_ls" then
+					lspconfig[server].setup({
+						capabilities = capabilities,
+						on_attach = on_attach,
+						init_options = {
+							preferences = {
+								completeFunctionCalls = true,
+								includeCompletionsWithSnippetText = true,
+							},
+						},
+					})
+				elseif server == "sourcekit" then
+					lspconfig[server].setup({
+						capabilities = capabilities,
+						on_attach = on_attach,
+						cmd = { "sourcekit-lsp" },
+						filetypes = { "swift" },
+					})
+				else
+					lspconfig[server].setup({
+						capabilities = capabilities,
+						on_attach = on_attach,
+					})
+				end
+			end
+		end,
+	},
+
+	-- vim-easymotion
+	{
+		"easymotion/vim-easymotion",
+		init = function()
+			-- Disable default mappings
+			vim.g.EasyMotion_do_mapping = 0
+		end,
+	},
 }

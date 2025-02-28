@@ -7,14 +7,16 @@ require("render-markdown").setup({
 })
 
 require("avante").setup({
-  provider = "openai",
-  openai = {
+
+  provider = "claude",
+
+  ["openai"] = {
     endpoint = "https://api.openai.com/v1",
     model = "o3-mini",
     temperature = 0,
-    max_tokens = 4096,
-    reasoning_effort = "high",
+    max_tokens = 8912,
   },
+
   windows = {
     sidebar_header = {
       enabled = true,
@@ -31,6 +33,6 @@ require("avante").setup({
   mappings = {
     ask = ";a",
     edit = ";e",
-    refresh = ";r"
+    refresh = ";r",
   },
 })
