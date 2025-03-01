@@ -2,17 +2,7 @@
 -- lua/user/misc.lua
 -------------------------------------------------------
 
--- Reveal the highlight group under the cursor
-function _G.SynGroup()
-  local pos = vim.fn.synID(vim.fn.line("."), vim.fn.col("."), 1)
-  local name = vim.fn.synIDattr(pos, "name")
-  local trans_name = vim.fn.synIDattr(vim.fn.synIDtrans(pos), "name")
-  print(name .. " -> " .. trans_name)
-end
-
-vim.keymap.set("n", "\\h", function()
-  SynGroup()
-end, { silent = true })
+-- Keymap moved to keymaps.lua
 
 function _G.FillLine(str)
   local tw = 80
@@ -26,9 +16,7 @@ function _G.FillLine(str)
   end
 end
 
-vim.keymap.set("n", "<space>-", function()
-  FillLine("_")
-end, { silent = true })
+-- Keymap moved to keymaps.lua
 
 local function VerticalSplitBuffer(bufnr)
   vim.cmd("vert belowright sb" .. bufnr)

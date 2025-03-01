@@ -23,8 +23,8 @@ opt.list = true
 opt.listchars = { tab = "»·", trail = "·" }
 opt.number = true
 opt.relativenumber = true
-opt.cursorline = true
-opt.cursorcolumn = true
+opt.cursorline = false
+opt.cursorcolumn = false
 opt.clipboard = "unnamedplus"
 
 -- Guicursor
@@ -39,19 +39,8 @@ g.neovide_cursor_vfx_mode = "railgun"
 g.neovide_refresh_rate = 120
 g.neovide_cursor_animation_length = 0.13
 
--- Lightline
-g.lightline = {
-	colorscheme = "onedark",
-	active = {
-		left = {
-			{ "mode", "paste" },
-			{ "readonly", "gitbranch", "relativepath", "modified" },
-		},
-	},
-	component_function = {
-		gitbranch = "FugitiveHead",
-	},
-}
+-- Statusline is now handled by lualine.nvim
+-- The custom CWD and filename display is configured in the lualine setup
 
 -- IndentLine
 -- g.indentLine_char = '▏'

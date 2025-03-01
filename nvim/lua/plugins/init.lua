@@ -1,24 +1,29 @@
 -------------------------------------------------------
 -- lua/plugins/init.lua
--- Now using Telescope instead of fzf,
--- and neotest instead of vim-test.
--- Connect signature help to noice so that signature popups are styled by noice
 -------------------------------------------------------
 
--- Diagnostic signs
-local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+-- Diagnostic signs (the old-school diagnostics config, in case there's old apps that use this)
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- Configure diagnostics to use a rounded border for floating windows
+-- Configure diagnostics to use a rounded border for floating windows (the new way to do this)
 vim.diagnostic.config({
 	float = {
 		border = "rounded", -- Use a rounded border for diagnostics
 		source = "if_many", -- Display diagnostic source if multiple diagnostics are present
 		header = "", -- No header in the popup
 		prefix = "", -- No prefix for each diagnostic message
+	},
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "",
+			[vim.diagnostic.severity.INFO] = "",
+			[vim.diagnostic.severity.HINT] = "",
+		},
 	},
 })
 
@@ -27,17 +32,18 @@ vim.diagnostic.config({
 return {
 
 	-- nvim-cmp & friends
+	-- https://github.com/hrsh7th/nvim-cmp
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-nvim-lsp", -- https://github.com/hrsh7th/cmp-nvim-lsp
+			"hrsh7th/cmp-buffer", -- https://github.com/hrsh7th/cmp-buffer
+			"hrsh7th/cmp-path", -- https://github.com/hrsh7th/cmp-path
+			"hrsh7th/cmp-cmdline", -- https://github.com/hrsh7th/cmp-cmdline
 
-			"L3MON4D3/LuaSnip",
-			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets",
+			"L3MON4D3/LuaSnip", -- https://github.com/L3MON4D3/LuaSnip
+			"saadparwaiz1/cmp_luasnip", -- https://github.com/saadparwaiz1/cmp_luasnip
+			"rafamadriz/friendly-snippets", -- https://github.com/rafamadriz/friendly-snippets
 		},
 		config = function()
 			local cmp_ok, cmp = pcall(require, "cmp")
@@ -70,16 +76,18 @@ return {
 				-- Mappings for nvim-cmp are now defined in lua/user/keymaps.lua
 				mapping = require("user.keymaps").get_cmp_mappings(),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
-					{ name = "buffer" },
-					{ name = "path" },
+					{ name = "copilot", group_index = 2 },
+					{ name = "nvim_lsp", group_index = 2 },
+					{ name = "luasnip", group_index = 2 },
+					{ name = "buffer", group_index = 3 },
+					{ name = "path", group_index = 3 },
 				}),
 			})
 		end,
 	},
 
 	-- ray-x/lsp_signature.nvim
+	-- https://github.com/ray-x/lsp_signature.nvim
 	{
 		"ray-x/lsp_signature.nvim",
 		config = function()
@@ -95,18 +103,171 @@ return {
 				},
 				floating_window = true,
 				hint_enable = true, -- show parameter hints
-				hint_prefix = " ",
+				hint_prefix = " ",
 			})
 		end,
 	},
 
 	-- vim-graphql
+	-- https://github.com/jparise/vim-graphql
 	{ "jparise/vim-graphql" },
 
-	-- vim-scripts/lightline
-	{ "vim-scripts/lightline" },
+	-- lualine.nvim - Better statusline with current working directory display
+	-- https://github.com/nvim-lualine/lualine.nvim
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			-- Define colors from clarity theme
+			local colors = {
+				bg = "#2a4565", -- Main background
+				bg_dark = "#102030", -- StatusLine background
+				bg_light = "#304E73", -- CursorLine background
+				fg = "#a5e9ff", -- Normal foreground
+				fg_dark = "#4382CB", -- LineNr foreground
+				blue = "#5fa1db", -- Statement
+				green = "#70d080", -- Identifier
+				yellow = "#ecad2b", -- Constant/Number
+				orange = "#fb5baa", -- String
+				purple = "#8f9ae5", -- Comment
+				cyan = "#8cd0d3", -- Type
+				red = "#FF6347", -- DiagnosticError
+				gray = "#8090a0", -- Delimiter
+			}
+
+			-- Setup lualine with custom theme
+			require("lualine").setup({
+				options = {
+					theme = {
+						normal = {
+							a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+							b = { bg = "#332b15", fg = colors.yellow }, -- Dark orange tint for path section
+							c = { bg = colors.bg, fg = colors.fg },
+							x = { bg = colors.bg, fg = colors.fg },
+							y = { bg = "#1a2e1a", fg = colors.green }, -- Dark green tint for progress
+							z = { bg = "#1a2a33", fg = colors.cyan }, -- Dark cyan tint for location
+						},
+						insert = {
+							a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+							b = { bg = "#332b15", fg = colors.yellow },
+							y = { bg = "#1a2e1a", fg = colors.green },
+							z = { bg = "#1a2a33", fg = colors.cyan },
+						},
+						visual = {
+							a = { bg = colors.orange, fg = colors.bg, gui = "bold" },
+							b = { bg = "#332b15", fg = colors.yellow },
+							y = { bg = "#1a2e1a", fg = colors.green },
+							z = { bg = "#1a2a33", fg = colors.cyan },
+						},
+						replace = {
+							a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+							b = { bg = "#332b15", fg = colors.yellow },
+							y = { bg = "#1a2e1a", fg = colors.green },
+							z = { bg = "#1a2a33", fg = colors.cyan },
+						},
+						command = {
+							a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+							b = { bg = "#332b15", fg = colors.yellow },
+							y = { bg = "#1a2e1a", fg = colors.green },
+							z = { bg = "#1a2a33", fg = colors.cyan },
+						},
+						inactive = {
+							a = { bg = colors.bg, fg = colors.fg_dark, gui = "bold" },
+							b = { bg = colors.bg, fg = colors.fg_dark }, -- Subdued color for inactive path
+							c = { bg = colors.bg, fg = colors.fg_dark },
+							x = { bg = colors.bg, fg = colors.fg_dark },
+							y = { bg = colors.bg, fg = colors.fg_dark },
+							z = { bg = colors.bg, fg = colors.fg_dark },
+						},
+					},
+					component_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
+				},
+				sections = {
+					lualine_a = { "mode" },
+					lualine_b = {
+						-- Custom function to show CWD + path + filename with modified/readonly indicators
+						{
+							function()
+								local cwd = vim.fn.getcwd()
+								local path = vim.fn.expand("%:p")
+								-- Extract relative path from the current working directory
+								local rel_path = path:gsub(vim.fn.getcwd() .. "/", "")
+
+								-- Add modified/readonly indicators
+								local modified = ""
+								if vim.bo.modified then
+									modified = "  "
+								end
+								local readonly = ""
+								if vim.bo.readonly then
+									readonly = "  "
+								end
+
+								return cwd .. " ▶ " .. rel_path .. modified .. readonly
+							end,
+							color = { fg = colors.yellow },
+							padding = { left = 1, right = 1 },
+						},
+					},
+					lualine_c = {
+						{
+							"diagnostics",
+							sources = { "nvim_diagnostic" },
+							symbols = { error = " ", warn = " ", info = " ", hint = " " },
+							diagnostics_color = {
+								error = { fg = colors.red },
+								warn = { fg = colors.yellow },
+								info = { fg = colors.blue },
+								hint = { fg = colors.cyan },
+							},
+						},
+					},
+					lualine_x = {
+						{ "encoding" },
+						{
+							"fileformat",
+							icons_enabled = true,
+						},
+						{ "filetype", icon_only = false, padding = { left = 1, right = 1 } },
+					},
+					lualine_y = {
+						{
+							"progress",
+							icon = "     ",
+							padding = { left = 1, right = 1 },
+							color = { fg = colors.green },
+						},
+					},
+					lualine_z = {
+						{ "location", icon = "󰍎", padding = { left = 1, right = 1 }, color = { fg = colors.cyan } },
+					},
+				},
+				inactive_sections = {
+					lualine_a = {},
+					lualine_b = {
+						-- Show path in inactive buffers too
+						{
+							function()
+								local cwd = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+								local path = vim.fn.expand("%:p")
+								-- Extract relative path from the current working directory
+								local rel_path = path:gsub(vim.fn.getcwd() .. "/", "")
+								return cwd .. " ▶ " .. rel_path
+							end,
+						},
+					},
+					lualine_c = {},
+					lualine_x = { "location" },
+					lualine_y = {},
+					lualine_z = {},
+				},
+			})
+		end,
+	},
 
 	-- Gitsigns plugin
+	-- https://github.com/lewis6991/gitsigns.nvim
 	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -131,14 +292,15 @@ return {
 	},
 
 	-- which-key
+	-- https://github.com/folke/which-key.nvim
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
-		opts = {},
 		-- Keybindings for which-key are now defined in lua/user/keymaps.lua
 	},
 
 	-- noice.nvim
+	-- https://github.com/folke/noice.nvim
 	{
 		"folke/noice.nvim",
 		version = "*", -- fetch the latest stable version
@@ -170,9 +332,9 @@ return {
 				enabled = true,
 				view = "cmdline_popup",
 				format = {
-					cmdline = { icon = "" },
-					search_down = { kind = "search", icon = " " },
-					search_up = { kind = "search", icon = " " },
+					cmdline = { icon = "➜" }, -- Restored the ">" character
+					search_down = { kind = "search", icon = " " },
+					search_up = { kind = "search", icon = " " },
 				},
 			},
 			popupmenu = {
@@ -207,55 +369,69 @@ return {
 			vim.api.nvim_set_hl(0, "NoiceLspSignature", { bg = "#ff0000", fg = "#ffffff" })
 		end,
 		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
+			"MunifTanjim/nui.nvim", -- https://github.com/MunifTanjim/nui.nvim
+			"rcarriga/nvim-notify", -- https://github.com/rcarriga/nvim-notify
 		},
 	},
 
 	-- vim-surround
+	-- https://github.com/tpope/vim-surround
 	{ "tpope/vim-surround" },
 
 	-- vim-vinegar
+	-- https://github.com/tpope/vim-vinegar
 	{ "tpope/vim-vinegar" },
 
 	-- vim-commentary
+	-- https://github.com/tpope/vim-commentary
 	{ "tpope/vim-commentary" },
 
 	-- vim-rhubarb
+	-- https://github.com/tpope/vim-rhubarb
 	{ "tpope/vim-rhubarb" },
 
 	-- vim-dispatch
+	-- https://github.com/tpope/vim-dispatch
 	{ "tpope/vim-dispatch" },
 
 	-- CamelCaseMotion
+	-- https://github.com/bkad/CamelCaseMotion
 	{ "bkad/CamelCaseMotion" },
 
 	-- vim-sneak
+	-- https://github.com/justinmk/vim-sneak
 	{ "justinmk/vim-sneak" },
 
 	-- emmet-vim
+	-- https://github.com/mattn/emmet-vim
 	{ "mattn/emmet-vim" },
 
-	-- lightline-onedark
-	{ "hallzy/lightline-onedark" },
+	-- Removed lightline-onedark (not needed with built-in statusline)
+	-- -- https://github.com/hallzy/lightline-onedark
+	-- { "hallzy/lightline-onedark" },
 
 	-- vim-closetag
+	-- https://github.com/alvan/vim-closetag
 	{ "alvan/vim-closetag" },
 
 	-- nvim-remote-containers
+	-- https://github.com/jamestthompson3/nvim-remote-containers
 	{ "jamestthompson3/nvim-remote-containers" },
 
 	-- asyncrun.vim
+	-- https://github.com/skywind3000/asyncrun.vim
 	{ "skywind3000/asyncrun.vim" },
 
 	-- vim-oscyank
+	-- https://github.com/ojroques/vim-oscyank
 	{ "ojroques/vim-oscyank", branch = "main" },
 
 	-- nvim-treesitter with playground
+	-- https://github.com/nvim-treesitter/nvim-treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		dependencies = { "nvim-treesitter/playground" },
+		dependencies = { "nvim-treesitter/playground" }, -- https://github.com/nvim-treesitter/playground
 		opts = {
 			ensure_installed = "all",
 			highlight = { enable = true },
@@ -279,24 +455,31 @@ return {
 	},
 
 	-- dressing.nvim
+	-- https://github.com/stevearc/dressing.nvim
 	{ "stevearc/dressing.nvim" },
 
 	-- plenary.nvim
+	-- https://github.com/nvim-lua/plenary.nvim
 	{ "nvim-lua/plenary.nvim" },
 
 	-- nui.nvim
+	-- https://github.com/MunifTanjim/nui.nvim
 	{ "MunifTanjim/nui.nvim" },
 
 	-- render-markdown.nvim
+	-- https://github.com/MeanderingProgrammer/render-markdown.nvim
 	{ "MeanderingProgrammer/render-markdown.nvim" },
 
 	-- nvim-web-devicons
+	-- https://github.com/nvim-tree/nvim-web-devicons
 	{ "nvim-tree/nvim-web-devicons" },
 
 	-- img-clip.nvim
+	-- https://github.com/HakonHarnes/img-clip.nvim
 	{ "HakonHarnes/img-clip.nvim" },
 
 	-- avante.nvim
+	-- https://github.com/yetone/avante.nvim
 	{
 		"yetone/avante.nvim",
 		branch = "main",
@@ -304,12 +487,13 @@ return {
 	},
 
 	-- neogit
+	-- https://github.com/NeogitOrg/neogit
 	{
 		"NeogitOrg/neogit",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"sindrets/diffview.nvim",
-			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim", -- https://github.com/nvim-lua/plenary.nvim
+			"sindrets/diffview.nvim", -- https://github.com/sindrets/diffview.nvim
+			"nvim-telescope/telescope.nvim", -- https://github.com/nvim-telescope/telescope.nvim
 		},
 		config = function()
 			local neogit_ok, neogit = pcall(require, "neogit")
@@ -322,10 +506,11 @@ return {
 	},
 
 	-- null-ls & mason-null-ls integration
+	-- https://github.com/jose-elias-alvarez/null-ls.nvim
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		dependencies = {
-			"jayp0521/mason-null-ls.nvim",
+			"jayp0521/mason-null-ls.nvim", -- https://github.com/jayp0521/mason-null-ls.nvim
 		},
 		config = function()
 			local mason_null_ok, mason_null_ls = pcall(require, "mason-null-ls")
@@ -384,6 +569,7 @@ return {
 	},
 
 	-- snacks
+	-- https://github.com/folke/snacks.nvim
 	{
 		"folke/snacks.nvim",
 		priority = 1000,
@@ -398,7 +584,7 @@ return {
 			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
-			statuscolumn = { enabled = true },
+			statuscolumn = { enabled = false }, -- Disabled to use built-in statusline
 			toggle = {
 				which_key = true,
 				notify = true,
@@ -411,12 +597,13 @@ return {
 					-- { section = "keys", gap = 1, padding = 1 },
 					{
 						pane = 1,
-						icon = " ",
+						icon = " ",
+						title = "Recent Files",
 						section = "recent_files",
 						padding = 1,
 					},
 					{
-						icon = " ",
+						icon = " ",
 						title = "Projects",
 						section = "projects",
 						padding = 1,
@@ -425,10 +612,11 @@ return {
 				},
 			},
 		},
- -- Keybindings for snacks.nvim are now defined in lua/user/keymaps.lua
+		-- Keybindings for snacks.nvim are now defined in lua/user/keymaps.lua
 	},
 
 	-- telescope.nvim
+	-- https://github.com/nvim-telescope/telescope.nvim
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
@@ -438,6 +626,7 @@ return {
 	},
 
 	-- telescope-fzf-native.nvim
+	-- https://github.com/nvim-telescope/telescope-fzf-native.nvim
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
 		build = "make",
@@ -447,18 +636,20 @@ return {
 	},
 
 	-- neotest
+	-- https://github.com/nvim-neotest/neotest
 	{
 		"nvim-neotest/neotest",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			"antoinemadec/FixCursorHold.nvim",
-			"haydenmeade/neotest-jest",
-			"nvim-neotest/nvim-nio",
+			"nvim-lua/plenary.nvim", -- https://github.com/nvim-lua/plenary.nvim
+			"nvim-treesitter/nvim-treesitter", -- https://github.com/nvim-treesitter/nvim-treesitter
+			"antoinemadec/FixCursorHold.nvim", -- https://github.com/antoinemadec/FixCursorHold.nvim
+			"haydenmeade/neotest-jest", -- https://github.com/haydenmeade/neotest-jest
+			"nvim-neotest/nvim-nio", -- https://github.com/nvim-neotest/nvim-nio
 		},
 	},
 
 	-- lazygit.nvim
+	-- https://github.com/kdheepak/lazygit.nvim
 	{
 		"kdheepak/lazygit.nvim",
 		cmd = "LazyGit",
@@ -466,6 +657,7 @@ return {
 	},
 
 	-- mason.nvim
+	-- https://github.com/williamboman/mason.nvim
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
@@ -480,6 +672,7 @@ return {
 	},
 
 	-- mason-lspconfig.nvim
+	-- https://github.com/williamboman/mason-lspconfig.nvim
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
@@ -501,6 +694,7 @@ return {
 	},
 
 	-- nvim-lspconfig
+	-- https://github.com/neovim/nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
@@ -524,9 +718,10 @@ return {
 			end
 
 			local on_attach = function(client, bufnr)
-				local user_keymaps_ok, user_lsp_keymaps = pcall(require, "user.lsp_keymaps")
+				-- Apply buffer-local LSP keymaps
+				local user_keymaps_ok, user_keymaps = pcall(require, "user.keymaps")
 				if user_keymaps_ok then
-					user_lsp_keymaps.setup(bufnr)
+					user_keymaps.setup_lsp_keymaps(bufnr)
 				end
 
 				-- Attach signature plugin
@@ -539,7 +734,7 @@ return {
 						},
 						floating_window = true,
 						hint_enable = true,
-						hint_prefix = " ",
+						hint_prefix = " ",
 					}, bufnr)
 				end
 			end
@@ -564,6 +759,25 @@ return {
 						cmd = { "sourcekit-lsp" },
 						filetypes = { "swift" },
 					})
+				elseif server == "lua_ls" then
+					lspconfig[server].setup({
+						capabilities = capabilities,
+						on_attach = on_attach,
+						settings = {
+							Lua = {
+								runtime = { version = "LuaJIT" },
+								diagnostics = {
+									globals = { "vim" },
+								},
+								workspace = {
+									library = {
+										[vim.fn.expand("$VIMRUNTIME")] = true,
+									},
+								},
+								telemetry = { enable = false },
+							},
+						},
+					})
 				else
 					lspconfig[server].setup({
 						capabilities = capabilities,
@@ -575,11 +789,54 @@ return {
 	},
 
 	-- vim-easymotion
+	-- https://github.com/easymotion/vim-easymotion
 	{
 		"easymotion/vim-easymotion",
 		init = function()
 			-- Disable default mappings
 			vim.g.EasyMotion_do_mapping = 0
+		end,
+	},
+
+	-- nvim-gx
+	-- https://github.com/chrishrb/nvim-gx
+	{
+		"chrishrb/gx.nvim",
+		keys = { { "gx", "<cmd>Browse<cr>", mode = { "n", "x" } } },
+		cmd = { "Browse" },
+		init = function()
+			vim.g.netrw_nogx = 1 -- disable netrw gx
+		end,
+		dependencies = { "nvim-lua/plenary.nvim" }, -- Required for Neovim < 0.10.0
+		config = true, -- default settings
+		submodules = false, -- not needed, submodules are required only for tests
+	},
+
+	-- catppuccin/nvim
+	-- https://github.com/catppuccin/nvim
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+	-- copilot.lua
+	-- https://github.com/zbirenbaum/copilot.lua
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			})
+		end,
+	},
+
+	-- copilot-cmp
+	-- https://github.com/zbirenbaum/copilot-cmp
+	{
+		"zbirenbaum/copilot-cmp",
+		dependencies = { "zbirenbaum/copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
 		end,
 	},
 }
