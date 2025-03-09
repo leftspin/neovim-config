@@ -13,6 +13,7 @@ require("avante").setup({
   ["openai"] = {
     endpoint = "https://api.openai.com/v1",
     model = "o3-mini",
+    reasoning_effort = "high",
     temperature = 0,
     max_tokens = 8912,
   },

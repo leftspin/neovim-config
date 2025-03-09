@@ -296,7 +296,6 @@ keymap("n", "<space>F", "<Plug>(easymotion-b)", opts)
 --------------------------
 -- UTILITY
 --------------------------
-keymap("n", "<space>w", ":up<bar>bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 keymap("n", "<space>n", ":noh<CR>", opts)
 
 --------------------------

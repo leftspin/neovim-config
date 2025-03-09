@@ -300,9 +300,9 @@ return {
 	},
 
 	-- noice.nvim
-	-- https://github.com/folke/noice.nvim
+	-- https://github.com/leftspin/noice.nvim (using personal fork)
 	{
-		"folke/noice.nvim",
+		"leftspin/noice.nvim",
 		version = "*", -- fetch the latest stable version
 		lazy = false, -- load early, no lazy/event
 		opts = {
@@ -549,7 +549,9 @@ return {
 					null_ls.builtins.formatting.shfmt,
 					null_ls.builtins.diagnostics.shellcheck,
 					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.diagnostics.luacheck,
+					null_ls.builtins.diagnostics.luacheck.with({
+						extra_args = { "--globals", "vim" },
+					}),
 				},
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then
@@ -667,7 +669,9 @@ return {
 				vim.notify("[mason] failed to load.", vim.log.levels.ERROR)
 				return
 			end
-			mason.setup()
+			mason.setup({
+				automatic_installation = true, -- Automatically install missing LSPs
+			})
 		end,
 	},
 
@@ -688,6 +692,7 @@ return {
 					"ts_ls",
 					"bashls",
 					"lua_ls",
+					"taplo",
 				},
 			})
 		end,
@@ -717,6 +722,14 @@ return {
 				capabilities.textDocument.completion.completionItem.snippetSupport = true
 			end
 
+			-- add swiftinterface as an alias for swift filetype
+			vim.filetype.add({
+				extension = {
+					swift = "swift",
+					swiftinterface = "swift", -- Treat .swiftinterface files as Swift
+				},
+			})
+
 			local on_attach = function(client, bufnr)
 				-- Apply buffer-local LSP keymaps
 				local user_keymaps_ok, user_keymaps = pcall(require, "user.keymaps")
@@ -739,7 +752,7 @@ return {
 				end
 			end
 
-			local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls" }
+			local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls", "taplo" }
 			for _, server in ipairs(servers) do
 				if server == "ts_ls" then
 					lspconfig[server].setup({
@@ -767,12 +780,10 @@ return {
 							Lua = {
 								runtime = { version = "LuaJIT" },
 								diagnostics = {
-									globals = { "vim" },
+									globals = { "vim", "require" },
 								},
 								workspace = {
-									library = {
-										[vim.fn.expand("$VIMRUNTIME")] = true,
-									},
+									library = vim.api.nvim_list_runtime_paths(),
 								},
 								telemetry = { enable = false },
 							},
@@ -878,5 +889,43 @@ return {
 				desc = "Quickfix List (Trouble)",
 			},
 		},
+	},
+
+	{
+		"nvim-focus/focus.nvim",
+		version = false,
+		config = function()
+			require("focus").setup({
+				enable = true, -- Enable module
+				commands = true, -- Create Focus commands
+				autoresize = {
+					enable = false, -- Enable or disable auto-resizing of splits
+					width = 0, -- Force width for the focused window
+					height = 0, -- Force height for the focused window
+					minwidth = 20, -- Force minimum width for the unfocused window
+					minheight = 5, -- Force minimum height for the unfocused window
+					height_quickfix = 10, -- Set the height of quickfix panel
+				},
+				split = {
+					bufnew = true, -- Create blank buffer for new split windows
+					tmux = false, -- Create tmux splits instead of neovim splits
+				},
+				ui = {
+					number = false, -- Display line numbers in the focussed window only
+					relativenumber = false, -- Display relative line numbers in the focussed window only
+					hybridnumber = false, -- Display hybrid line numbers in the focussed window only
+					absolutenumber_unfocussed = false, -- Preserve absolute numbers in the unfocussed windows
+
+					cursorline = true, -- Display a cursorline in the focussed window only
+					cursorcolumn = false, -- Display cursorcolumn in the focussed window only
+					colorcolumn = {
+						enable = false, -- Display colorcolumn in the foccused window only
+						list = "+1", -- Set the comma-saperated list for the colorcolumn
+					},
+					signcolumn = false, -- Display signcolumn in the focussed window only
+					winhighlight = false, -- Auto highlighting for focussed/unfocussed windows
+				},
+			})
+		end,
 	},
 }
