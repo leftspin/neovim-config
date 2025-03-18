@@ -24,6 +24,7 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.INFO] = "",
 			[vim.diagnostic.severity.HINT] = "",
 		},
+		j,
 	},
 })
 
@@ -612,9 +613,9 @@ return {
 					},
 					{ section = "startup" },
 				},
+				-- Keybindings for snacks.nvim are now defined in lua/user/keymaps.lua
 			},
 		},
-		-- Keybindings for snacks.nvim are now defined in lua/user/keymaps.lua
 	},
 
 	-- telescope.nvim
@@ -687,6 +688,8 @@ return {
 				vim.notify("[mason-lspconfig] failed to load.", vim.log.levels.ERROR)
 				return
 			end
+			-- this only contains languages that Mason knows about.
+			-- languages like gleam are installed separately and aren't included here
 			mlsp.setup({
 				ensure_installed = {
 					"ts_ls",
@@ -721,12 +724,12 @@ return {
 				capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 				capabilities.textDocument.completion.completionItem.snippetSupport = true
 			end
-
-			-- add swiftinterface as an alias for swift filetype
+			-- add swiftinterface as an alias for swift filetype and gleam filetype
 			vim.filetype.add({
 				extension = {
 					swift = "swift",
 					swiftinterface = "swift", -- Treat .swiftinterface files as Swift
+					gleam = "gleam", -- Treat .gleam files as Gleam
 				},
 			})
 
@@ -752,7 +755,7 @@ return {
 				end
 			end
 
-			local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls", "taplo" }
+			local servers = { "ts_ls", "sourcekit", "bashls", "lua_ls", "taplo", "gleam" }
 			for _, server in ipairs(servers) do
 				if server == "ts_ls" then
 					lspconfig[server].setup({
@@ -770,7 +773,6 @@ return {
 						capabilities = capabilities,
 						on_attach = on_attach,
 						cmd = { "sourcekit-lsp" },
-						filetypes = { "swift" },
 					})
 				elseif server == "lua_ls" then
 					lspconfig[server].setup({
@@ -788,6 +790,13 @@ return {
 								telemetry = { enable = false },
 							},
 						},
+					})
+				elseif server == "gleam" then
+					lspconfig[server].setup({
+						capabilities = capabilities,
+						on_attach = on_attach,
+						cmd = { "gleam", "lsp" }, -- Command to start the Gleam LSP server
+						filetypes = { "gleam" },
 					})
 				else
 					lspconfig[server].setup({

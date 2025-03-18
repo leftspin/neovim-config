@@ -172,6 +172,14 @@ hi SnacksPickerPreviewCursorLine    guifg=#2A1A05 guibg=#ecad2b
 " The color of the path part of file listings on the dashboard
 hi SnacksDashboardDir               guifg=#4382CB
 
+" ???
+hi SnacksPickerDimmed               guifg=#4a9dff
+hi SnacksPickerUnselected           guifg=orange
+hi SnacksPickerPathIgnored          guifg=yellow
+
+hi SnacksPickerGitStatusIgnored     guifg=#6989b1   " Muted blue-gray - for ignored files in git status
+hi SnacksPickerGitStatusUntracked   guifg=#4382CB   " Medium blue - for untracked files in git status
+
 "----------------------------------------------------
 " Noice.nvim Colors (Defined by Noice.nvim plugin)
 "----------------------------------------------------
