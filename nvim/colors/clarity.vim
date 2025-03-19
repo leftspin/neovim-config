@@ -76,12 +76,6 @@ hi Visual       guifg=white       guibg=#f62a00   gui=none
 " Warning messages
 hi WarningMsg   guifg=salmon
 
-" Inline Diagnostics
-hi DiagnosticError    guifg=#FF6347 guibg=#2a4565 gui=italic
-hi DiagnosticWarn     guifg=#FbD300 guibg=#2a4565 gui=italic
-hi DiagnosticInfo     guifg=#60A1D8 guibg=#2a4565 gui=italic
-hi DiagnosticHint     guifg=#70d080 guibg=#2a4565 gui=italic
-
 "----------------------------------------------------
 " Additional Theme Colors (Not currently used)
 " These colors match the clarity theme palette and
@@ -112,6 +106,13 @@ hi Statement  guifg=#5fa1db   gui=none        " Sky blue
 hi Todo       guifg=orangered guibg=#304050 gui=none " Orange red on dark blue-gray
 hi Type       guifg=#8cd0d3   gui=none        " Light cyan
 hi String     guifg=#fb5baa     guibg=none
+
+"----------------------------------------------------
+" LSP Highlighting
+" These groups control the appearance of LSP-related
+" highlights like references, definitions, etc.
+"----------------------------------------------------
+hi LspReferenceText guifg=#142a43 guibg=#d8e5f0 gui=bold
 
 "----------------------------------------------------
 " Fencing Highlight Groups
@@ -217,8 +218,33 @@ hi EasyMotionMoveHL guifg=#a5e9ff guibg=#304E73
 
 
 "----------------------------------------------------
+" Signs
+"----------------------------------------------------
+
+" Diagnostic signs in the sign column
+hi DiagnosticSignError guifg=#FF6347 guibg=#142a43
+hi DiagnosticSignWarn  guifg=#FbD300 guibg=#142a43
+hi DiagnosticSignInfo  guifg=#60A1D8 guibg=#142a43
+hi DiagnosticSignHint  guifg=#70d080 guibg=#142a43
+
+"----------------------------------------------------
 " GitSigns.nvim Colors (Defined by GitSigns.nvim plugin)
 "----------------------------------------------------
 
 hi GitSignsCurrentLineBlame guifg=#60A1D8
+
+"----------------------------------------------------
+" Tabby Colors (Defined by Tabby plugin)
+"----------------------------------------------------
+
+" Highlight for inactive tab lines.
+hi TabLine      guifg=#8f9ae5 guibg=#102030 gui=none
+" Highlight for the fill area of the tabline.
+hi TabLineFill  guifg=#8f9ae5 guibg=#102030 gui=none
+" Highlight for the selected tab.
+hi TabLineSel   guifg=#102030 guibg=#ecad2b gui=bold
+" Highlight for the active window tab.
+hi TabWinActive guifg=#102030 guibg=#ecad2b gui=bold
+" Highlight for inactive window tabs.
+hi TabWinInactive guifg=#142a43 guibg=#7e672e gui=none
 

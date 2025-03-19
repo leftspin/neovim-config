@@ -10,6 +10,10 @@ require("avante").setup({
 
   provider = "claude",
 
+  claude = {
+    disable_tools = true,
+  },
+
   ["openai"] = {
     endpoint = "https://api.openai.com/v1",
     model = "o3-mini",
